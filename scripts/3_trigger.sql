@@ -1,10 +1,8 @@
-DELIMITER //
+select usuarios from trabalho;
 
-CREATE TRIGGER trigger_exemplo
-BEFORE INSERT ON apagar
+CREATE TRIGGER usuario_existente
+BEFORE INSERT OR UPDATE ON apagar
 FOR EACH ROW
 BEGIN
-    INSERT INTO apagar_tambem(mensagem) VALUES ('Trigger super simples só para exemplificar.');
-END//
 
-DELIMITER ;
+
