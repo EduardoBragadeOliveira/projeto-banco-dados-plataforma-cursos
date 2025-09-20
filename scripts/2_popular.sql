@@ -1,480 +1,1652 @@
 USE trabalho;
 
-INSERT INTO usuarios (nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, verificado, ultimo_login) VALUES
-('João Pedro Silva', 'joaopedro.silva1@exemplo.com', 'senha123', '023.456.789-01', 'masculino', '1988-04-12', NULL, 'ativo', TRUE, '2025-08-15 10:24:11'),
-('Mariana Oliveira', 'mariana.oliveira2@exemplo.com', 'senha123', '134.567.890-12', 'feminino', '1992-11-03', NULL, 'ativo', TRUE, '2025-07-02 18:05:34'),
-('Pedro Henrique Santos', 'pedro.henrique3@exemplo.com', 'senha123', '245.678.901-23', 'masculino', '1995-06-28', NULL, 'ativo', FALSE, '2025-03-09 14:12:05'),
-('Ana Clara Costa', 'ana.clara4@exemplo.com', 'senha123', '356.789.012-34', 'feminino', '1990-09-19', NULL, 'ativo', TRUE, '2025-09-01 09:32:48'),
-('Lucas Pereira', 'lucas.pereira5@exemplo.com', 'senha123', '467.890.123-45', 'masculino', '1985-02-02', NULL, 'inativo', FALSE, NULL),
-('Beatriz Ramos', 'beatriz.ramos6@exemplo.com', 'senha123', '578.901.234-56', 'feminino', '1998-12-11', NULL, 'ativo', TRUE, '2025-06-21 20:11:02'),
-('Rafael Almeida', 'rafael.almeida7@exemplo.com', 'senha123', '689.012.345-67', 'masculino', '1983-07-30', NULL, 'ativo', TRUE, '2025-05-17 07:45:19'),
-('Fernanda Rocha', 'fernanda.rocha8@exemplo.com', 'senha123', '790.123.456-78', 'feminino', '1991-01-05', NULL, 'ativo', FALSE, NULL),
-('Diego Martins', 'diego.martins9@exemplo.com', 'senha123', '801.234.567-89', 'masculino', '1996-03-21', NULL, 'banido', FALSE, NULL),
-('Patrícia Almeida', 'patricia.almeida10@exemplo.com', 'senha123', '912.345.678-90', 'feminino', '1993-10-14', NULL, 'ativo', TRUE, '2025-02-27 11:10:55'),
-('Gustavo Ferreira', 'gustavo.ferreira11@exemplo.com', 'senha123', '021.334.455-11', 'masculino', '1989-08-09', NULL, 'ativo', FALSE, NULL),
-('Carla Mendes', 'carla.mendes12@exemplo.com', 'senha123', '132.445.566-22', 'feminino', '1994-05-06', NULL, 'ativo', TRUE, '2025-01-19 16:22:12'),
-('Rafael Barros', 'rafael.barros13@exemplo.com', 'senha123', '243.556.677-33', 'masculino', '1990-12-01', NULL, 'ativo', FALSE, '2025-04-03 13:03:41'),
-('Juliana Ribeiro', 'juliana.ribeiro14@exemplo.com', 'senha123', '354.667.788-44', 'feminino', '1987-09-25', NULL, 'ativo', TRUE, '2025-08-09 21:05:07'),
-('Thiago Gomes', 'thiago.gomes15@exemplo.com', 'senha123', '465.778.899-55', 'masculino', '1997-06-16', NULL, 'ativo', FALSE, NULL),
-('Camila Fernandes', 'camila.fernandes16@exemplo.com', 'senha123', '576.889.900-66', 'feminino', '1995-11-12', NULL, 'ativo', TRUE, '2025-07-28 08:17:29'),
-('Bruno Carvalho', 'bruno.carvalho17@exemplo.com', 'senha123', '687.990.011-77', 'masculino', '1984-07-01', NULL, 'ativo', TRUE, '2025-03-15 19:03:55'),
-('Larissa Nunes', 'larissa.nunes18@exemplo.com', 'senha123', '798.101.122-88', 'feminino', '1993-05-28', NULL, 'inativo', FALSE, NULL),
-('André Duarte', 'andre.duarte19@exemplo.com', 'senha123', '809.212.233-99', 'masculino', '1986-10-07', NULL, 'ativo', TRUE, '2025-06-04 10:02:27'),
-('Isabela Castro', 'isabela.castro20@exemplo.com', 'senha123', '910.323.344-00', 'feminino', '1995-01-15', NULL, 'ativo', TRUE, '2025-05-01 15:26:51'),
-('Rodrigo Pinto', 'rodrigo.pinto21@exemplo.com', 'senha123', '031.434.455-21', 'masculino', '1992-02-22', NULL, 'ativo', TRUE, '2025-04-18 12:15:45'),
-('Tatiane Lopes', 'tatiane.lopes22@exemplo.com', 'senha123', '142.545.566-32', 'feminino', '1986-03-30', NULL, 'inativo', FALSE, NULL),
-('Eduardo Araújo', 'eduardo.araujo23@exemplo.com', 'senha123', '253.656.677-43', 'masculino', '1990-12-05', NULL, 'ativo', TRUE, '2025-02-02 14:49:36'),
-('Vanessa Correia', 'vanessa.correia24@exemplo.com', 'senha123', '364.767.788-54', 'feminino', '1998-09-14', NULL, 'ativo', FALSE, NULL),
-('Fábio Teixeira', 'fabio.teixeira25@exemplo.com', 'senha123', '475.878.899-65', 'masculino', '1991-04-08', NULL, 'ativo', TRUE, '2025-01-21 16:37:24'),
-('Priscila Moraes', 'priscila.moraes26@exemplo.com', 'senha123', '586.989.900-76', 'feminino', '1993-07-11', NULL, 'ativo', FALSE, '2025-03-12 11:23:55'),
-('Leonardo Cunha', 'leonardo.cunha27@exemplo.com', 'senha123', '697.090.011-87', 'masculino', '1988-05-19', NULL, 'ativo', TRUE, '2025-07-11 09:18:47'),
-('Carolina Batista', 'carolina.batista28@exemplo.com', 'senha123', '708.101.122-98', 'feminino', '1996-08-03', NULL, 'ativo', FALSE, NULL),
-('Marcelo Farias', 'marcelo.farias29@exemplo.com', 'senha123', '819.212.233-09', 'masculino', '1999-02-17', NULL, 'ativo', TRUE, '2025-06-08 18:09:21'),
-('Daniela Pires', 'daniela.pires30@exemplo.com', 'senha123', '920.323.344-10', 'feminino', '1995-10-23', NULL, 'ativo', TRUE, NULL),
-('Felipe Rezende', 'felipe.rezende31@exemplo.com', 'senha123', '031.434.455-31', 'masculino', '1990-03-12', NULL, 'ativo', FALSE, '2025-05-28 13:44:09'),
-('Natália Barros', 'natalia.barros32@exemplo.com', 'senha123', '142.545.566-42', 'feminino', '1994-06-18', NULL, 'ativo', TRUE, '2025-04-09 12:02:33'),
-('Vitor Machado', 'vitor.machado33@exemplo.com', 'senha123', '253.656.677-53', 'masculino', '1987-11-30', NULL, 'ativo', FALSE, NULL),
-('Luana Braga', 'luana.braga34@exemplo.com', 'senha123', '364.767.788-64', 'feminino', '1992-01-08', NULL, 'inativo', FALSE, NULL),
-('Gisele Santos', 'gisele.santos35@exemplo.com', 'senha123', '475.878.899-75', 'feminino', '1989-09-02', NULL, 'ativo', TRUE, '2025-03-29 09:55:00'),
-('Marcos Vinícius', 'marcos.vinicius36@exemplo.com', 'senha123', '586.989.900-86', 'masculino', '1984-12-21', NULL, 'ativo', TRUE, '2025-02-16 17:12:45'),
-('Aline Moreira', 'aline.moreira37@exemplo.com', 'senha123', '697.090.011-97', 'feminino', '1997-05-30', NULL, 'ativo', FALSE, NULL),
-('Igor Nascimento', 'igor.nascimento38@exemplo.com', 'senha123', '708.101.122-08', 'masculino', '1991-07-15', NULL, 'ativo', TRUE, '2025-01-04 08:48:55'),
-('Sofia Martins', 'sofia.martins39@exemplo.com', 'senha123', '819.212.233-19', 'feminino', '1998-02-27', NULL, 'ativo', TRUE, '2025-08-20 21:30:12'),
-('Murilo Alves', 'murilo.alves40@exemplo.com', 'senha123', '920.323.344-20', 'masculino', '1986-09-06', NULL, 'inativo', FALSE, NULL),
-('Renata Lima', 'renata.lima41@exemplo.com', 'senha123', '031.434.455-41', 'feminino', '1993-04-17', NULL, 'ativo', TRUE, '2025-06-02 10:11:22'),
-('Cássio Rocha', 'cassio.rocha42@exemplo.com', 'senha123', '142.545.566-52', 'masculino', '1985-08-29', NULL, 'ativo', FALSE, NULL),
-('Mônica Fernandes', 'monica.fernandes43@exemplo.com', 'senha123', '253.656.677-63', 'feminino', '1990-10-12', NULL, 'ativo', TRUE, '2025-05-05 14:15:09'),
-('Nicolas Duarte', 'nicolas.duarte44@exemplo.com', 'senha123', '364.767.788-74', 'masculino', '1994-01-01', NULL, 'banido', FALSE, NULL),
-('Camila Rodrigues', 'camila.rodrigues45@exemplo.com', 'senha123', '475.878.899-85', 'feminino', '1996-11-19', NULL, 'ativo', TRUE, '2025-07-19 19:44:33'),
-('Hugo Pereira', 'hugo.pereira46@exemplo.com', 'senha123', '586.989.900-96', 'masculino', '1982-03-03', NULL, 'ativo', TRUE, '2025-03-02 06:50:12'),
-('Paula Teixeira', 'paula.teixeira47@exemplo.com', 'senha123', '697.090.011-07', 'feminino', '1991-12-05', NULL, 'ativo', FALSE, NULL),
-('Wellington Costa', 'wellington.costa48@exemplo.com', 'senha123', '708.101.122-18', 'masculino', '1987-02-20', NULL, 'ativo', TRUE, '2025-04-25 12:00:00'),
-('Sabrina Azevedo', 'sabrina.azevedo49@exemplo.com', 'senha123', '819.212.233-29', 'feminino', '1995-09-09', NULL, 'ativo', TRUE, '2025-02-11 09:09:09'),
-('Felipe Nogueira', 'felipe.nogueira50@exemplo.com', 'senha123', '920.323.344-30', 'masculino', '1990-06-06', NULL, 'ativo', FALSE, NULL),
-('Tatiane Moraes', 'tatiane.moraes51@email.com', 'senha123', '051.222.333-44', 'feminino', '1991-01-18', NULL, 'ativo', TRUE, '2025-02-27 11:05:15'),
-('Vinícius Moreira', 'vinicius.moreira52@email.com', 'senha123', '052.333.444-55', 'masculino', '1994-08-23', NULL, 'ativo', FALSE, '2025-02-20 09:45:12'),
-('Carla Batista', 'carla.batista53@email.com', 'senha123', '053.444.555-66', 'feminino', '1992-10-30', NULL, 'ativo', TRUE, '2025-03-01 14:22:35'),
-('Gustavo Correia', 'gustavo.correia54@email.com', 'senha123', '054.555.666-77', 'masculino', '1990-06-12', NULL, 'banido', FALSE, NULL),
-('Isabela Pinto', 'isabela.pinto55@email.com', 'senha123', '055.666.777-88', 'feminino', '1997-02-05', NULL, 'ativo', TRUE, '2025-02-14 17:31:22'),
-('Diego Nogueira', 'diego.nogueira56@email.com', 'senha123', '056.777.888-99', 'masculino', '1996-03-09', NULL, 'ativo', FALSE, '2025-02-18 08:44:10'),
-('Natália Rezende', 'natalia.rezende57@email.com', 'senha123', '057.888.999-00', 'feminino', '1993-07-01', NULL, 'ativo', TRUE, '2025-03-05 19:10:30'),
-('Bruno Freitas', 'bruno.freitas58@email.com', 'senha123', '058.999.000-11', 'masculino', '1998-05-21', NULL, 'inativo', FALSE, NULL),
-('Amanda Monteiro', 'amanda.monteiro59@email.com', 'senha123', '059.000.111-22', 'feminino', '1991-11-15', NULL, 'ativo', TRUE, '2025-01-28 13:09:48'),
-('Murilo Viana', 'murilo.viana60@email.com', 'senha123', '060.111.222-33', 'masculino', '1994-09-27', NULL, 'ativo', FALSE, '2025-02-07 10:42:50'),
-('Débora Ramos', 'debora.ramos61@email.com', 'senha123', '061.222.333-44', 'feminino', '1989-04-04', NULL, 'ativo', TRUE, '2025-02-25 12:14:33'),
-('Ricardo Barros', 'ricardo.barros62@email.com', 'senha123', '062.333.444-55', 'masculino', '1995-12-19', NULL, 'ativo', TRUE, '2025-02-23 16:40:12'),
-('Priscila Cunha', 'priscila.cunha63@email.com', 'senha123', '063.444.555-66', 'feminino', '1992-06-28', NULL, 'banido', FALSE, NULL),
-('Daniel Moraes', 'daniel.moraes64@email.com', 'senha123', '064.555.666-77', 'masculino', '1990-01-30', NULL, 'ativo', TRUE, '2025-01-30 15:33:55'),
-('Letícia Lima', 'leticia.lima65@email.com', 'senha123', '065.666.777-88', 'feminino', '1998-03-22', NULL, 'ativo', FALSE, '2025-02-10 18:44:20'),
-('Henrique Castro', 'henrique.castro66@email.com', 'senha123', '066.777.888-99', 'masculino', '1996-08-11', NULL, 'ativo', TRUE, '2025-02-21 07:59:10'),
-('Adriana Melo', 'adriana.melo67@email.com', 'senha123', '067.888.999-00', 'feminino', '1993-09-19', NULL, 'ativo', FALSE, '2025-03-02 12:11:45'),
-('Leonardo Figueiredo', 'leonardo.figueiredo68@email.com', 'senha123', '068.999.000-11', 'masculino', '1991-05-16', NULL, 'ativo', TRUE, '2025-02-26 19:21:33'),
-('Mariana Paiva', 'mariana.paiva69@email.com', 'senha123', '069.000.111-22', 'feminino', '1994-01-08', NULL, 'ativo', TRUE, '2025-01-20 09:45:05'),
-('Cláudio Rocha', 'claudio.rocha70@email.com', 'senha123', '070.111.222-33', 'masculino', '1997-07-11', NULL, 'inativo', FALSE, NULL),
-('Eliane Carvalho', 'eliane.carvalho71@email.com', 'senha123', '071.222.333-44', 'feminino', '1990-03-03', NULL, 'ativo', TRUE, '2025-02-05 14:35:20'),
-('Fábio Andrade', 'fabio.andrade72@email.com', 'senha123', '072.333.444-55', 'masculino', '1992-07-25', NULL, 'ativo', FALSE, '2025-02-14 09:40:12'),
-('Bianca Moura', 'bianca.moura73@email.com', 'senha123', '073.444.555-66', 'feminino', '1998-01-13', NULL, 'ativo', TRUE, '2025-02-28 16:50:40'),
-('Marcelo Braga', 'marcelo.braga74@email.com', 'senha123', '074.555.666-77', 'masculino', '1995-10-05', NULL, 'ativo', TRUE, '2025-03-06 11:33:55'),
-('Paula Dias', 'paula.dias75@email.com', 'senha123', '075.666.777-88', 'feminino', '1993-02-17', NULL, 'ativo', FALSE, '2025-02-18 08:15:22'),
-('César Pires', 'cesar.pires76@email.com', 'senha123', '076.777.888-99', 'masculino', '1989-12-09', NULL, 'banido', FALSE, NULL),
-('Tatiana Almeida', 'tatiana.almeida77@email.com', 'senha123', '077.888.999-00', 'feminino', '1996-06-21', NULL, 'ativo', TRUE, '2025-01-27 20:11:10'),
-('Eduardo Campos', 'eduardo.campos78@email.com', 'senha123', '078.999.000-11', 'masculino', '1991-04-30', NULL, 'ativo', TRUE, '2025-02-15 18:27:00'),
-('Michele Torres', 'michele.torres79@email.com', 'senha123', '079.000.111-22', 'feminino', '1997-09-14', NULL, 'inativo', FALSE, NULL),
-('Alexandre Prado', 'alexandre.prado80@email.com', 'senha123', '080.111.222-33', 'masculino', '1993-03-28', NULL, 'ativo', TRUE, '2025-03-01 07:50:44'),
-('Renata Lopes', 'renata.lopes81@email.com', 'senha123', '081.222.333-44', 'feminino', '1995-05-19', NULL, 'ativo', TRUE, '2025-02-17 15:32:11'),
-('Fernando Guimarães', 'fernando.guimaraes82@email.com', 'senha123', '082.333.444-55', 'masculino', '1990-08-08', NULL, 'ativo', FALSE, '2025-02-24 13:40:55'),
-('Patrícia Nunes', 'patricia.nunes83@email.com', 'senha123', '083.444.555-66', 'feminino', '1988-11-27', NULL, 'ativo', TRUE, '2025-01-29 09:05:23'),
-('Igor Ribeiro', 'igor.ribeiro84@email.com', 'senha123', '084.555.666-77', 'masculino', '1996-12-15', NULL, 'ativo', TRUE, '2025-02-19 21:45:33'),
-('Juliana Castro', 'juliana.castro85@email.com', 'senha123', '085.666.777-88', 'feminino', '1992-01-06', NULL, 'ativo', FALSE, '2025-02-09 10:20:14'),
-('Mateus Tavares', 'mateus.tavares86@email.com', 'senha123', '086.777.888-99', 'masculino', '1994-04-18', NULL, 'ativo', TRUE, '2025-02-28 17:59:00'),
-('Roberta Leal', 'roberta.leal87@email.com', 'senha123', '087.888.999-00', 'feminino', '1997-07-02', NULL, 'banido', FALSE, NULL),
-('Sérgio Mendes', 'sergio.mendes88@email.com', 'senha123', '088.999.000-11', 'masculino', '1991-09-20', NULL, 'ativo', TRUE, '2025-02-13 08:22:55'),
-('Clara Fernandes', 'clara.fernandes89@email.com', 'senha123', '089.000.111-22', 'feminino', '1993-06-11', NULL, 'ativo', TRUE, '2025-02-16 19:14:33'),
-('Rogério Matos', 'rogerio.matos90@email.com', 'senha123', '090.111.222-33', 'masculino', '1995-10-30', NULL, 'ativo', FALSE, '2025-03-04 12:40:00'),
-('Vanessa Cruz', 'vanessa.cruz91@email.com', 'senha123', '091.222.333-44', 'feminino', '1990-05-03', NULL, 'ativo', TRUE, '2025-02-12 16:55:41'),
-('Paulo Araújo', 'paulo.araujo92@email.com', 'senha123', '092.333.444-55', 'masculino', '1989-07-22', NULL, 'ativo', TRUE, '2025-02-22 09:33:17'),
-('Luana Brito', 'luana.brito93@email.com', 'senha123', '093.444.555-66', 'feminino', '1996-02-14', NULL, 'ativo', FALSE, '2025-02-18 14:21:45'),
-('Otávio Rezende', 'otavio.rezende94@email.com', 'senha123', '094.555.666-77', 'masculino', '1992-09-26', NULL, 'ativo', TRUE, '2025-02-26 11:00:30'),
-('Elaine Cardoso', 'elaine.cardoso95@email.com', 'senha123', '095.666.777-88', 'feminino', '1987-08-17', NULL, 'ativo', TRUE, '2025-01-31 15:45:20'),
-('Bruno Machado', 'bruno.machado96@email.com', 'senha123', '096.777.888-99', 'masculino', '1998-12-25', NULL, 'ativo', FALSE, '2025-02-09 09:20:10'),
-('Simone Pacheco', 'simone.pacheco97@email.com', 'senha123', '097.888.999-00', 'feminino', '1991-11-29', NULL, 'ativo', TRUE, '2025-02-21 13:42:33'),
-('Márcio Alves', 'marcio.alves98@email.com', 'senha123', '098.999.000-11', 'masculino', '1993-04-08', NULL, 'ativo', TRUE, '2025-03-05 17:12:50'),
-('Cristiane Vieira', 'cristiane.vieira99@email.com', 'senha123', '099.000.111-22', 'feminino', '1994-01-19', NULL, 'ativo', FALSE, '2025-02-14 11:20:12'),
-('Helena Souza', 'helena.souza100@email.com', 'senha123', '100.222.333-44', 'feminino', '1995-02-03', NULL, 'ativo', TRUE, '2025-02-19 11:17:00'),
-('Ana Clara Souza', 'ana.souza1@email.com', 'senha123', '123.456.789-01', 'Feminino', '1995-04-12', 'fotos/ana1.jpg', 'ativo', TRUE, '2025-01-15 14:23:45'),
-('Bruno Henrique Lima', 'bruno.lima2@email.com', 'senha123', '123.456.789-02', 'Masculino', '1992-07-23', 'fotos/bruno2.jpg', 'ativo', FALSE, '2025-02-10 09:11:22'),
-('Carla Mendes Oliveira', 'carla.oliveira3@email.com', 'senha123', '123.456.789-03', 'Feminino', '1998-02-08', 'fotos/carla3.jpg', 'ativo', TRUE, '2025-03-18 18:40:12'),
-('Diego Matos Pereira', 'diego.pereira4@email.com', 'senha123', '123.456.789-04', 'Masculino', '1989-11-30', 'fotos/diego4.jpg', 'ativo', TRUE, '2025-03-21 12:30:55'),
-('Eduarda Martins', 'eduarda.martins5@email.com', 'senha123', '123.456.789-05', 'Feminino', '2000-05-19', 'fotos/eduarda5.jpg', 'ativo', FALSE, '2025-01-05 16:22:17'),
-('Felipe Gomes', 'felipe.gomes6@email.com', 'senha123', '123.456.789-06', 'Masculino', '1993-08-11', 'fotos/felipe6.jpg', 'ativo', TRUE, '2025-04-02 21:10:36'),
-('Gabriela Rocha', 'gabriela.rocha7@email.com', 'senha123', '123.456.789-07', 'Feminino', '1997-09-29', 'fotos/gabriela7.jpg', 'ativo', FALSE, '2025-02-22 10:03:15'),
-('Henrique Alves', 'henrique.alves8@email.com', 'senha123', '123.456.789-08', 'Masculino', '1987-06-14', 'fotos/henrique8.jpg', 'inativo', FALSE, '2025-01-28 19:17:40'),
-('Isabela Ferreira', 'isabela.ferreira9@email.com', 'senha123', '123.456.789-09', 'Feminino', '1996-01-22', 'fotos/isabela9.jpg', 'ativo', TRUE, '2025-03-14 11:47:59'),
-('João Pedro Araújo', 'joao.araujo10@email.com', 'senha123', '123.456.789-10', 'Masculino', '1991-10-05', 'fotos/joao10.jpg', 'banido', FALSE, '2025-01-12 08:25:37')
-('Sofia Ribeiro', 'sofia.ribeiro101@email.com', 'senha123', '101.111.222-33', 'Feminino', '1995-05-12', NULL, 'ativo', TRUE, '2025-02-10 09:12:15'),
-('Lucas Carvalho', 'lucas.carvalho102@email.com', 'senha123', '102.222.333-44', 'Masculino', '1992-07-18', NULL, 'ativo', FALSE, '2025-01-20 11:42:33'),
-('Mariana Martins', 'mariana.martins103@email.com', 'senha123', '103.333.444-55', 'Feminino', '1990-03-05', NULL, 'ativo', TRUE, '2025-03-02 14:22:50'),
-('Rafael Almeida', 'rafael.almeida104@email.com', 'senha123', '104.444.555-66', 'Masculino', '1989-10-12', NULL, 'ativo', TRUE, '2025-01-30 16:11:22'),
-('Isadora Costa', 'isadora.costa105@email.com', 'senha123', '105.555.666-77', 'Feminino', '1997-06-25', NULL, 'ativo', FALSE, '2025-02-14 12:45:10'),
-('Gabriel Fernandes', 'gabriel.fernandes106@email.com', 'senha123', '106.666.777-88', 'Masculino', '1994-09-19', NULL, 'ativo', TRUE, '2025-03-05 10:30:22'),
-('Camila Souza', 'camila.souza107@email.com', 'senha123', '107.777.888-99', 'Feminino', '1993-12-07', NULL, 'ativo', TRUE, '2025-02-28 17:15:33'),
-('Felipe Rocha', 'felipe.rocha108@email.com', 'senha123', '108.888.999-00', 'Masculino', '1991-01-23', NULL, 'inativo', FALSE, NULL),
-('Aline Lima', 'aline.lima109@email.com', 'senha123', '109.999.000-11', 'Feminino', '1996-04-18', NULL, 'ativo', TRUE, '2025-03-08 19:12:50'),
-('Diego Moreira', 'diego.moreira110@email.com', 'senha123', '110.000.111-22', 'Masculino', '1990-08-11', NULL, 'banido', FALSE, NULL),
-('Juliana Batista', 'juliana.batista111@email.com', 'senha123', '111.111.222-33', 'Feminino', '1995-02-20', NULL, 'ativo', TRUE, '2025-01-25 08:30:22'),
-('Bruno Santos', 'bruno.santos112@email.com', 'senha123', '112.222.333-44', 'Masculino', '1992-11-14', NULL, 'ativo', TRUE, '2025-02-17 10:15:45'),
-('Fernanda Pereira', 'fernanda.pereira113@email.com', 'senha123', '113.333.444-55', 'Feminino', '1993-07-02', NULL, 'ativo', FALSE, '2025-03-01 13:50:11'),
-('Marcelo Azevedo', 'marcelo.azevedo114@email.com', 'senha123', '114.444.555-66', 'Masculino', '1989-05-28', NULL, 'ativo', TRUE, '2025-02-23 15:42:30'),
-('Patrícia Nunes', 'patricia.nunes115@email.com', 'senha123', '115.555.666-77', 'Feminino', '1996-10-30', NULL, 'ativo', TRUE, '2025-03-06 09:25:44'),
-('Thiago Teixeira', 'thiago.teixeira116@email.com', 'senha123', '116.666.777-88', 'Masculino', '1991-03-09', NULL, 'ativo', FALSE, '2025-01-28 11:18:55'),
-('Natália Costa', 'natalia.costa117@email.com', 'senha123', '117.777.888-99', 'Feminino', '1994-06-15', NULL, 'ativo', TRUE, '2025-02-12 17:33:12'),
-('Leonardo Rodrigues', 'leonardo.rodrigues118@email.com', 'senha123', '118.888.999-00', 'Masculino', '1988-09-20', NULL, 'ativo', TRUE, '2025-01-30 12:44:22'),
-('Larissa Martins', 'larissa.martins119@email.com', 'senha123', '119.999.000-11', 'Feminino', '1997-01-03', NULL, 'inativo', FALSE, NULL),
-('Rodrigo Almeida', 'rodrigo.almeida120@email.com', 'senha123', '120.000.111-22', 'Masculino', '1993-08-19', NULL, 'ativo', TRUE, '2025-02-25 18:12:11'),
-('Carolina Silva', 'carolina.silva121@email.com', 'senha123', '121.111.222-33', 'Feminino', '1995-11-07', NULL, 'ativo', TRUE, '2025-03-03 14:23:50'),
-('Rafael Gomes', 'rafael.gomes122@email.com', 'senha123', '122.222.333-44', 'Masculino', '1990-06-25', NULL, 'ativo', FALSE, '2025-01-21 10:12:35'),
-('Amanda Costa', 'amanda.costa123@email.com', 'senha123', '123.333.444-55', 'Feminino', '1992-12-14', NULL, 'ativo', TRUE, '2025-02-19 09:50:12'),
-('Gustavo Rodrigues', 'gustavo.rodrigues124@email.com', 'senha123', '124.444.555-66', 'Masculino', '1994-03-11', NULL, 'ativo', TRUE, '2025-03-05 16:22:30'),
-('Juliana Lima', 'juliana.lima125@email.com', 'senha123', '125.555.666-77', 'Feminino', '1996-09-09', NULL, 'ativo', FALSE, '2025-02-26 08:35:12'),
-('Vinícius Rocha', 'vinicius.rocha126@email.com', 'senha123', '126.666.777-88', 'Masculino', '1991-01-17', NULL, 'ativo', TRUE, '2025-01-29 17:12:20'),
-('Camila Nunes', 'camila.nunes127@email.com', 'senha123', '127.777.888-99', 'Feminino', '1995-05-20', NULL, 'ativo', TRUE, '2025-02-15 12:40:30'),
-('Diego Fernandes', 'diego.fernandes128@email.com', 'senha123', '128.888.999-00', 'Masculino', '1990-10-12', NULL, 'inativo', FALSE, NULL),
-('Beatriz Silva', 'beatriz.silva129@email.com', 'senha123', '129.999.000-11', 'Feminino', '1993-07-29', NULL, 'ativo', TRUE, '2025-03-02 11:15:22'),
-('Lucas Teixeira', 'lucas.teixeira130@email.com', 'senha123', '130.000.111-22', 'Masculino', '1996-02-25', NULL, 'ativo', TRUE, '2025-02-20 14:12:10'),
-('Mariana Santos', 'mariana.santos131@email.com', 'senha123', '131.111.222-33', 'Feminino', '1992-08-14', NULL, 'ativo', FALSE, '2025-01-27 08:50:33'),
-('Rogério Lima', 'rogerio.lima132@email.com', 'senha123', '132.222.333-44', 'Masculino', '1994-11-30', NULL, 'ativo', TRUE, '2025-02-18 09:40:50'),
-('Patrícia Carvalho', 'patricia.carvalho133@email.com', 'senha123', '133.333.444-55', 'Feminino', '1990-05-19', NULL, 'ativo', TRUE, '2025-03-04 16:10:12'),
-('Henrique Souza', 'henrique.souza134@email.com', 'senha123', '134.444.555-66', 'Masculino', '1993-12-03', NULL, 'ativo', FALSE, '2025-02-28 12:33:44'),
-('Renata Martins', 'renata.martins135@email.com', 'senha123', '135.555.666-77', 'Feminino', '1997-03-14', NULL, 'ativo', TRUE, '2025-01-25 14:50:22'),
-('Eduardo Rocha', 'eduardo.rocha136@email.com', 'senha123', '136.666.777-88', 'Masculino', '1991-06-18', NULL, 'ativo', TRUE, '2025-02-19 11:12:30'),
-('Carla Nunes', 'carla.nunes137@email.com', 'senha123', '137.777.888-99', 'Feminino', '1995-09-22', NULL, 'ativo', FALSE, '2025-03-01 09:25:10'),
-('Marcelo Gomes', 'marcelo.gomes138@email.com', 'senha123', '138.888.999-00', 'Masculino', '1990-02-27', NULL, 'ativo', TRUE, '2025-02-12 17:50:20'),
-('Tatiane Ribeiro', 'tatiane.ribeiro139@email.com', 'senha123', '139.999.000-11', 'Feminino', '1993-07-10', NULL, 'inativo', FALSE, NULL),
-('Felipe Carvalho', 'felipe.carvalho140@email.com', 'senha123', '140.000.111-22', 'Masculino', '1996-01-08', NULL, 'ativo', TRUE, '2025-03-03 10:12:50'),
-('Sérgio Lima', 'sergio.lima141@email.com', 'senha123', '141.111.222-33', 'Masculino', '1992-08-30', NULL, 'ativo', TRUE, NULL),
-('Mariana Alves', 'mariana.alves151@email.com', 'senha123', '151.111.222-33', 'Feminino', '1994-05-12', NULL, 'ativo', TRUE, '2025-02-11 14:15:22'),
-('Lucas Fernandes', 'lucas.fernandes152@email.com', 'senha123', '152.222.333-44', 'Masculino', '1991-07-18', NULL, 'ativo', FALSE, '2025-01-19 09:22:10'),
-('Camila Rocha', 'camila.rocha153@email.com', 'senha123', '153.333.444-55', 'Feminino', '1995-03-25', NULL, 'ativo', TRUE, '2025-03-03 16:30:55'),
-('Rafael Costa', 'rafael.costa154@email.com', 'senha123', '154.444.555-66', 'Masculino', '1990-11-12', NULL, 'ativo', TRUE, '2025-02-25 12:40:33'),
-('Isadora Martins', 'isadora.martins155@email.com', 'senha123', '155.555.666-77', 'Feminino', '1996-06-05', NULL, 'ativo', FALSE, '2025-02-14 10:55:22'),
-('Gabriel Lima', 'gabriel.lima156@email.com', 'senha123', '156.666.777-88', 'Masculino', '1992-09-18', NULL, 'ativo', TRUE, '2025-03-06 11:12:44'),
-('Bianca Nunes', 'bianca.nunes157@email.com', 'senha123', '157.777.888-99', 'Feminino', '1993-12-02', NULL, 'ativo', TRUE, '2025-02-28 18:05:30'),
-('Felipe Ribeiro', 'felipe.ribeiro158@email.com', 'senha123', '158.888.999-00', 'Masculino', '1989-01-22', NULL, 'inativo', FALSE, NULL),
-('Larissa Silva', 'larissa.silva159@email.com', 'senha123', '159.999.000-11', 'Feminino', '1997-04-12', NULL, 'ativo', TRUE, '2025-03-08 17:12:20'),
-('Diego Araújo', 'diego.araujo160@email.com', 'senha123', '160.000.111-22', 'Masculino', '1991-08-05', NULL, 'banido', FALSE, NULL),
-('Juliana Santos', 'juliana.santos161@email.com', 'senha123', '161.111.222-33', 'Feminino', '1994-02-10', NULL, 'ativo', TRUE, '2025-01-28 12:15:30'),
-('Bruno Carvalho', 'bruno.carvalho162@email.com', 'senha123', '162.222.333-44', 'Masculino', '1990-12-18', NULL, 'ativo', TRUE, '2025-02-20 14:10:12'),
-('Fernanda Gomes', 'fernanda.gomes163@email.com', 'senha123', '163.333.444-55', 'Feminino', '1995-07-22', NULL, 'ativo', FALSE, '2025-03-01 09:50:44'),
-('Marcelo Lima', 'marcelo.lima164@email.com', 'senha123', '164.444.555-66', 'Masculino', '1988-05-19', NULL, 'ativo', TRUE, '2025-02-27 11:42:33'),
-('Patrícia Souza', 'patricia.souza165@email.com', 'senha123', '165.555.666-77', 'Feminino', '1996-10-29', NULL, 'ativo', TRUE, '2025-03-05 13:20:12'),
-('Thiago Fernandes', 'thiago.fernandes166@email.com', 'senha123', '166.666.777-88', 'Masculino', '1992-03-14', NULL, 'ativo', FALSE, '2025-02-12 10:33:22'),
-('Natália Rocha', 'natalia.rocha167@email.com', 'senha123', '167.777.888-99', 'Feminino', '1994-06-09', NULL, 'ativo', TRUE, '2025-01-30 16:12:10'),
-('Leonardo Lima', 'leonardo.lima168@email.com', 'senha123', '168.888.999-00', 'Masculino', '1989-09-20', NULL, 'ativo', TRUE, '2025-03-03 12:40:44'),
-('Larissa Martins', 'larissa.martins169@email.com', 'senha123', '169.999.000-11', 'Feminino', '1997-01-11', NULL, 'inativo', FALSE, NULL),
-('Rodrigo Souza', 'rodrigo.souza170@email.com', 'senha123', '170.000.111-22', 'Masculino', '1993-08-29', NULL, 'ativo', TRUE, '2025-02-18 09:55:20'),
-('Carolina Carvalho', 'carolina.carvalho171@email.com', 'senha123', '171.111.222-33', 'Feminino', '1995-11-03', NULL, 'ativo', TRUE, '2025-03-06 10:12:55'),
-('Rafael Nunes', 'rafael.nunes172@email.com', 'senha123', '172.222.333-44', 'Masculino', '1990-06-25', NULL, 'ativo', FALSE, '2025-01-21 08:22:11'),
-('Amanda Martins', 'amanda.martins173@email.com', 'senha123', '173.333.444-55', 'Feminino', '1992-12-14', NULL, 'ativo', TRUE, '2025-02-16 13:15:30'),
-('Gustavo Lima', 'gustavo.lima174@email.com', 'senha123', '174.444.555-66', 'Masculino', '1994-03-11', NULL, 'ativo', TRUE, '2025-03-04 11:50:20'),
-('Juliana Rocha', 'juliana.rocha175@email.com', 'senha123', '175.555.666-77', 'Feminino', '1996-09-09', NULL, 'ativo', FALSE, '2025-02-26 10:15:10'),
-('Vinícius Souza', 'vinicius.souza176@email.com', 'senha123', '176.666.777-88', 'Masculino', '1991-01-17', NULL, 'ativo', TRUE, '2025-01-29 12:42:44'),
-('Camila Lima', 'camila.lima177@email.com', 'senha123', '177.777.888-99', 'Feminino', '1995-05-20', NULL, 'ativo', TRUE, '2025-02-15 14:30:33'),
-('Diego Martins', 'diego.martins178@email.com', 'senha123', '178.888.999-00', 'Masculino', '1990-10-12', NULL, 'inativo', FALSE, NULL),
-('Beatriz Rocha', 'beatriz.rocha179@email.com', 'senha123', '179.999.000-11', 'Feminino', '1993-07-29', NULL, 'ativo', TRUE, '2025-03-02 12:50:20'),
-('Lucas Lima', 'lucas.lima180@email.com', 'senha123', '180.000.111-22', 'Masculino', '1996-02-25', NULL, 'ativo', TRUE, '2025-02-20 16:12:44'),
-('Mariana Silva', 'mariana.silva181@email.com', 'senha123', '181.111.222-33', 'Feminino', '1992-08-14', NULL, 'ativo', FALSE, '2025-01-27 09:33:22'),
-('Rogério Carvalho', 'rogerio.carvalho182@email.com', 'senha123', '182.222.333-44', 'Masculino', '1994-11-30', NULL, 'ativo', TRUE, '2025-02-18 11:20:55'),
-('Patrícia Lima', 'patricia.lima183@email.com', 'senha123', '183.333.444-55', 'Feminino', '1990-05-19', NULL, 'ativo', TRUE, '2025-03-04 15:42:33'),
-('Henrique Souza', 'henrique.souza184@email.com', 'senha123', '184.444.555-66', 'Masculino', '1993-12-03', NULL, 'ativo', FALSE, '2025-02-28 13:12:20'),
-('Renata Martins', 'renata.martins185@email.com', 'senha123', '185.555.666-77', 'Feminino', '1997-03-14', NULL, 'ativo', TRUE, '2025-01-25 15:10:12'),
-('Eduardo Rocha', 'eduardo.rocha186@email.com', 'senha123', '186.666.777-88', 'Masculino', '1991-06-18', NULL, 'ativo', TRUE, '2025-02-19 12:15:30'),
-('Carla Nunes', 'carla.nunes187@email.com', 'senha123', '187.777.888-99', 'Feminino', '1995-09-22', NULL, 'ativo', FALSE, '2025-03-01 11:42:10'),
-('Marcelo Gomes', 'marcelo.gomes188@email.com', 'senha123', '188.888.999-00', 'Masculino', '1990-02-27', NULL, 'ativo', TRUE, '2025-02-12 16:22:44'),
-('Tatiane Ribeiro', 'tatiane.ribeiro189@email.com', 'senha123', '189.999.000-11', 'Feminino', '1993-07-10', NULL, 'inativo', FALSE, NULL),
-('Felipe Carvalho', 'felipe.carvalho190@email.com', 'senha123', '190.000.111-22', 'Masculino', '1996-01-08', NULL, 'ativo', TRUE, '2025-03-03 13:12:20'),
-('Sérgio Lima', 'sergio.lima191@email.com', 'senha123', '191.111.222-33', 'Masculino', '1992-08-30', NULL, 'ativo', TRUE, '2025-02-05 14:15:33'),
-('Aline Martins', 'aline.martins192@email.com', 'senha123', '192.222.333-44', 'Feminino', '1994-04-21', NULL, 'ativo', TRUE, '2025-02-10 16:40:10'),
-('Vinícius Carvalho', 'vinicius.carvalho193@email.com', 'senha123', '193.333.444-55', 'Masculino', '1991-05-12', NULL, 'ativo', FALSE, '2025-01-19 09:55:22'),
-('Larissa Lima', 'larissa.lima194@email.com', 'senha123', '194.444.555-66', 'Feminino', '1995-09-14', NULL, 'ativo', TRUE, '2025-03-06 12:15:50'),
-('Diego Carvalho', 'diego.carvalho195@email.com', 'senha123', '195.555.666-77', 'Masculino', '1990-02-28', NULL, 'inativo', FALSE, NULL),
-('Beatriz Lima', 'beatriz.lima196@email.com', 'senha123', '196.666.777-88', 'Feminino', '1993-07-12', NULL, 'ativo', TRUE, '2025-03-02 14:10:20'),
-('Lucas Martins', 'lucas.martins197@email.com', 'senha123', '197.777.888-99', 'Masculino', '1996-02-15', NULL, 'ativo', TRUE, '2025-02-20 12:30:33'),
-('Mariana Nunes', 'mariana.nunes198@email.com', 'senha123', '198.888.999-00', 'Feminino', '1992-08-18', NULL, 'ativo', FALSE, '2025-01-27 10:12:50'),
-('Rogério Souza', 'rogerio.souza199@email.com', 'senha123', '199.999.000-11', 'Masculino', '1994-11-22', NULL, 'ativo', TRUE, '2025-02-18 13:12:22'),
-('Patrícia Rocha', 'patricia.rocha200@email.com', 'senha123', '200.000.111-22', 'Feminino', '1990-05-25', NULL, 'ativo', TRUE, '2025-03-04 11:15:44'),
-('Marcelo Teixeira', 'marcelo.teixeira201@email.com', 'senha123', '201.111.222-33', 'Masculino', '1992-03-14', NULL, 'ativo', TRUE, '2025-03-05 10:15:22'),
-('Natália Ribeiro', 'natalia.ribeiro202@email.com', 'senha123', '202.222.333-44', 'Feminino', '1995-07-08', NULL, 'ativo', FALSE, '2025-02-18 12:40:10'),
-('Eduardo Carvalho', 'eduardo.carvalho203@email.com', 'senha123', '203.333.444-55', 'Masculino', '1990-12-20', NULL, 'ativo', TRUE, '2025-01-28 16:22:33'),
-('Fernanda Rocha', 'fernanda.rocha204@email.com', 'senha123', '204.444.555-66', 'Feminino', '1993-05-17', NULL, 'ativo', TRUE, '2025-03-02 14:10:55'),
-('Bruno Martins', 'bruno.martins205@email.com', 'senha123', '205.555.666-77', 'Masculino', '1991-08-30', NULL, 'ativo', FALSE, '2025-02-12 11:15:20'),
-('Camila Nunes', 'camila.nunes206@email.com', 'senha123', '206.666.777-88', 'Feminino', '1994-11-05', NULL, 'ativo', TRUE, '2025-01-30 09:50:33'),
-('Thiago Lima', 'thiago.lima207@email.com', 'senha123', '207.777.888-99', 'Masculino', '1990-02-12', NULL, 'ativo', TRUE, '2025-02-20 12:33:22'),
-('Aline Souza', 'aline.souza208@email.com', 'senha123', '208.888.999-00', 'Feminino', '1996-06-22', NULL, 'ativo', FALSE, '2025-03-01 08:40:50'),
-('Vinícius Rocha', 'vinicius.rocha209@email.com', 'senha123', '209.999.000-11', 'Masculino', '1992-09-14', NULL, 'ativo', TRUE, '2025-02-25 13:12:44'),
-('Beatriz Carvalho', 'beatriz.carvalho210@email.com', 'senha123', '210.000.111-22', 'Feminino', '1995-01-19', NULL, 'ativo', TRUE, '2025-03-06 10:55:22');
-
-INSERT INTO alunos (usuario_id, escolaridade, principais_objetivos) VALUES
-(1, 'Ensino Médio Completo', 'Aprender habilidades de programação para mudar de carreira.'),
-(2, 'Ensino Superior Incompleto', 'Melhorar competências em marketing digital e gestão de redes sociais.'),
-(3, 'Ensino Superior Completo', 'Aprofundar conhecimentos em design gráfico e UX/UI.'),
-(4, 'Mestrado', 'Adquirir conhecimentos em inteligência artificial aplicada a negócios.'),
-(5, 'Ensino Médio Completo', 'Aprender inglês para oportunidades internacionais.'),
-(6, 'Ensino Superior Completo', 'Desenvolver habilidades em finanças pessoais e investimentos.'),
-(7, 'Ensino Superior Incompleto', 'Aprender sobre empreendedorismo e startups.'),
-(8, 'Ensino Médio Completo', 'Melhorar técnicas de comunicação e apresentação.'),
-(9, 'Ensino Superior Completo', 'Aprender análise de dados e Excel avançado.'),
-(10, 'Mestrado', 'Desenvolver competências em liderança e gestão de equipes.'),
-(11, 'Ensino Médio Completo', 'Aprender programação web e desenvolvimento de apps.'),
-(12, 'Ensino Superior Incompleto', 'Adquirir habilidades em fotografia e edição de vídeo.'),
-(13, 'Ensino Superior Completo', 'Aprender técnicas avançadas de marketing digital.'),
-(14, 'Mestrado', 'Aprofundar conhecimento em pesquisa acadêmica.'),
-(15, 'Ensino Médio Completo', 'Aprender a investir na bolsa de valores.'),
-(16, 'Ensino Superior Completo', 'Desenvolver habilidades em escrita criativa.'),
-(17, 'Ensino Superior Incompleto', 'Aprender sobre ciência de dados e Python.'),
-(18, 'Ensino Médio Completo', 'Melhorar habilidades em negociação e vendas.'),
-(19, 'Ensino Superior Completo', 'Desenvolver competências em gestão de projetos.'),
-(20, 'Mestrado', 'Aprender sobre desenvolvimento de aplicativos móveis.'),
-(21, 'Ensino Médio Completo', 'Aprimorar conhecimentos em Excel e Power BI.'),
-(22, 'Ensino Superior Incompleto', 'Aprender técnicas de edição de áudio e vídeo.'),
-(23, 'Ensino Superior Completo', 'Desenvolver habilidades em análise financeira.'),
-(24, 'Mestrado', 'Aprender sobre marketing de conteúdo e SEO.'),
-(25, 'Ensino Médio Completo', 'Melhorar inglês e espanhol para viagens e trabalho.'),
-(26, 'Ensino Superior Completo', 'Aprender programação em JavaScript e frameworks modernos.'),
-(27, 'Ensino Superior Incompleto', 'Desenvolver habilidades em storytelling e copywriting.'),
-(28, 'Ensino Médio Completo', 'Aprender gestão de tempo e produtividade pessoal.'),
-(29, 'Ensino Superior Completo', 'Aprofundar conhecimentos em inteligência de mercado.'),
-(30, 'Mestrado', 'Aprender sobre liderança e coaching executivo.'),
-(31, 'Ensino Médio Completo', 'Aprender sobre design de interfaces e UX.'),
-(32, 'Ensino Superior Incompleto', 'Desenvolver competências em empreendedorismo digital.'),
-(33, 'Ensino Superior Completo', 'Aprender técnicas de negociação avançada.'),
-(34, 'Mestrado', 'Aprender programação em Python para ciência de dados.'),
-(35, 'Ensino Médio Completo', 'Aprimorar habilidades em comunicação interpessoal.'),
-(36, 'Ensino Superior Completo', 'Aprender sobre marketing digital e social media.'),
-(37, 'Ensino Superior Incompleto', 'Desenvolver competências em análise de dados financeiros.'),
-(38, 'Ensino Médio Completo', 'Aprender fotografia e edição de imagens.'),
-(39, 'Ensino Superior Completo', 'Aprofundar conhecimento em gestão de projetos ágeis.'),
-(40, 'Mestrado', 'Aprender sobre desenvolvimento de aplicativos web.'),
-(41, 'Ensino Médio Completo', 'Melhorar habilidades em vendas e atendimento ao cliente.'),
-(42, 'Ensino Superior Incompleto', 'Aprender técnicas de escrita profissional.'),
-(43, 'Ensino Superior Completo', 'Desenvolver habilidades em programação mobile.'),
-(44, 'Mestrado', 'Aprender marketing estratégico e branding.'),
-(45, 'Ensino Médio Completo', 'Aprender sobre investimentos e finanças pessoais.'),
-(46, 'Ensino Superior Completo', 'Aprofundar conhecimento em análise de dados e BI.'),
-(47, 'Ensino Superior Incompleto', 'Desenvolver habilidades em design gráfico e UI.'),
-(48, 'Ensino Médio Completo', 'Aprender técnicas de produtividade e organização pessoal.'),
-(49, 'Ensino Superior Completo', 'Aprofundar conhecimentos em marketing digital avançado.'),
-(50, 'Mestrado', 'Aprender inteligência artificial aplicada ao marketing.'),
-(51, 'Ensino Médio Completo', 'Aprender programação para iniciar carreira em tecnologia.'),
-(52, 'Ensino Superior Incompleto', 'Desenvolver habilidades em marketing digital e mídias sociais.'),
-(53, 'Ensino Superior Completo', 'Aprofundar conhecimento em design gráfico e UX/UI.'),
-(54, 'Mestrado', 'Aprender sobre inteligência artificial aplicada a negócios.'),
-(55, 'Ensino Médio Completo', 'Melhorar inglês para oportunidades internacionais.'),
-(56, 'Ensino Superior Completo', 'Desenvolver competências em finanças pessoais e investimentos.'),
-(57, 'Ensino Superior Incompleto', 'Aprender sobre empreendedorismo e startups.'),
-(58, 'Ensino Médio Completo', 'Aprimorar habilidades de comunicação e apresentação.'),
-(59, 'Ensino Superior Completo', 'Aprender análise de dados e Excel avançado.'),
-(60, 'Mestrado', 'Desenvolver competências em liderança e gestão de equipes.'),
-(61, 'Ensino Médio Completo', 'Aprender programação web e desenvolvimento de apps.'),
-(62, 'Ensino Superior Incompleto', 'Adquirir habilidades em fotografia e edição de vídeo.'),
-(63, 'Ensino Superior Completo', 'Aprender técnicas avançadas de marketing digital.'),
-(64, 'Mestrado', 'Aprofundar conhecimento em pesquisa acadêmica.'),
-(65, 'Ensino Médio Completo', 'Aprender a investir na bolsa de valores.'),
-(66, 'Ensino Superior Completo', 'Desenvolver habilidades em escrita criativa.'),
-(67, 'Ensino Superior Incompleto', 'Aprender ciência de dados e Python.'),
-(68, 'Ensino Médio Completo', 'Melhorar habilidades em negociação e vendas.'),
-(69, 'Ensino Superior Completo', 'Desenvolver competências em gestão de projetos.'),
-(70, 'Mestrado', 'Aprender desenvolvimento de aplicativos móveis.'),
-(71, 'Ensino Médio Completo', 'Aprimorar conhecimentos em Excel e Power BI.'),
-(72, 'Ensino Superior Incompleto', 'Aprender edição de áudio e vídeo.'),
-(73, 'Ensino Superior Completo', 'Desenvolver habilidades em análise financeira.'),
-(74, 'Mestrado', 'Aprender sobre marketing de conteúdo e SEO.'),
-(75, 'Ensino Médio Completo', 'Melhorar inglês e espanhol para viagens e trabalho.'),
-(76, 'Ensino Superior Completo', 'Aprender programação em JavaScript e frameworks modernos.'),
-(77, 'Ensino Superior Incompleto', 'Desenvolver habilidades em storytelling e copywriting.'),
-(78, 'Ensino Médio Completo', 'Aprender gestão de tempo e produtividade pessoal.'),
-(79, 'Ensino Superior Completo', 'Aprofundar conhecimentos em inteligência de mercado.'),
-(80, 'Mestrado', 'Aprender sobre liderança e coaching executivo.'),
-(81, 'Ensino Médio Completo', 'Aprender design de interfaces e UX.'),
-(82, 'Ensino Superior Incompleto', 'Desenvolver competências em empreendedorismo digital.'),
-(83, 'Ensino Superior Completo', 'Aprender técnicas de negociação avançada.'),
-(84, 'Mestrado', 'Aprender programação em Python para ciência de dados.'),
-(85, 'Ensino Médio Completo', 'Aprimorar habilidades em comunicação interpessoal.'),
-(86, 'Ensino Superior Completo', 'Aprender marketing digital e social media.'),
-(87, 'Ensino Superior Incompleto', 'Desenvolver competências em análise de dados financeiros.'),
-(88, 'Ensino Médio Completo', 'Aprender fotografia e edição de imagens.'),
-(89, 'Ensino Superior Completo', 'Aprofundar conhecimento em gestão de projetos ágeis.'),
-(90, 'Mestrado', 'Aprender desenvolvimento de aplicativos web.'),
-(91, 'Ensino Médio Completo', 'Melhorar habilidades em vendas e atendimento ao cliente.'),
-(92, 'Ensino Superior Incompleto', 'Aprender técnicas de escrita profissional.'),
-(93, 'Ensino Superior Completo', 'Desenvolver habilidades em programação mobile.'),
-(94, 'Mestrado', 'Aprender marketing estratégico e branding.'),
-(95, 'Ensino Médio Completo', 'Aprender sobre investimentos e finanças pessoais.'),
-(96, 'Ensino Superior Completo', 'Aprofundar conhecimento em análise de dados e BI.'),
-(97, 'Ensino Superior Incompleto', 'Desenvolver habilidades em design gráfico e UI.'),
-(98, 'Ensino Médio Completo', 'Aprender técnicas de produtividade e organização pessoal.'),
-(99, 'Ensino Superior Completo', 'Aprofundar conhecimentos em marketing digital avançado.'),
-(100, 'Mestrado', 'Aprender inteligência artificial aplicada ao marketing.');
-
-INSERT INTO areas_atuacao_instrutores (nome, descricao) VALUES
-('Programação Web', 'Desenvolvimento de websites e aplicações web utilizando HTML, CSS, JavaScript e frameworks modernos.'),
-('Programação Mobile', 'Criação de aplicativos para Android e iOS com foco em experiência do usuário e performance.'),
-('Ciência de Dados', 'Análise de dados, modelagem estatística, aprendizado de máquina e visualização de informações.'),
-('Inteligência Artificial', 'Desenvolvimento de soluções utilizando IA, redes neurais e algoritmos de aprendizado profundo.'),
-('Marketing Digital', 'Estratégias de marketing online, SEO, mídias sociais e campanhas publicitárias.'),
-('Design Gráfico', 'Criação de identidade visual, ilustração, design de interfaces e materiais gráficos.'),
-('UX/UI', 'Design centrado no usuário, experiência digital e interfaces intuitivas e funcionais.'),
-('Finanças Pessoais', 'Gestão financeira individual, investimentos, planejamento e controle de gastos.'),
-('Empreendedorismo', 'Criação de startups, inovação e desenvolvimento de novos negócios.'),
-('Gestão de Projetos', 'Planejamento, execução e controle de projetos utilizando metodologias ágeis e tradicionais.'),
-('Liderança', 'Desenvolvimento de habilidades de liderança, coaching e gestão de equipes.'),
-('Inglês para Negócios', 'Aperfeiçoamento do inglês focado em comunicação profissional e oportunidades internacionais.'),
-('Produtividade e Gestão de Tempo', 'Técnicas para otimizar o uso do tempo e aumentar a produtividade pessoal e profissional.'),
-('Fotografia', 'Técnicas fotográficas, edição de imagens e composição visual.'),
-('Edição de Vídeo', 'Criação e edição de vídeos profissionais utilizando softwares como Premiere e After Effects.'),
-('Escrita Criativa', 'Desenvolvimento de habilidades de escrita, storytelling e produção de textos criativos.'),
-('Copywriting', 'Redação persuasiva para marketing, vendas e comunicação digital.'),
-('Negociação', 'Estratégias e técnicas para negociações comerciais e interpessoais.'),
-('Vendas', 'Técnicas de vendas, prospecção de clientes e estratégias comerciais.'),
-('Excel Avançado', 'Ferramentas e funções avançadas do Excel para análise de dados e relatórios.'),
-('Power BI', 'Criação de dashboards, relatórios interativos e análise visual de dados.'),
-('Blockchain', 'Tecnologias de blockchain, criptomoedas e contratos inteligentes.'),
-('Segurança da Informação', 'Proteção de sistemas, dados e redes contra ataques e vulnerabilidades.'),
-('Redes de Computadores', 'Configuração, manutenção e gerenciamento de redes de computadores.'),
-('Cloud Computing', 'Serviços em nuvem, infraestrutura e soluções escaláveis.'),
-('DevOps', 'Integração contínua, entrega contínua e automação de processos de desenvolvimento.'),
-('Machine Learning', 'Desenvolvimento e aplicação de algoritmos de aprendizado de máquina.'),
-('Deep Learning', 'Redes neurais profundas e soluções de inteligência artificial avançadas.'),
-('Python', 'Programação em Python aplicada a ciência de dados, automação e desenvolvimento web.'),
-('JavaScript', 'Programação em JavaScript e frameworks como React, Vue e Angular.'),
-('Java', 'Desenvolvimento em Java para sistemas, aplicações web e Android.'),
-('C#', 'Programação em C# para desenvolvimento de software e jogos.'),
-('SQL e Bancos de Dados', 'Modelagem de dados, consultas SQL e gerenciamento de bancos de dados relacionais.'),
-('NoSQL', 'Bancos de dados não relacionais como MongoDB, Redis e Cassandra.'),
-('Marketing de Conteúdo', 'Criação de conteúdo estratégico para atrair, engajar e converter público-alvo.'),
-('SEO', 'Otimização de sites para mecanismos de busca e aumento de visibilidade online.'),
-('Redes Sociais', 'Gestão de redes sociais, campanhas digitais e engajamento de audiência.'),
-('Branding', 'Desenvolvimento de marca, identidade visual e posicionamento de mercado.'),
-('Psicologia', 'Estudos e práticas de psicologia aplicada ao comportamento humano e desenvolvimento pessoal.'),
-('Coaching', 'Orientação de desenvolvimento pessoal e profissional através de técnicas de coaching.'),
-('Carreira e Recolocação', 'Planejamento de carreira, coaching profissional e preparação para o mercado de trabalho.'),
-('Gestão de Pessoas', 'Técnicas e práticas para liderança e administração de equipes.'),
-('Comunicação', 'Desenvolvimento de habilidades de comunicação verbal, escrita e interpessoal.'),
-('Oratória', 'Técnicas de apresentação e fala em público.'),
-('Educação Financeira', 'Planejamento financeiro, investimentos e orçamento pessoal.'),
-('Investimentos', 'Fundamentos de investimentos, bolsa de valores e renda fixa/variável.'),
-('Gestão de Negócios', 'Planejamento, estratégia e operação de empresas e empreendimentos.'),
-('Administração', 'Fundamentos de administração e gestão de organizações.'),
-('Contabilidade', 'Princípios contábeis, balanços e análise financeira.'),
-('Recursos Humanos', 'Gestão de pessoas, recrutamento e desenvolvimento de talentos.'),
-('Psicopedagogia', 'Estudos sobre aprendizagem e desenvolvimento educacional.'),
-('Educação Infantil', 'Práticas pedagógicas voltadas para crianças em idade pré-escolar.'),
-('Ensino Fundamental', 'Metodologias e práticas de ensino para crianças e adolescentes.'),
-('Ensino Médio', 'Desenvolvimento de competências e preparação para o ensino superior.'),
-('Ensino Superior', 'Educação acadêmica e formação profissional avançada.'),
-('Idiomas', 'Ensino de diferentes línguas estrangeiras.'),
-('Inglês', 'Aprendizado da língua inglesa em diversos níveis.'),
-('Espanhol', 'Aprendizado da língua espanhola em diversos níveis.'),
-('Francês', 'Aprendizado da língua francesa em diversos níveis.'),
-('Alemão', 'Aprendizado da língua alemã em diversos níveis.'),
-('Programação para Crianças', 'Introdução à programação e lógica para crianças e adolescentes.'),
-('Robótica', 'Desenvolvimento de projetos de robótica e automação.'),
-('Impressão 3D', 'Criação e produção de modelos 3D para impressão.'),
-('Game Design', 'Criação de jogos digitais, storytelling e mecânicas de gameplay.'),
-('Desenvolvimento de Jogos', 'Programação e produção de jogos digitais.'),
-('Arte Digital', 'Criação de ilustrações e artes utilizando softwares digitais.'),
-('Animação 2D e 3D', 'Produção de animações digitais em duas e três dimensões.'),
-('Ilustração', 'Técnicas de desenho e ilustração artística.'),
-('Música', 'Teoria musical, prática instrumental e produção sonora.'),
-('Canto', 'Técnicas vocais e interpretação musical.'),
-('Instrumentos Musicais', 'Aprendizado de instrumentos como piano, violão, bateria, entre outros.'),
-('Teatro', 'Expressão artística, atuação e interpretação teatral.'),
-('Dança', 'Técnicas de dança e performance artística.'),
-('Yoga', 'Práticas de yoga para equilíbrio físico e mental.'),
-('Meditação', 'Técnicas de meditação e mindfulness.'),
-('Saúde e Bem-estar', 'Orientações sobre saúde física, mental e qualidade de vida.'),
-('Nutrição', 'Estudos e práticas de alimentação saudável e dietas.'),
-('Gastronomia', 'Preparação de alimentos, técnicas culinárias e gastronomia profissional.'),
-('Culinária Internacional', 'Aprendizado de receitas e técnicas de cozinhas de diferentes culturas.'),
-('Panificação e Confeitaria', 'Produção de pães, bolos e doces.'),
-('Marketing Pessoal', 'Desenvolvimento de marca pessoal e imagem profissional.'),
-('Fotografia Profissional', 'Técnicas avançadas de fotografia e edição.'),
-('Cinema e Audiovisual', 'Produção de filmes, vídeos e conteúdos audiovisuais.'),
-('Edição de Fotos', 'Tratamento e edição de imagens digitais.'),
-('Redação', 'Habilidades de escrita e produção de textos.'),
-('Literatura', 'Estudo e análise de obras literárias.'),
-('História', 'Estudo de eventos históricos e contextos culturais.'),
-('Geografia', 'Estudo de territórios, sociedades e ambiente natural.'),
-('Matemática', 'Ensino de matemática básica e avançada.'),
-('Física', 'Estudo da física clássica e moderna.'),
-('Química', 'Estudo da química geral, orgânica e analítica.'),
-('Biologia', 'Estudo de seres vivos e ecossistemas.'),
-('Programação Python Avançada', 'Aprendizado avançado de Python com foco em ciência de dados e automação.'),
-('Programação Java Avançada', 'Aprendizado avançado de Java para aplicações corporativas.'),
-('Desenvolvimento Full Stack', 'Criação de aplicações completas utilizando front-end e back-end.'),
-('Front-End', 'Desenvolvimento de interfaces web e experiências do usuário.'),
-('Back-End', 'Desenvolvimento de servidores, APIs e bancos de dados.'),
-('Gestão de E-commerce', 'Planejamento e operação de lojas virtuais.'),
-('Publicidade', 'Criação de campanhas publicitárias em diversos meios.'),
-('Fotografia de Moda', 'Técnicas fotográficas aplicadas à moda e publicidade.'),
-('Marketing de Influência', 'Estratégias para engajamento e promoção através de influenciadores.'),
-('Redes e Telecomunicações', 'Estudo de redes, protocolos e comunicação digital.'),
-('Arquitetura', 'Planejamento, projeto e construção de edificações.'),
-('Design de Interiores', 'Criação de ambientes internos funcionais e estéticos.'),
-('Urbanismo', 'Planejamento e desenvolvimento de cidades e espaços urbanos.'),
-('Engenharia Civil', 'Projeto, construção e manutenção de obras civis.'),
-('Engenharia Elétrica', 'Estudo de sistemas elétricos, circuitos e automação.'),
-('Engenharia Mecânica', 'Desenvolvimento de máquinas, equipamentos e processos mecânicos.'),
-('Engenharia de Produção', 'Gestão e otimização de processos produtivos.'),
-('Engenharia de Software', 'Desenvolvimento e manutenção de sistemas de software.'),
-('Gestão Ambiental', 'Práticas de sustentabilidade e preservação ambiental.'),
-('Direito', 'Estudo de leis, regulamentos e práticas jurídicas.'),
-('Educação Física', 'Treinamento físico, esportes e condicionamento corporal.'),
-('Treinamento Esportivo', 'Preparação e desenvolvimento de atletas e equipes.'),
-('Psicologia Infantil', 'Estudos sobre desenvolvimento psicológico de crianças.'),
-('Psicologia Organizacional', 'Aplicação da psicologia no ambiente corporativo.'),
-('Inteligência Emocional', 'Desenvolvimento de habilidades de autogestão emocional.'),
-('Coaching Executivo', 'Apoio ao desenvolvimento de líderes e executivos.'),
-('Mentoria', 'Orientação e acompanhamento de profissionais para crescimento na carreira.'),
-('Gestão de Eventos', 'Planejamento e execução de eventos corporativos e sociais.'),
-('Consultoria Empresarial', 'Orientação estratégica para empresas em diversos setores.'),
-('Relações Públicas', 'Gestão de imagem, comunicação e relacionamento com stakeholders.'),
-('Planejamento Estratégico', 'Definição de metas e estratégias para organizações.'),
-('Logística', 'Gestão de transporte, armazenamento e distribuição de produtos.'),
-('Supply Chain', 'Planejamento e otimização da cadeia de suprimentos.'),
-('Negócios Internacionais', 'Estratégias para comércio e parcerias globais.'),
-('Economia', 'Estudo de mercados, políticas econômicas e análise financeira.'),
-('Análise de Mercado', 'Estudo e interpretação de dados de mercado para tomada de decisão.'),
-('Gestão de Qualidade', 'Implementação de processos de controle e melhoria contínua.'),
-('Gestão de Riscos', 'Identificação, avaliação e mitigação de riscos em organizações.'),
-('Compliance', 'Garantia de conformidade com normas, leis e regulamentos.')
-('Gestão de Inovação', 'Desenvolvimento de processos inovadores e implementação de novas ideias nas empresas.'),
-('Sustentabilidade Corporativa', 'Práticas de responsabilidade ambiental e social nas organizações.'),
-('E-commerce Avançado', 'Estratégias de vendas online, otimização de conversões e marketing digital.'),
-('Big Data', 'Processamento e análise de grandes volumes de dados para insights estratégicos.'),
-('Data Science Aplicada', 'Uso de dados para tomada de decisão, modelagem e predição de resultados.'),
-('Gestão de Startups', 'Planejamento, lançamento e crescimento de empresas inovadoras.'),
-('Crowdfunding', 'Captação de recursos coletivos para projetos e negócios.'),
-('Storytelling', 'Criação de narrativas envolventes para marketing, apresentações e educação.'),
-('Produção Musical', 'Criação, gravação e edição de música em estúdios profissionais.'),
-('Engenharia de Som', 'Técnicas de captação, mixagem e masterização de áudio.'),
-('Teoria Musical', 'Estudo de harmonia, ritmo e estrutura musical.'),
-('Produção de Conteúdo', 'Criação de textos, vídeos e materiais digitais para diferentes plataformas.'),
-('Marketing de Performance', 'Estratégias baseadas em resultados para campanhas digitais.'),
-('Growth Hacking', 'Técnicas para crescimento rápido de produtos e empresas.'),
-('Desenvolvimento Ágil', 'Metodologias ágeis de gestão e desenvolvimento de software.'),
-('Scrum', 'Implementação de framework Scrum para gerenciamento de projetos ágeis.'),
-('Kanban', 'Gestão visual de processos e tarefas utilizando o método Kanban.'),
-('Lean Startup', 'Método de desenvolvimento de negócios com foco em aprendizado rápido.'),
-('Gamificação', 'Aplicação de mecânicas de jogos em contextos de aprendizado e engajamento.'),
-('Educação Online', 'Criação e gestão de cursos digitais e plataformas de ensino.'),
-('Ensino a Distância', 'Práticas pedagógicas para educação remota e híbrida.'),
-('Design Instrucional', 'Planejamento de cursos e materiais didáticos eficientes.'),
-('Programação em C++', 'Desenvolvimento de softwares e sistemas utilizando a linguagem C++.'),
-('Programação em PHP', 'Desenvolvimento web backend com PHP e frameworks relacionados.'),
-('Programação em Ruby', 'Desenvolvimento de aplicações web com Ruby on Rails.'),
-('Inteligência de Mercado', 'Coleta e análise de informações estratégicas sobre o mercado.'),
-('Marketing de Produto', 'Estratégias de lançamento, posicionamento e comunicação de produtos.'),
-('Design de Produto', 'Criação, desenvolvimento e prototipagem de produtos físicos e digitais.'),
-('Engenharia de Materiais', 'Estudo e aplicação de materiais na produção industrial.'),
-('Gestão de Patrimônio', 'Planejamento e controle de ativos e recursos organizacionais.'),
-('Consultoria Financeira', 'Orientação sobre investimentos, planejamento financeiro e gestão de recursos.');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (1, 'Marcelo Souza', 'marcelo.souza1@example.com', '56b99c0ab29fd895cfd3deba9086e0ca49d6a3f2bfe65836d8d11aa4fa291184', '043.321.819-12', 'feminino', '1962-11-07', '/images/usuarios/1.jpg', 'inativo', 'silver', 'ambos', TRUE, '2024-11-16 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (2, 'Joao Freitas', 'joao.freitas2@example.com', '0906a329060ed475c0f0e9275b133b0051be7cda6d875b4120c067b224c36e1d', '386.379.402-62', 'nao-binario', '1997-11-30', '/images/usuarios/2.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-08-26 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (3, 'Bruno Souza', 'bruno.souza3@example.com', '98033ca2d723d6af8514b8706baa6b184be0ff20301744418ca2eaff76d8e133', '161.559.407-26', 'nao-binario', '1971-03-14', '/images/usuarios/3.jpg', 'ativo', 'diamond', 'ambos', FALSE, '2025-04-23 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (4, 'Eduardo Cardoso', 'eduardo.cardoso4@example.com', 'c243c2cff067ef5f0263a4d77f56665f96d3026efd8a4fe43123768d661065fd', '593.103.413-34', 'masculino', '1994-02-06', '/images/usuarios/4.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-03-23 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (5, 'Lucas Gomes', 'lucas.gomes5@example.com', 'b43744a98e23592cffc6141693224e2c807cf515996b7bb8e315d3a8138e3831', '192.832.764-62', 'nao-binario', '1979-09-14', '/images/usuarios/5.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-09-04 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (6, 'Camila Ribeiro', 'camila.ribeiro6@example.com', '0f775fbd864e783a6107a3ffdcd237136041a381a8d9324ec6c57ff96f183587', '641.395.376-40', 'nao-binario', '2001-03-01', '/images/usuarios/6.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-12-07 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (7, 'Aline Gomes', 'aline.gomes7@example.com', '9203b067e5fdbb5993ceb7e30883fee198af62c17f9a6e47c5964d96b68a364f', '969.653.287-30', 'masculino', '1964-03-23', '/images/usuarios/7.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-10-07 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (8, 'Carolina Cardoso', 'carolina.cardoso8@example.com', 'da2cf3bbd0a2d758fb1b0ca88fd2577f292552c4b216f87f8a0f1cab8c1a7936', '166.978.480-56', 'nao-binario', '1970-04-11', '/images/usuarios/8.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-03-30 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (9, 'Ana Rocha', 'ana.rocha9@example.com', '4c33a44e444967515b7cb323be1b743823734842cc6fa73155b132da4a456f25', '627.048.281-46', 'nao-binario', '1986-10-10', '/images/usuarios/9.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-08-26 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (10, 'Paula Freitas', 'paula.freitas10@example.com', 'b3ee6d714e6ebd1b82140c71d44dfd43509a8ffbb07c95dfc1952f8537d2b4e6', '809.570.154-35', 'masculino', '1965-03-13', '/images/usuarios/10.jpg', 'ativo', 'basico', 'ambos', FALSE, '2025-01-15 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (11, 'Eduardo Oliveira', 'eduardo.oliveira11@example.com', '16d0bf343b532695749fc51477aa0a6bfa20ef4a1ddaded1bd730f9450f9803a', '822.782.489-25', 'feminino', '1979-01-01', '/images/usuarios/11.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-02-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (12, 'Renata Carvalho', 'renata.carvalho12@example.com', 'acdb502dffd593a4e33a24aa5d62f18e299fe6ef8133a5ed3feef4803487af13', '787.133.150-99', 'nao-binario', '1980-08-23', '/images/usuarios/12.jpg', 'ativo', 'basico', 'ambos', FALSE, '2024-11-01 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (13, 'Maria Almeida', 'maria.almeida13@example.com', '237ad1478a08a52dc5c8b5e112c162f76f4999536f45ff064fb93ccfe2b77574', '105.183.473-11', 'nao-binario', '1971-11-14', '/images/usuarios/13.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-01-21 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (14, 'Camila Fernandes', 'camila.fernandes14@example.com', 'b09346138c2f8af7e6df5a19a00abbfb281d273ef7e57fedfe27ee696a504e1a', '311.656.670-69', 'nao-binario', '1968-10-29', '/images/usuarios/14.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-07-27 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (15, 'Mariana Pereira', 'mariana.pereira15@example.com', '32e3edea0420563360efbd2204cebd7ddbdbd785d04c15ab96a568490c8f3570', '387.262.473-12', 'masculino', '1999-10-03', '/images/usuarios/15.jpg', 'ativo', 'basico', 'ambos', FALSE, '2024-12-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (16, 'Eduardo Silva', 'eduardo.silva16@example.com', '63a2acef07a80d0ec029cbb10b4f07fd4ab4329ad8bda2b56477fd02f1519ac1', '132.677.360-99', 'masculino', '1993-12-31', '/images/usuarios/16.jpg', 'inativo', 'diamond', 'ambos', TRUE, '2025-01-31 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (17, 'Fernanda Fernandes', 'fernanda.fernandes17@example.com', 'ac4ffceb80b039854f76194a7fbfc567ec9563740e097535cd64fac6d42c3fcb', '872.343.098-20', 'masculino', '1988-02-19', '/images/usuarios/17.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-12-23 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (18, 'Paula Santos', 'paula.santos18@example.com', 'f76a750953983287c8c86e5d0874ebeb62f53abf4e0697030ae301ec8049398c', '812.191.361-51', 'nao-binario', '1982-02-01', '/images/usuarios/18.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-02-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (19, 'Renata Dias', 'renata.dias19@example.com', '1e1663038080c81acbed52317ac5d13d1cb479df2aca198d2c4dd3fbd7195993', '985.435.346-28', 'masculino', '1986-11-30', '/images/usuarios/19.jpg', 'ativo', 'basico', 'ambos', FALSE, '2024-11-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (20, 'Daniel Souza', 'daniel.souza20@example.com', 'c18dabfbff274c2f81ee9337bcf0c852a3585e6623d10d5dea2999226cac308d', '183.842.513-89', 'feminino', '1985-07-26', '/images/usuarios/20.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-10-21 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (21, 'Felipe Silva', 'felipe.silva21@example.com', '14b1c155ce454e06fca184d9e49778b0e3f8551fa4504cb714f825638d4a6b0f', '841.241.182-82', 'feminino', '1985-04-11', '/images/usuarios/21.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-10-31 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (22, 'Sofia Gomes', 'sofia.gomes22@example.com', '02c5032d2408308ace8309a3ff9a92302ede9215033a56430ea70042bab4fc61', '874.016.400-13', 'feminino', '1971-09-26', '/images/usuarios/22.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-02-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (23, 'Aline Fernandes', 'aline.fernandes23@example.com', '9b485be6655ea6ddc7b8163bb8d7d0dec80c66e4200f7cb5cc4600f81ca5f147', '801.128.059-80', 'nao-binario', '1973-04-14', '/images/usuarios/23.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-08-31 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (24, 'Andre Carvalho', 'andre.carvalho24@example.com', 'f4828f2eb44ee80c0c6e8d75bb22be3fb75bbb323c25520402e192ef357b81c9', '331.586.923-14', 'masculino', '1975-11-19', '/images/usuarios/24.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-04-03 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (25, 'Camila Fernandes', 'camila.fernandes25@example.com', '5b906643b0476e96b7ebf1f36df9c95d8e19db9fb340128b2dcc7bba8063e225', '342.160.733-44', 'feminino', '1991-05-15', '/images/usuarios/25.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-10-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (26, 'Lucas Araujo', 'lucas.araujo26@example.com', 'd71cb5908a3fe8aa8eb57af0ff15914e593982835efabcc2e6e950246d4bc34a', '541.458.685-59', 'masculino', '1970-05-07', '/images/usuarios/26.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-05-08 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (27, 'Maria Souza', 'maria.souza27@example.com', '7720e86619fcdc60c73081b3aada9217782c63348ff3e7937f1f2a6476a55f5d', '965.569.816-50', 'nao-binario', '1977-01-19', '/images/usuarios/27.jpg', 'ativo', 'diamond', 'ambos', FALSE, '2024-12-19 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (28, 'Renata Pereira', 'renata.pereira28@example.com', '96e8aa118aaf06730212e8d49f34f184d9448394a2100388579ef78315774d6b', '561.595.148-60', 'feminino', '1996-08-21', '/images/usuarios/28.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-06-14 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (29, 'Carolina Araujo', 'carolina.araujo29@example.com', 'e19dd841051609a707b35001c6b93508fc0102fc0b306e655dd3cfe437f02d91', '299.468.044-29', 'masculino', '1998-07-26', '/images/usuarios/29.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-02-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (30, 'Renata Pereira', 'renata.pereira30@example.com', 'b9c23f06c2a61097d5369ceae99a4b17b2c7d42ada6dbab2b1875dc1f1b8d67d', '872.148.951-40', 'masculino', '1987-11-06', '/images/usuarios/30.jpg', 'ativo', 'silver', 'ambos', FALSE, '2025-08-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (31, 'Mariana Mendes', 'mariana.mendes31@example.com', '1b2cd42f4e6bd0d6063fb52e4565b86f716c5b5f083b3a16f999ca90e6e4571b', '917.693.676-61', 'masculino', '1973-03-28', '/images/usuarios/31.jpg', 'ativo', 'basico', 'ambos', TRUE, '2024-08-22 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (32, 'Andre Souza', 'andre.souza32@example.com', 'd439d5af1d86324eb4cba228d20ceb5fd48db16c683f33e3965be7f792126ca2', '632.870.831-36', 'feminino', '1971-12-18', '/images/usuarios/32.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-02-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (33, 'Juliana Pinto', 'juliana.pinto33@example.com', '80e923e23c91ca4761d89c96da29b418b475ad71aa7eaa0137b502c6014ca2c0', '687.277.434-07', 'nao-binario', '2003-06-23', '/images/usuarios/33.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-09-20 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (34, 'Fernanda Almeida', 'fernanda.almeida34@example.com', '9e7a9b0610b5de76fbb65bf94a8613f796095abe374a03d8fd5eb3ee7d7dc357', '455.812.236-88', 'nao-binario', '1973-09-16', '/images/usuarios/34.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-04-04 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (35, 'Aline Barbosa', 'aline.barbosa35@example.com', '2a7f05625bbc3c00d58e3942ac2fce7af18799b593f5a018af6e92926fdb037e', '603.669.096-80', 'feminino', '1960-07-12', '/images/usuarios/35.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-02-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (36, 'Aline Freitas', 'aline.freitas36@example.com', '444fad4e381f31d997334d33a9a95226cfaccdeeb9e7aaef645bea33913f71f9', '937.346.706-09', 'feminino', '1996-04-09', '/images/usuarios/36.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-11-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (37, 'Aline Silva', 'aline.silva37@example.com', '23a1597e5315ebaf82a951316dc3f351bbae112fa382d1ddcf7438bd14c50c0c', '699.016.272-22', 'masculino', '1983-05-04', '/images/usuarios/37.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-04-01 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (38, 'Thiago Araujo', 'thiago.araujo38@example.com', 'e431b17bdc5af0f2839a1224a266466c49eb0f821f8a0a9d7a203a6c6d5c33c5', '464.170.805-59', 'masculino', '1966-02-26', '/images/usuarios/38.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-05-17 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (39, 'Lucas Silva', 'lucas.silva39@example.com', '8a62dcca096e2594f5a3b8b44f72984c15f0b6158fdf13507a07f23e7eb942ce', '923.271.937-01', 'nao-binario', '1982-12-27', '/images/usuarios/39.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-09-03 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (40, 'Leandro Souza', 'leandro.souza40@example.com', '97d37ddf9516037cb856befeb135d761e6dc97cf2b2ea00d07c358f5ab2f2f7a', '241.904.966-43', 'nao-binario', '1977-10-16', '/images/usuarios/40.jpg', 'ativo', 'silver', 'ambos', FALSE, '2024-08-21 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (41, 'Fernanda Cardoso', 'fernanda.cardoso41@example.com', '69c1d546101263aae8ac1060af4dcf74516756bbc751b0e9d5be662d132d8f1f', '190.586.518-91', 'nao-binario', '1990-08-12', '/images/usuarios/41.jpg', 'inativo', 'diamond', 'ambos', TRUE, '2025-07-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (42, 'Carolina Carvalho', 'carolina.carvalho42@example.com', '0878623173b3ec5b55531f3c9ddaa1982c6e53a7215744c060260b68a3c070bd', '726.284.987-32', 'feminino', '1999-01-28', '/images/usuarios/42.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-05-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (43, 'Eduardo Oliveira', 'eduardo.oliveira43@example.com', '0a46870d6c3bb2277cb661b086c568105c86126662acd1dcff7704ea2849068a', '473.799.650-05', 'feminino', '1989-02-27', '/images/usuarios/43.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-05-11 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (44, 'Bruno Gomes', 'bruno.gomes44@example.com', '806a3f422e205cb018b8454d46556746de23321ecccf9faefafb66c888750ece', '948.083.136-62', 'feminino', '1981-07-23', '/images/usuarios/44.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-09-12 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (45, 'Jose Rocha', 'jose.rocha45@example.com', 'aef278c3c638c38631e759117b04f8a186e134bc2e9bf7c11da6d1c83fd685cc', '363.495.788-12', 'feminino', '1998-03-04', '/images/usuarios/45.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-01-31 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (46, 'Rafael Rocha', 'rafael.rocha46@example.com', 'bd459552ebec4937665bfcdc05c50a18feaf04cbcd7fc3b9a65d49b378c82993', '431.351.823-93', 'masculino', '2003-06-10', '/images/usuarios/46.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-06-13 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (47, 'Fernanda Almeida', 'fernanda.almeida47@example.com', '66b2d863b4c93bba0cea49c3f966e202ef7c21e4515e731f821992e1a7513bd8', '524.082.400-58', 'nao-binario', '1986-03-17', '/images/usuarios/47.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-08-31 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (48, 'Larissa Souza', 'larissa.souza48@example.com', 'c0d0d50790bce3726e29d9e7227cc2baeb1f530f070227bfa03be4100b9e9abd', '094.777.520-73', 'feminino', '2002-11-10', '/images/usuarios/48.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-08-14 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (49, 'Daniel Santos', 'daniel.santos49@example.com', '22b2f4aee03565dbb724bf407f7392667ee4ef6ed340d51c5f95e7b3871d3244', '229.413.186-28', 'nao-binario', '1980-03-31', '/images/usuarios/49.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-02-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (50, 'Fernanda Dias', 'fernanda.dias50@example.com', 'e83914faaaa0f78f3a503a4c19808d33894faa3178edad59b71db7ce9db1acb7', '649.909.133-20', 'feminino', '1967-04-14', '/images/usuarios/50.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-07-02 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (51, 'Joao Fernandes', 'joao.fernandes51@example.com', '9117de2c5033216fe22ef3e85e8e806c2da4046a15f0f4f70d57c53f8fd48871', '797.403.447-60', 'masculino', '1980-12-09', '/images/usuarios/51.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-12-16 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (52, 'Mariana Lima', 'mariana.lima52@example.com', '8b80446901d7ec07b498de2955d79ff982a329976297739b9c27f7d32fad994f', '421.024.994-99', 'feminino', '1971-02-26', '/images/usuarios/52.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-05-04 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (53, 'Felipe Freitas', 'felipe.freitas53@example.com', 'e528f481990452a8914cc2677576a6500054d1febbc6d62e8bbff8e5ed5ba1b8', '771.906.594-17', 'masculino', '1968-03-11', '/images/usuarios/53.jpg', 'ativo', 'basico', 'ambos', TRUE, '2024-10-11 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (54, 'Eduardo Gomes', 'eduardo.gomes54@example.com', '3c0fd67efbb53b997dae6e983d912b1ac6935fba0a886ae6a2ce2f48ab5dd5ba', '902.787.429-17', 'feminino', '2004-02-11', '/images/usuarios/54.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-04-03 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (55, 'Bruno Souza', 'bruno.souza55@example.com', '2fff7440cf6b4f321ee99a464078187ebfeda437ae927c90783b27d1dfdc9711', '256.746.807-30', 'masculino', '1988-03-20', '/images/usuarios/55.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-02-26 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (56, 'Sofia Pinto', 'sofia.pinto56@example.com', '1732f7a56bf21df28f3d4da328b6d21cd76b8add355b9d5cf57515df005a0b85', '087.603.859-59', 'feminino', '1999-08-28', '/images/usuarios/56.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-07-15 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (57, 'Isabela Rocha', 'isabela.rocha57@example.com', 'af222f8bb93067600ae6a003d55e5e1d14bdf23ce53f0d065cbc9a410d3c0016', '771.093.248-43', 'masculino', '1996-08-08', '/images/usuarios/57.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-07-22 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (58, 'Marcelo Lima', 'marcelo.lima58@example.com', 'ec3781bdc20c12530fffa0b82d684c7f17036b26bf16c52f272016d8ff25da1a', '748.467.737-82', 'nao-binario', '1972-12-22', '/images/usuarios/58.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-05-02 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (59, 'Thiago Fernandes', 'thiago.fernandes59@example.com', 'd8c554c1f3f35127ecf877fbc3ffe5ddcfafc99c1ffa2ce53600b0e239359fec', '584.044.997-65', 'masculino', '2000-01-23', '/images/usuarios/59.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-08-26 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (60, 'Aline Araujo', 'aline.araujo60@example.com', '712a2c64429573e6e5748116068acc47e400ff00ddc51114f09f070a414b6844', '753.396.360-01', 'feminino', '2002-06-07', '/images/usuarios/60.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-10-16 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (61, 'Camila Lima', 'camila.lima61@example.com', '11fb8b3596f04b6ad8d59efb61c67fda727fe3ce2937728fb580f185b54caa4c', '702.895.171-14', 'nao-binario', '2000-12-28', '/images/usuarios/61.jpg', 'inativo', 'silver', 'ambos', TRUE, '2024-10-20 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (62, 'Carlos Oliveira', 'carlos.oliveira62@example.com', '3a194ace0c71fd45ee614495cb98e1ed5f38722d6d307944755842cd5b5061d8', '745.961.586-94', 'feminino', '2003-10-11', '/images/usuarios/62.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-05-23 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (63, 'Marcelo Rocha', 'marcelo.rocha63@example.com', '9ee9e697a059a31e2a7e6b6a363d5b1191b07295659d70f078adb855fbdf8bd2', '316.117.240-28', 'masculino', '1989-02-06', '/images/usuarios/63.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-02-12 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (64, 'Carlos Almeida', 'carlos.almeida64@example.com', '038ded5cff5e88cbe82fdd96a96583318d0a05241f9b8fddfb7d24fe12113d51', '869.222.196-20', 'nao-binario', '1981-08-09', '/images/usuarios/64.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-10-29 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (65, 'Rafael Barbosa', 'rafael.barbosa65@example.com', '7729dff6599b3b4aa93bfa85745d92f53119dc5c4c2851bc948a657a0704c6dd', '407.482.175-86', 'nao-binario', '1986-11-02', '/images/usuarios/65.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-01-30 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (66, 'Sofia Rocha', 'sofia.rocha66@example.com', '76effba87bd0361d3867d900a70d9cd34233700537f847ba920461ce1cd8908a', '367.136.959-56', 'feminino', '1986-06-27', '/images/usuarios/66.jpg', 'inativo', 'diamond', 'ambos', TRUE, '2024-12-05 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (67, 'Sofia Santos', 'sofia.santos67@example.com', 'd86e7b467b25443599119cd4c06f91bcf99791034eb6af1850c0e903617a26df', '974.395.339-33', 'feminino', '1972-04-08', '/images/usuarios/67.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-02-07 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (68, 'Maria Dias', 'maria.dias68@example.com', '9d70bf7d8ce3a1109185916e66112b25de2a268393f5affd767c2fa34b84c886', '521.456.232-02', 'nao-binario', '1992-10-27', '/images/usuarios/68.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-05-12 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (69, 'Isabela Mendes', 'isabela.mendes69@example.com', '8145963513e079e25f4be4199055b5b9776c75f449c063aa0d005729471f5964', '451.712.368-97', 'feminino', '1968-02-07', '/images/usuarios/69.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-07-19 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (70, 'Pedro Carvalho', 'pedro.carvalho70@example.com', '0324ccfd0cdb364b32b82ae4019f1efd25762523a918722bdd1ac5a3ffff45bf', '496.513.709-40', 'nao-binario', '1989-06-05', '/images/usuarios/70.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-10-30 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (71, 'Eduardo Barbosa', 'eduardo.barbosa71@example.com', 'a520119ec6494adb9d1b3d73e51328fbd27fd7b226feb96fc83eebf485e649a4', '461.200.471-28', 'masculino', '1981-01-23', '/images/usuarios/71.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-03-15 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (72, 'Renata Freitas', 'renata.freitas72@example.com', '065c03602f6e0e7f9f86b2dabf9b306b080eb63ff445c36de83846dad2110145', '692.617.964-15', 'masculino', '1993-03-29', '/images/usuarios/72.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-03-19 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (73, 'Ana Carvalho', 'ana.carvalho73@example.com', '1fbf917736d1c15f7f4c6ca14ed734f03545087ebcc323c8043f167bd5d85881', '850.643.171-09', 'nao-binario', '1979-01-11', '/images/usuarios/73.jpg', 'ativo', 'basico', 'ambos', FALSE, '2025-04-03 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (74, 'Mariana Lima', 'mariana.lima74@example.com', 'e25317fd44c972ca2eba4655262a0a6440614a093e07486f9f5708a8c618b77f', '931.839.335-00', 'masculino', '1960-04-02', '/images/usuarios/74.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-12-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (75, 'Rafael Costa', 'rafael.costa75@example.com', '5a91e270c5fc0c823347a47a06aa9acbbdc67622f123265f3d481c96c5202daa', '102.053.950-28', 'masculino', '1983-10-22', '/images/usuarios/75.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-09-04 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (76, 'Jose Mendes', 'jose.mendes76@example.com', '857cab026abb0aa70177058873d9a1a59b429c55132e04ea89f2e9b293628554', '758.917.839-19', 'masculino', '1987-01-22', '/images/usuarios/76.jpg', 'ativo', 'basico', 'ambos', FALSE, '2025-01-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (77, 'Sofia Araujo', 'sofia.araujo77@example.com', '95bf8811840030cfcae58ff579062729c8d6093bcdcc5a2248afcb5559711cb4', '617.711.592-15', 'masculino', '1971-04-28', '/images/usuarios/77.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-11-19 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (78, 'Felipe Rocha', 'felipe.rocha78@example.com', 'f13f677ec5d7b77ea5aa6e0b556f1f1c7843af8e9e8f9519f9da5fb2cfa3026f', '789.611.836-46', 'feminino', '1980-07-01', '/images/usuarios/78.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-09-12 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (79, 'Ana Ribeiro', 'ana.ribeiro79@example.com', '5fcbee91c993652fcdc32de7ff1917b7425845287bdfbe876ccb553f17563ca7', '654.527.111-21', 'masculino', '1998-09-29', '/images/usuarios/79.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-12-10 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (80, 'Maria Dias', 'maria.dias80@example.com', '1e5ece0f7171fe3c40e0315a6ea9b0d27fe20f1ac27c51af93f5126999abc1c5', '885.165.604-41', 'nao-binario', '1988-01-12', '/images/usuarios/80.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-01-17 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (81, 'Mariana Souza', 'mariana.souza81@example.com', '0dc0e94f6ceb18b5de55ce4999ddfbff540f35f2339d00b3f0ea7d458fe30fff', '585.149.368-76', 'nao-binario', '1962-05-10', '/images/usuarios/81.jpg', 'ativo', 'gold', 'ambos', FALSE, '2025-05-04 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (82, 'Leandro Rocha', 'leandro.rocha82@example.com', 'c79f2a3c04f6c303c9740a1a954b577c951103f79ac8c6338ba777414d193f1a', '550.229.612-01', 'nao-binario', '1962-10-01', '/images/usuarios/82.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-01-31 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (83, 'Bruno Costa', 'bruno.costa83@example.com', 'da722a84bd54a06d2b3360a7f31cf753ab3f0ad8f9ba4a21e629de07eea2e672', '545.991.022-06', 'nao-binario', '1964-06-18', '/images/usuarios/83.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-02-15 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (84, 'Larissa Cardoso', 'larissa.cardoso84@example.com', 'b8d4127a0d6c5591414be2d24840682d87bb7a589319d81dc771cf9917d63ec5', '764.381.561-23', 'feminino', '2003-08-28', '/images/usuarios/84.jpg', 'ativo', 'gold', 'ambos', FALSE, '2025-03-02 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (85, 'Juliana Santos', 'juliana.santos85@example.com', '203feead0f1d9535404d4de917115fb1b70cf4bbceea55468ee79c39d8b4c88a', '034.324.451-27', 'masculino', '2004-08-15', '/images/usuarios/85.jpg', 'ativo', 'silver', 'ambos', FALSE, '2024-12-22 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (86, 'Leandro Almeida', 'leandro.almeida86@example.com', '3860c6caf144efb580cf0021bbe429521c1a71a19867f753f54b166186963337', '885.160.607-02', 'masculino', '1988-02-01', '/images/usuarios/86.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-02-19 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (87, 'Fernanda Souza', 'fernanda.souza87@example.com', '3d7cbe18332a21b3c4e9b328c660959352c48b7a8e0f75989db5127a28cc746f', '605.297.516-13', 'masculino', '1981-10-29', '/images/usuarios/87.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-03-02 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (88, 'Sofia Rocha', 'sofia.rocha88@example.com', 'df443ad506894bb089dfc4911627213c864f10c0785e55050a08dd1b18b4d13a', '535.218.188-73', 'masculino', '1991-05-06', '/images/usuarios/88.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-07-08 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (89, 'Rafael Pereira', 'rafael.pereira89@example.com', '63e5aa3de4917d538c50e1638d2501109fdc45db29fd2d32c0a14619e2c9a61e', '292.127.799-27', 'feminino', '1988-12-29', '/images/usuarios/89.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-08-17 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (90, 'Larissa Barbosa', 'larissa.barbosa90@example.com', '59416beb7e6d44a1037bc97e28520f2b42ead435e48986b9dd50d5345e23db0c', '449.058.147-32', 'feminino', '1963-05-17', '/images/usuarios/90.jpg', 'ativo', 'gold', 'ambos', FALSE, '2025-08-05 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (91, 'Juliana Cardoso', 'juliana.cardoso91@example.com', 'f4312d9d590480940f2218fb7ac253605077fce98b4da0c34163278f29bbe7fd', '867.980.793-39', 'feminino', '2002-09-02', '/images/usuarios/91.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-03-29 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (92, 'Leandro Oliveira', 'leandro.oliveira92@example.com', 'a5c5960fa04067ccb0e35f889c414352d6a5b755f9f6689c0938eb72d7891fcd', '820.377.889-23', 'masculino', '1992-08-24', '/images/usuarios/92.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-08-20 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (93, 'Bruno Cardoso', 'bruno.cardoso93@example.com', '1e3979d2beb2a1d11cb16af0913c188dbe57670739ce884de89650f7edd4028e', '051.518.644-09', 'nao-binario', '1973-06-28', '/images/usuarios/93.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-04-15 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (94, 'Marcelo Araujo', 'marcelo.araujo94@example.com', 'f8fdef2101d2bce9c35e368479b2ec5fe6fa21306a782c2d63ac13757f7f9875', '291.486.528-80', 'masculino', '1997-12-26', '/images/usuarios/94.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-06-20 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (95, 'Lucas Ribeiro', 'lucas.ribeiro95@example.com', '4c756876d030040bf11c233fd6a02d294c8917a3e2f3c35aff6b517ad47db64f', '733.221.418-92', 'nao-binario', '1963-05-21', '/images/usuarios/95.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-07-04 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (96, 'Paula Costa', 'paula.costa96@example.com', '98ad338071c8e4b92b712295c93ef113b05c3e410fdaab7a028d8cb54346b18a', '927.065.379-37', 'feminino', '2000-04-10', '/images/usuarios/96.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-01-23 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (97, 'Andre Pereira', 'andre.pereira97@example.com', '1df0a39b8dfbd8b7c1b6aa81fbcd5cc859b48979a30576628758493db872bf98', '597.746.886-05', 'masculino', '1977-11-30', '/images/usuarios/97.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-08-25 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (98, 'Marcelo Mendes', 'marcelo.mendes98@example.com', '6fddb55f3e6e793e1ca67c00f2938a7cccfb551ce73ebeec548a9e0e0f230a36', '581.814.124-20', 'feminino', '1973-03-21', '/images/usuarios/98.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-05-30 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (99, 'Eduardo Barbosa', 'eduardo.barbosa99@example.com', 'aa60ec002feb855df79934d0d5aea3d58882189e062c976b215b8d2ffcc9c269', '506.068.536-05', 'masculino', '1993-08-20', '/images/usuarios/99.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-09-20 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (100, 'Marcelo Ribeiro', 'marcelo.ribeiro100@example.com', 'ce79d498b19181e6daf3afacd9b6ef752c4f83c9dad6f0005de5c4190db81a3d', '220.472.779-94', 'masculino', '1967-02-09', '/images/usuarios/100.jpg', 'inativo', 'silver', 'ambos', TRUE, '2024-12-14 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (101, 'Tatiana Cardoso', 'tatiana.cardoso101@example.com', 'be546281b747995462e9d0a1d2029ceca17b3200a3cb58c3ce66da29e5cc20ef', '861.434.103-02', 'feminino', '2001-01-03', '/images/usuarios/101.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-09-12 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (102, 'Marcelo Pinto', 'marcelo.pinto102@example.com', '903dadff77f6b622536ef121eece9b591864fba3682d6334008f25277eeee319', '932.460.953-73', 'nao-binario', '1997-05-16', '/images/usuarios/102.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-03-20 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (103, 'Jose Pinto', 'jose.pinto103@example.com', '3143172afe70cd6c13bbb9dfb35f50ee7d251dce8b07153292b057f82ea5870e', '888.806.706-64', 'feminino', '1982-10-03', '/images/usuarios/103.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-03-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (104, 'Mariana Souza', 'mariana.souza104@example.com', '5d9358926cd51006f706014a7de035b06bd849b93f707de482cf6733985a2c3e', '952.058.527-21', 'nao-binario', '2002-12-06', '/images/usuarios/104.jpg', 'ativo', 'silver', 'ambos', FALSE, '2024-08-19 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (105, 'Pedro Santos', 'pedro.santos105@example.com', 'ec783f23402217f315a1d0d96bcd457f0d34af05ae5aff83d75f39229ffba560', '430.305.486-00', 'nao-binario', '2002-06-21', '/images/usuarios/105.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-08-17 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (106, 'Maria Ribeiro', 'maria.ribeiro106@example.com', 'ca9dadfde9550becd0e7e75502ea93135fd24a813b19d45623cfd71728c68b01', '415.667.652-62', 'feminino', '2004-08-19', '/images/usuarios/106.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-09-13 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (107, 'Carolina Oliveira', 'carolina.oliveira107@example.com', '2e4df952efc3b4f6d23fe2bf7666878430288cc97e17f47cc47d776663e58a1d', '692.845.115-43', 'nao-binario', '1986-07-10', '/images/usuarios/107.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-02-05 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (108, 'Beatriz Barbosa', 'beatriz.barbosa108@example.com', '27696a1c688df2772026e7c4ef3ded27db0733067b217064683084f044f09c8c', '059.640.165-88', 'nao-binario', '1974-05-09', '/images/usuarios/108.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-10-08 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (109, 'Camila Barbosa', 'camila.barbosa109@example.com', '777860a6c960cad6bd70f745899cd0b7bab59bcbc9e3907a65723405f5ee485d', '021.355.690-01', 'nao-binario', '1973-10-06', '/images/usuarios/109.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-08-26 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (110, 'Jose Dias', 'jose.dias110@example.com', '07c1d10419096062664aa58794d9940f94e962703a96f442a2da91c8d7803b8a', '285.654.310-40', 'nao-binario', '1976-09-09', '/images/usuarios/110.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-07-22 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (111, 'Rafael Gomes', 'rafael.gomes111@example.com', '6a711240aa9e08cfd937c46c4595727aad6c6fc4ed28e705ec7d97eb42a5d1d5', '739.473.121-27', 'feminino', '1975-06-28', '/images/usuarios/111.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-10-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (112, 'Sofia Ribeiro', 'sofia.ribeiro112@example.com', '00c81925ce98aaade2ac836b60322655015f5a98d75b6f3314ad0e18d89da143', '518.844.225-15', 'nao-binario', '1980-02-12', '/images/usuarios/112.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-05-22 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (113, 'Camila Mendes', 'camila.mendes113@example.com', '6b7a9844fd30b1e12841514a521200fb93207ec5a3dc6ce5aed723aff7e3bab1', '058.957.829-22', 'masculino', '1965-11-24', '/images/usuarios/113.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-08-23 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (114, 'Carolina Dias', 'carolina.dias114@example.com', 'd848bef3673c725e294efcf4a240fdad8fb65a34099c1b6d511b8645bc06d13e', '125.177.852-06', 'nao-binario', '1976-04-28', '/images/usuarios/114.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-08-23 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (115, 'Eduardo Souza', 'eduardo.souza115@example.com', '878b99c4904b36ee2b26a5a3aec188db159b86a36ef71429863b2dff49646baf', '824.225.358-25', 'feminino', '1967-01-28', '/images/usuarios/115.jpg', 'ativo', 'gold', 'ambos', FALSE, '2025-04-18 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (116, 'Juliana Freitas', 'juliana.freitas116@example.com', '0380a8a6451c8c4a293f849a5af0326c5b197804840f2e4fd14f2a4ffcf28830', '182.992.299-44', 'feminino', '1963-09-11', '/images/usuarios/116.jpg', 'ativo', 'basico', 'ambos', FALSE, '2024-10-27 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (117, 'Thiago Dias', 'thiago.dias117@example.com', 'f8e75307a77c96614991b66a58b73102f51833f1f06ec9d3aa4487a7183b7427', '439.690.784-85', 'nao-binario', '1987-02-07', '/images/usuarios/117.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-08-14 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (118, 'Leandro Santos', 'leandro.santos118@example.com', '04046229aa99510aad575e725b27b8b51e1e90020e713c57cd38980808605c2e', '276.773.592-27', 'feminino', '1988-08-24', '/images/usuarios/118.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-07-16 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (119, 'Thiago Carvalho', 'thiago.carvalho119@example.com', 'a385055ca0689636a066c676d1e364de2c5f1bfdc383b138c364d22ce9d2b548', '881.537.147-80', 'masculino', '1972-08-21', '/images/usuarios/119.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-11-09 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (120, 'Carolina Almeida', 'carolina.almeida120@example.com', '979cfe65568a0b9af5011df56780e55d4c5003066ec850efe102d7af3df364ff', '259.532.787-27', 'feminino', '1987-09-06', '/images/usuarios/120.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-01-05 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (121, 'Pedro Almeida', 'pedro.almeida121@example.com', '3be0d79387845fc218d5c31b760e64761b0880fe3a09399da21ecafb4da54bf4', '395.004.797-20', 'feminino', '1960-09-24', '/images/usuarios/121.jpg', 'ativo', 'diamond', 'ambos', FALSE, '2025-05-08 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (122, 'Tatiana Carvalho', 'tatiana.carvalho122@example.com', '0fec38943a0dae3c60628c01f5850c7c50a9488769411d4d9a2574be91dc7564', '650.609.835-82', 'nao-binario', '1985-11-21', '/images/usuarios/122.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-04-30 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (123, 'Eduardo Cardoso', 'eduardo.cardoso123@example.com', 'c00357563669ed21c34e13687cad669038eb88a2831fc8109b40ddc62f63e934', '912.165.585-32', 'masculino', '1977-11-09', '/images/usuarios/123.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-08-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (124, 'Maria Lima', 'maria.lima124@example.com', '7070a79edcc05090c8d6e8ed01874fde092f43fc69dab6cffaf498a0347fc862', '578.729.825-82', 'nao-binario', '1988-07-29', '/images/usuarios/124.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-01-04 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (125, 'Eduardo Pinto', 'eduardo.pinto125@example.com', 'd1ece2a7e4ae8ea301bdf93ba5ac3121dad2331e32d8604eab73640b041f43da', '879.470.551-08', 'feminino', '1987-08-08', '/images/usuarios/125.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-05-08 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (126, 'Marcelo Dias', 'marcelo.dias126@example.com', '0b5fc828cd5821606562605794bbe05579b202dc6888b166c7ad7d08c317a40d', '930.972.896-32', 'masculino', '1981-09-23', '/images/usuarios/126.jpg', 'inativo', 'basico', 'ambos', TRUE, '2025-02-07 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (127, 'Bruno Fernandes', 'bruno.fernandes127@example.com', 'e9f36a18c7e727180d9239cce0c6b4531c6b79ae186a57a373742ba496f0c359', '263.689.702-91', 'nao-binario', '1978-08-08', '/images/usuarios/127.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-04-13 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (128, 'Paula Barbosa', 'paula.barbosa128@example.com', '0bd5b0539b4fe1073506425b8191b7d509b8aa407bf0083b790f1968f07a983d', '858.549.733-23', 'feminino', '1986-10-12', '/images/usuarios/128.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-09-25 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (129, 'Lucas Mendes', 'lucas.mendes129@example.com', '028173800a8d8ebdfd405214f3110810eb65b0bcd47bb648e3d4c20b6fff0be7', '575.844.198-44', 'feminino', '1995-05-25', '/images/usuarios/129.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-04-26 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (130, 'Leandro Oliveira', 'leandro.oliveira130@example.com', '2d619f68f8d3ccce565929114aa7df5b557f2be10ddd5a138b3a5b4f90d74e69', '574.733.848-46', 'nao-binario', '1984-05-14', '/images/usuarios/130.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-10-13 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (131, 'Andre Pinto', 'andre.pinto131@example.com', '20165d3dbe6b5d8abd1f480f5b45410ace749ef282cd293c96aabe0b71914a95', '330.165.712-05', 'masculino', '1974-03-03', '/images/usuarios/131.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-06-10 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (132, 'Thiago Rocha', 'thiago.rocha132@example.com', '1246be60932b91b1060c16ae98891e13ce7d01cbd72d9b06bb1fce29cff32ef9', '540.193.802-00', 'feminino', '1975-10-09', '/images/usuarios/132.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-03-01 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (133, 'Camila Mendes', 'camila.mendes133@example.com', '4b4be01e1404bfe321cb9f35495b80d58ead66d9bf69df1f429ca0764f1ffb9e', '240.049.915-30', 'feminino', '2000-10-05', '/images/usuarios/133.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-07-14 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (134, 'Sofia Pinto', 'sofia.pinto134@example.com', '4982b9b44161880a0c82d898f8e45c0c5c9595611501c8231a765c01e269110a', '743.152.742-19', 'masculino', '1990-03-30', '/images/usuarios/134.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-10-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (135, 'Andre Araujo', 'andre.araujo135@example.com', 'a26bc0d902d25dd6a0ff945aa9469bad9f814004b14d347b7ee7826819149c23', '685.161.227-05', 'feminino', '1982-04-03', '/images/usuarios/135.jpg', 'inativo', 'diamond', 'ambos', TRUE, '2024-08-31 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (136, 'Rafael Ribeiro', 'rafael.ribeiro136@example.com', '21fcb4d957f22226ea842ba6728874df61451fd72a6d3042392105b0f1c68b91', '499.045.301-08', 'feminino', '1987-07-11', '/images/usuarios/136.jpg', 'ativo', 'gold', 'ambos', TRUE, '2024-10-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (137, 'Isabela Rocha', 'isabela.rocha137@example.com', '1c9e5cc7151700026c2ff81dc579fd2be3e56baedd7776ae268d2f9c763f3144', '593.327.279-88', 'feminino', '1997-04-22', '/images/usuarios/137.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-10-15 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (138, 'Eduardo Pereira', 'eduardo.pereira138@example.com', '629c0c552f2b9900a857bcb86c3ad998c850299ed43aa34c8587e32bea07e572', '391.878.519-64', 'masculino', '1965-07-16', '/images/usuarios/138.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-07-06 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (139, 'Paula Ribeiro', 'paula.ribeiro139@example.com', 'bfcc531f8ba5f5e5420f4c5f1ddaeae00022242823f26719efbf627467cfb26b', '871.397.187-14', 'masculino', '2000-09-05', '/images/usuarios/139.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-08-22 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (140, 'Aline Barbosa', 'aline.barbosa140@example.com', 'b93919a926a59ab4bdbe36a78a544acba243a8cc490da6faae4fe351aad03368', '406.403.910-06', 'feminino', '1990-11-28', '/images/usuarios/140.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-08-16 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (141, 'Isabela Mendes', 'isabela.mendes141@example.com', 'e61ddcf82897ba3e777b404cf5533876f9a8ab1a120e646ca60cb9ecb047d610', '046.226.567-06', 'feminino', '1993-09-13', '/images/usuarios/141.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-03-26 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (142, 'Ana Costa', 'ana.costa142@example.com', '37b2a6f277291d7a1fc2261584593bc059d04643b0c62ca61367140903ff031b', '868.230.047-26', 'nao-binario', '1998-01-18', '/images/usuarios/142.jpg', 'ativo', 'silver', 'ambos', TRUE, '2025-03-27 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (143, 'Carlos Gomes', 'carlos.gomes143@example.com', 'fd95a265d0752725f99d1ca63f3c65868ad0546fbca154219cb539fc427b0157', '310.690.331-07', 'masculino', '1963-01-05', '/images/usuarios/143.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-08-29 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (144, 'Gustavo Barbosa', 'gustavo.barbosa144@example.com', 'a9fe96a21169cde4e9bf0e837d23b41f3b95eac4e0fb4be533af0d4106bc6299', '383.028.439-64', 'feminino', '1988-10-07', '/images/usuarios/144.jpg', 'ativo', 'silver', 'ambos', TRUE, '2024-12-28 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (145, 'Mariana Fernandes', 'mariana.fernandes145@example.com', '2a2ef93273b357edecb27792a9f6f1a502235902ed5c3388b838a906a6981191', '440.892.687-06', 'masculino', '1990-11-24', '/images/usuarios/145.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2025-04-10 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (146, 'Leandro Fernandes', 'leandro.fernandes146@example.com', '4608466b29d97554e64229b7d748927029503dc4b3c2e06a0eb301a9bb212d6d', '624.628.733-33', 'feminino', '1972-12-13', '/images/usuarios/146.jpg', 'ativo', 'basico', 'ambos', TRUE, '2025-02-19 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (147, 'Aline Pinto', 'aline.pinto147@example.com', '431fa4e3ee752fd3ab7e6b53a31262ad496ee99e1fe40d51b5c98750a5e54c23', '263.435.175-88', 'masculino', '1977-02-01', '/images/usuarios/147.jpg', 'ativo', 'diamond', 'ambos', TRUE, '2024-11-16 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (148, 'Maria Oliveira', 'maria.oliveira148@example.com', '1faa97ebc513858b51c04e136c2d3574ad5488fd4a82f9a5b24104b4adc778d0', '398.373.540-01', 'masculino', '1977-01-17', '/images/usuarios/148.jpg', 'ativo', 'basico', 'ambos', TRUE, '2024-08-30 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (149, 'Larissa Almeida', 'larissa.almeida149@example.com', '8d23aefbf6dca7142d726a56dcd80c45fcae601e00119cda50455994492037f9', '936.385.467-84', 'nao-binario', '1992-03-25', '/images/usuarios/149.jpg', 'ativo', 'gold', 'ambos', TRUE, '2025-01-09 00:19:52');
+INSERT INTO usuarios (id, nome, email, senha, cpf, genero, data_nascimento, foto_perfil, status_conta, plano, tipo_usuario, verificado, ultimo_login) VALUES (150, 'Pedro Souza', 'pedro.souza150@example.com', '53a2bcf2b2ff120bf4f9e946a2d59871c444ecd79df2d554e24ec30cf926db83', '753.556.093-71', 'nao-binario', '1973-02-02', '/images/usuarios/150.jpg', 'inativo', 'diamond', 'ambos', TRUE, '2025-06-12 00:19:52');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (1, 'area de Atuacao 1', 'Descricao da area de atuacao numero 1.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (2, 'area de Atuacao 2', 'Descricao da area de atuacao numero 2.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (3, 'area de Atuacao 3', 'Descricao da area de atuacao numero 3.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (4, 'area de Atuacao 4', 'Descricao da area de atuacao numero 4.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (5, 'area de Atuacao 5', 'Descricao da area de atuacao numero 5.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (6, 'area de Atuacao 6', 'Descricao da area de atuacao numero 6.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (7, 'area de Atuacao 7', 'Descricao da area de atuacao numero 7.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (8, 'area de Atuacao 8', 'Descricao da area de atuacao numero 8.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (9, 'area de Atuacao 9', 'Descricao da area de atuacao numero 9.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (10, 'area de Atuacao 10', 'Descricao da area de atuacao numero 10.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (11, 'area de Atuacao 11', 'Descricao da area de atuacao numero 11.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (12, 'area de Atuacao 12', 'Descricao da area de atuacao numero 12.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (13, 'area de Atuacao 13', 'Descricao da area de atuacao numero 13.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (14, 'area de Atuacao 14', 'Descricao da area de atuacao numero 14.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (15, 'area de Atuacao 15', 'Descricao da area de atuacao numero 15.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (16, 'area de Atuacao 16', 'Descricao da area de atuacao numero 16.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (17, 'area de Atuacao 17', 'Descricao da area de atuacao numero 17.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (18, 'area de Atuacao 18', 'Descricao da area de atuacao numero 18.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (19, 'area de Atuacao 19', 'Descricao da area de atuacao numero 19.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (20, 'area de Atuacao 20', 'Descricao da area de atuacao numero 20.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (21, 'area de Atuacao 21', 'Descricao da area de atuacao numero 21.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (22, 'area de Atuacao 22', 'Descricao da area de atuacao numero 22.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (23, 'area de Atuacao 23', 'Descricao da area de atuacao numero 23.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (24, 'area de Atuacao 24', 'Descricao da area de atuacao numero 24.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (25, 'area de Atuacao 25', 'Descricao da area de atuacao numero 25.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (26, 'area de Atuacao 26', 'Descricao da area de atuacao numero 26.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (27, 'area de Atuacao 27', 'Descricao da area de atuacao numero 27.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (28, 'area de Atuacao 28', 'Descricao da area de atuacao numero 28.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (29, 'area de Atuacao 29', 'Descricao da area de atuacao numero 29.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (30, 'area de Atuacao 30', 'Descricao da area de atuacao numero 30.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (31, 'area de Atuacao 31', 'Descricao da area de atuacao numero 31.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (32, 'area de Atuacao 32', 'Descricao da area de atuacao numero 32.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (33, 'area de Atuacao 33', 'Descricao da area de atuacao numero 33.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (34, 'area de Atuacao 34', 'Descricao da area de atuacao numero 34.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (35, 'area de Atuacao 35', 'Descricao da area de atuacao numero 35.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (36, 'area de Atuacao 36', 'Descricao da area de atuacao numero 36.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (37, 'area de Atuacao 37', 'Descricao da area de atuacao numero 37.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (38, 'area de Atuacao 38', 'Descricao da area de atuacao numero 38.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (39, 'area de Atuacao 39', 'Descricao da area de atuacao numero 39.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (40, 'area de Atuacao 40', 'Descricao da area de atuacao numero 40.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (41, 'area de Atuacao 41', 'Descricao da area de atuacao numero 41.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (42, 'area de Atuacao 42', 'Descricao da area de atuacao numero 42.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (43, 'area de Atuacao 43', 'Descricao da area de atuacao numero 43.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (44, 'area de Atuacao 44', 'Descricao da area de atuacao numero 44.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (45, 'area de Atuacao 45', 'Descricao da area de atuacao numero 45.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (46, 'area de Atuacao 46', 'Descricao da area de atuacao numero 46.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (47, 'area de Atuacao 47', 'Descricao da area de atuacao numero 47.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (48, 'area de Atuacao 48', 'Descricao da area de atuacao numero 48.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (49, 'area de Atuacao 49', 'Descricao da area de atuacao numero 49.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (50, 'area de Atuacao 50', 'Descricao da area de atuacao numero 50.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (51, 'area de Atuacao 51', 'Descricao da area de atuacao numero 51.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (52, 'area de Atuacao 52', 'Descricao da area de atuacao numero 52.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (53, 'area de Atuacao 53', 'Descricao da area de atuacao numero 53.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (54, 'area de Atuacao 54', 'Descricao da area de atuacao numero 54.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (55, 'area de Atuacao 55', 'Descricao da area de atuacao numero 55.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (56, 'area de Atuacao 56', 'Descricao da area de atuacao numero 56.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (57, 'area de Atuacao 57', 'Descricao da area de atuacao numero 57.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (58, 'area de Atuacao 58', 'Descricao da area de atuacao numero 58.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (59, 'area de Atuacao 59', 'Descricao da area de atuacao numero 59.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (60, 'area de Atuacao 60', 'Descricao da area de atuacao numero 60.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (61, 'area de Atuacao 61', 'Descricao da area de atuacao numero 61.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (62, 'area de Atuacao 62', 'Descricao da area de atuacao numero 62.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (63, 'area de Atuacao 63', 'Descricao da area de atuacao numero 63.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (64, 'area de Atuacao 64', 'Descricao da area de atuacao numero 64.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (65, 'area de Atuacao 65', 'Descricao da area de atuacao numero 65.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (66, 'area de Atuacao 66', 'Descricao da area de atuacao numero 66.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (67, 'area de Atuacao 67', 'Descricao da area de atuacao numero 67.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (68, 'area de Atuacao 68', 'Descricao da area de atuacao numero 68.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (69, 'area de Atuacao 69', 'Descricao da area de atuacao numero 69.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (70, 'area de Atuacao 70', 'Descricao da area de atuacao numero 70.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (71, 'area de Atuacao 71', 'Descricao da area de atuacao numero 71.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (72, 'area de Atuacao 72', 'Descricao da area de atuacao numero 72.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (73, 'area de Atuacao 73', 'Descricao da area de atuacao numero 73.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (74, 'area de Atuacao 74', 'Descricao da area de atuacao numero 74.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (75, 'area de Atuacao 75', 'Descricao da area de atuacao numero 75.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (76, 'area de Atuacao 76', 'Descricao da area de atuacao numero 76.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (77, 'area de Atuacao 77', 'Descricao da area de atuacao numero 77.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (78, 'area de Atuacao 78', 'Descricao da area de atuacao numero 78.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (79, 'area de Atuacao 79', 'Descricao da area de atuacao numero 79.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (80, 'area de Atuacao 80', 'Descricao da area de atuacao numero 80.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (81, 'area de Atuacao 81', 'Descricao da area de atuacao numero 81.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (82, 'area de Atuacao 82', 'Descricao da area de atuacao numero 82.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (83, 'area de Atuacao 83', 'Descricao da area de atuacao numero 83.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (84, 'area de Atuacao 84', 'Descricao da area de atuacao numero 84.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (85, 'area de Atuacao 85', 'Descricao da area de atuacao numero 85.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (86, 'area de Atuacao 86', 'Descricao da area de atuacao numero 86.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (87, 'area de Atuacao 87', 'Descricao da area de atuacao numero 87.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (88, 'area de Atuacao 88', 'Descricao da area de atuacao numero 88.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (89, 'area de Atuacao 89', 'Descricao da area de atuacao numero 89.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (90, 'area de Atuacao 90', 'Descricao da area de atuacao numero 90.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (91, 'area de Atuacao 91', 'Descricao da area de atuacao numero 91.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (92, 'area de Atuacao 92', 'Descricao da area de atuacao numero 92.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (93, 'area de Atuacao 93', 'Descricao da area de atuacao numero 93.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (94, 'area de Atuacao 94', 'Descricao da area de atuacao numero 94.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (95, 'area de Atuacao 95', 'Descricao da area de atuacao numero 95.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (96, 'area de Atuacao 96', 'Descricao da area de atuacao numero 96.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (97, 'area de Atuacao 97', 'Descricao da area de atuacao numero 97.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (98, 'area de Atuacao 98', 'Descricao da area de atuacao numero 98.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (99, 'area de Atuacao 99', 'Descricao da area de atuacao numero 99.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (100, 'area de Atuacao 100', 'Descricao da area de atuacao numero 100.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (101, 'area de Atuacao 101', 'Descricao da area de atuacao numero 101.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (102, 'area de Atuacao 102', 'Descricao da area de atuacao numero 102.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (103, 'area de Atuacao 103', 'Descricao da area de atuacao numero 103.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (104, 'area de Atuacao 104', 'Descricao da area de atuacao numero 104.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (105, 'area de Atuacao 105', 'Descricao da area de atuacao numero 105.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (106, 'area de Atuacao 106', 'Descricao da area de atuacao numero 106.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (107, 'area de Atuacao 107', 'Descricao da area de atuacao numero 107.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (108, 'area de Atuacao 108', 'Descricao da area de atuacao numero 108.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (109, 'area de Atuacao 109', 'Descricao da area de atuacao numero 109.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (110, 'area de Atuacao 110', 'Descricao da area de atuacao numero 110.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (111, 'area de Atuacao 111', 'Descricao da area de atuacao numero 111.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (112, 'area de Atuacao 112', 'Descricao da area de atuacao numero 112.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (113, 'area de Atuacao 113', 'Descricao da area de atuacao numero 113.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (114, 'area de Atuacao 114', 'Descricao da area de atuacao numero 114.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (115, 'area de Atuacao 115', 'Descricao da area de atuacao numero 115.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (116, 'area de Atuacao 116', 'Descricao da area de atuacao numero 116.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (117, 'area de Atuacao 117', 'Descricao da area de atuacao numero 117.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (118, 'area de Atuacao 118', 'Descricao da area de atuacao numero 118.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (119, 'area de Atuacao 119', 'Descricao da area de atuacao numero 119.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (120, 'area de Atuacao 120', 'Descricao da area de atuacao numero 120.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (121, 'area de Atuacao 121', 'Descricao da area de atuacao numero 121.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (122, 'area de Atuacao 122', 'Descricao da area de atuacao numero 122.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (123, 'area de Atuacao 123', 'Descricao da area de atuacao numero 123.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (124, 'area de Atuacao 124', 'Descricao da area de atuacao numero 124.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (125, 'area de Atuacao 125', 'Descricao da area de atuacao numero 125.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (126, 'area de Atuacao 126', 'Descricao da area de atuacao numero 126.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (127, 'area de Atuacao 127', 'Descricao da area de atuacao numero 127.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (128, 'area de Atuacao 128', 'Descricao da area de atuacao numero 128.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (129, 'area de Atuacao 129', 'Descricao da area de atuacao numero 129.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (130, 'area de Atuacao 130', 'Descricao da area de atuacao numero 130.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (131, 'area de Atuacao 131', 'Descricao da area de atuacao numero 131.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (132, 'area de Atuacao 132', 'Descricao da area de atuacao numero 132.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (133, 'area de Atuacao 133', 'Descricao da area de atuacao numero 133.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (134, 'area de Atuacao 134', 'Descricao da area de atuacao numero 134.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (135, 'area de Atuacao 135', 'Descricao da area de atuacao numero 135.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (136, 'area de Atuacao 136', 'Descricao da area de atuacao numero 136.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (137, 'area de Atuacao 137', 'Descricao da area de atuacao numero 137.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (138, 'area de Atuacao 138', 'Descricao da area de atuacao numero 138.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (139, 'area de Atuacao 139', 'Descricao da area de atuacao numero 139.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (140, 'area de Atuacao 140', 'Descricao da area de atuacao numero 140.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (141, 'area de Atuacao 141', 'Descricao da area de atuacao numero 141.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (142, 'area de Atuacao 142', 'Descricao da area de atuacao numero 142.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (143, 'area de Atuacao 143', 'Descricao da area de atuacao numero 143.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (144, 'area de Atuacao 144', 'Descricao da area de atuacao numero 144.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (145, 'area de Atuacao 145', 'Descricao da area de atuacao numero 145.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (146, 'area de Atuacao 146', 'Descricao da area de atuacao numero 146.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (147, 'area de Atuacao 147', 'Descricao da area de atuacao numero 147.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (148, 'area de Atuacao 148', 'Descricao da area de atuacao numero 148.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (149, 'area de Atuacao 149', 'Descricao da area de atuacao numero 149.');
+INSERT INTO areas_atuacao_instrutores (id, nome, descricao) VALUES (150, 'area de Atuacao 150', 'Descricao da area de atuacao numero 150.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (1, 'Categoria 1', 'Categoria de cursos sobre tema 1.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (2, 'Categoria 2', 'Categoria de cursos sobre tema 2.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (3, 'Categoria 3', 'Categoria de cursos sobre tema 3.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (4, 'Categoria 4', 'Categoria de cursos sobre tema 4.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (5, 'Categoria 5', 'Categoria de cursos sobre tema 5.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (6, 'Categoria 6', 'Categoria de cursos sobre tema 6.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (7, 'Categoria 7', 'Categoria de cursos sobre tema 7.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (8, 'Categoria 8', 'Categoria de cursos sobre tema 8.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (9, 'Categoria 9', 'Categoria de cursos sobre tema 9.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (10, 'Categoria 10', 'Categoria de cursos sobre tema 10.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (11, 'Categoria 11', 'Categoria de cursos sobre tema 11.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (12, 'Categoria 12', 'Categoria de cursos sobre tema 12.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (13, 'Categoria 13', 'Categoria de cursos sobre tema 13.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (14, 'Categoria 14', 'Categoria de cursos sobre tema 14.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (15, 'Categoria 15', 'Categoria de cursos sobre tema 15.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (16, 'Categoria 16', 'Categoria de cursos sobre tema 16.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (17, 'Categoria 17', 'Categoria de cursos sobre tema 17.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (18, 'Categoria 18', 'Categoria de cursos sobre tema 18.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (19, 'Categoria 19', 'Categoria de cursos sobre tema 19.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (20, 'Categoria 20', 'Categoria de cursos sobre tema 20.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (21, 'Categoria 21', 'Categoria de cursos sobre tema 21.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (22, 'Categoria 22', 'Categoria de cursos sobre tema 22.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (23, 'Categoria 23', 'Categoria de cursos sobre tema 23.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (24, 'Categoria 24', 'Categoria de cursos sobre tema 24.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (25, 'Categoria 25', 'Categoria de cursos sobre tema 25.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (26, 'Categoria 26', 'Categoria de cursos sobre tema 26.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (27, 'Categoria 27', 'Categoria de cursos sobre tema 27.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (28, 'Categoria 28', 'Categoria de cursos sobre tema 28.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (29, 'Categoria 29', 'Categoria de cursos sobre tema 29.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (30, 'Categoria 30', 'Categoria de cursos sobre tema 30.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (31, 'Categoria 31', 'Categoria de cursos sobre tema 31.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (32, 'Categoria 32', 'Categoria de cursos sobre tema 32.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (33, 'Categoria 33', 'Categoria de cursos sobre tema 33.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (34, 'Categoria 34', 'Categoria de cursos sobre tema 34.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (35, 'Categoria 35', 'Categoria de cursos sobre tema 35.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (36, 'Categoria 36', 'Categoria de cursos sobre tema 36.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (37, 'Categoria 37', 'Categoria de cursos sobre tema 37.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (38, 'Categoria 38', 'Categoria de cursos sobre tema 38.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (39, 'Categoria 39', 'Categoria de cursos sobre tema 39.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (40, 'Categoria 40', 'Categoria de cursos sobre tema 40.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (41, 'Categoria 41', 'Categoria de cursos sobre tema 41.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (42, 'Categoria 42', 'Categoria de cursos sobre tema 42.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (43, 'Categoria 43', 'Categoria de cursos sobre tema 43.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (44, 'Categoria 44', 'Categoria de cursos sobre tema 44.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (45, 'Categoria 45', 'Categoria de cursos sobre tema 45.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (46, 'Categoria 46', 'Categoria de cursos sobre tema 46.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (47, 'Categoria 47', 'Categoria de cursos sobre tema 47.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (48, 'Categoria 48', 'Categoria de cursos sobre tema 48.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (49, 'Categoria 49', 'Categoria de cursos sobre tema 49.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (50, 'Categoria 50', 'Categoria de cursos sobre tema 50.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (51, 'Categoria 51', 'Categoria de cursos sobre tema 51.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (52, 'Categoria 52', 'Categoria de cursos sobre tema 52.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (53, 'Categoria 53', 'Categoria de cursos sobre tema 53.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (54, 'Categoria 54', 'Categoria de cursos sobre tema 54.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (55, 'Categoria 55', 'Categoria de cursos sobre tema 55.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (56, 'Categoria 56', 'Categoria de cursos sobre tema 56.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (57, 'Categoria 57', 'Categoria de cursos sobre tema 57.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (58, 'Categoria 58', 'Categoria de cursos sobre tema 58.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (59, 'Categoria 59', 'Categoria de cursos sobre tema 59.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (60, 'Categoria 60', 'Categoria de cursos sobre tema 60.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (61, 'Categoria 61', 'Categoria de cursos sobre tema 61.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (62, 'Categoria 62', 'Categoria de cursos sobre tema 62.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (63, 'Categoria 63', 'Categoria de cursos sobre tema 63.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (64, 'Categoria 64', 'Categoria de cursos sobre tema 64.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (65, 'Categoria 65', 'Categoria de cursos sobre tema 65.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (66, 'Categoria 66', 'Categoria de cursos sobre tema 66.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (67, 'Categoria 67', 'Categoria de cursos sobre tema 67.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (68, 'Categoria 68', 'Categoria de cursos sobre tema 68.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (69, 'Categoria 69', 'Categoria de cursos sobre tema 69.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (70, 'Categoria 70', 'Categoria de cursos sobre tema 70.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (71, 'Categoria 71', 'Categoria de cursos sobre tema 71.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (72, 'Categoria 72', 'Categoria de cursos sobre tema 72.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (73, 'Categoria 73', 'Categoria de cursos sobre tema 73.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (74, 'Categoria 74', 'Categoria de cursos sobre tema 74.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (75, 'Categoria 75', 'Categoria de cursos sobre tema 75.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (76, 'Categoria 76', 'Categoria de cursos sobre tema 76.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (77, 'Categoria 77', 'Categoria de cursos sobre tema 77.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (78, 'Categoria 78', 'Categoria de cursos sobre tema 78.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (79, 'Categoria 79', 'Categoria de cursos sobre tema 79.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (80, 'Categoria 80', 'Categoria de cursos sobre tema 80.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (81, 'Categoria 81', 'Categoria de cursos sobre tema 81.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (82, 'Categoria 82', 'Categoria de cursos sobre tema 82.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (83, 'Categoria 83', 'Categoria de cursos sobre tema 83.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (84, 'Categoria 84', 'Categoria de cursos sobre tema 84.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (85, 'Categoria 85', 'Categoria de cursos sobre tema 85.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (86, 'Categoria 86', 'Categoria de cursos sobre tema 86.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (87, 'Categoria 87', 'Categoria de cursos sobre tema 87.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (88, 'Categoria 88', 'Categoria de cursos sobre tema 88.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (89, 'Categoria 89', 'Categoria de cursos sobre tema 89.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (90, 'Categoria 90', 'Categoria de cursos sobre tema 90.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (91, 'Categoria 91', 'Categoria de cursos sobre tema 91.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (92, 'Categoria 92', 'Categoria de cursos sobre tema 92.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (93, 'Categoria 93', 'Categoria de cursos sobre tema 93.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (94, 'Categoria 94', 'Categoria de cursos sobre tema 94.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (95, 'Categoria 95', 'Categoria de cursos sobre tema 95.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (96, 'Categoria 96', 'Categoria de cursos sobre tema 96.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (97, 'Categoria 97', 'Categoria de cursos sobre tema 97.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (98, 'Categoria 98', 'Categoria de cursos sobre tema 98.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (99, 'Categoria 99', 'Categoria de cursos sobre tema 99.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (100, 'Categoria 100', 'Categoria de cursos sobre tema 100.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (101, 'Categoria 101', 'Categoria de cursos sobre tema 101.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (102, 'Categoria 102', 'Categoria de cursos sobre tema 102.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (103, 'Categoria 103', 'Categoria de cursos sobre tema 103.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (104, 'Categoria 104', 'Categoria de cursos sobre tema 104.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (105, 'Categoria 105', 'Categoria de cursos sobre tema 105.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (106, 'Categoria 106', 'Categoria de cursos sobre tema 106.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (107, 'Categoria 107', 'Categoria de cursos sobre tema 107.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (108, 'Categoria 108', 'Categoria de cursos sobre tema 108.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (109, 'Categoria 109', 'Categoria de cursos sobre tema 109.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (110, 'Categoria 110', 'Categoria de cursos sobre tema 110.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (111, 'Categoria 111', 'Categoria de cursos sobre tema 111.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (112, 'Categoria 112', 'Categoria de cursos sobre tema 112.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (113, 'Categoria 113', 'Categoria de cursos sobre tema 113.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (114, 'Categoria 114', 'Categoria de cursos sobre tema 114.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (115, 'Categoria 115', 'Categoria de cursos sobre tema 115.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (116, 'Categoria 116', 'Categoria de cursos sobre tema 116.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (117, 'Categoria 117', 'Categoria de cursos sobre tema 117.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (118, 'Categoria 118', 'Categoria de cursos sobre tema 118.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (119, 'Categoria 119', 'Categoria de cursos sobre tema 119.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (120, 'Categoria 120', 'Categoria de cursos sobre tema 120.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (121, 'Categoria 121', 'Categoria de cursos sobre tema 121.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (122, 'Categoria 122', 'Categoria de cursos sobre tema 122.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (123, 'Categoria 123', 'Categoria de cursos sobre tema 123.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (124, 'Categoria 124', 'Categoria de cursos sobre tema 124.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (125, 'Categoria 125', 'Categoria de cursos sobre tema 125.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (126, 'Categoria 126', 'Categoria de cursos sobre tema 126.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (127, 'Categoria 127', 'Categoria de cursos sobre tema 127.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (128, 'Categoria 128', 'Categoria de cursos sobre tema 128.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (129, 'Categoria 129', 'Categoria de cursos sobre tema 129.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (130, 'Categoria 130', 'Categoria de cursos sobre tema 130.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (131, 'Categoria 131', 'Categoria de cursos sobre tema 131.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (132, 'Categoria 132', 'Categoria de cursos sobre tema 132.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (133, 'Categoria 133', 'Categoria de cursos sobre tema 133.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (134, 'Categoria 134', 'Categoria de cursos sobre tema 134.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (135, 'Categoria 135', 'Categoria de cursos sobre tema 135.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (136, 'Categoria 136', 'Categoria de cursos sobre tema 136.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (137, 'Categoria 137', 'Categoria de cursos sobre tema 137.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (138, 'Categoria 138', 'Categoria de cursos sobre tema 138.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (139, 'Categoria 139', 'Categoria de cursos sobre tema 139.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (140, 'Categoria 140', 'Categoria de cursos sobre tema 140.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (141, 'Categoria 141', 'Categoria de cursos sobre tema 141.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (142, 'Categoria 142', 'Categoria de cursos sobre tema 142.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (143, 'Categoria 143', 'Categoria de cursos sobre tema 143.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (144, 'Categoria 144', 'Categoria de cursos sobre tema 144.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (145, 'Categoria 145', 'Categoria de cursos sobre tema 145.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (146, 'Categoria 146', 'Categoria de cursos sobre tema 146.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (147, 'Categoria 147', 'Categoria de cursos sobre tema 147.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (148, 'Categoria 148', 'Categoria de cursos sobre tema 148.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (149, 'Categoria 149', 'Categoria de cursos sobre tema 149.');
+INSERT INTO categorias_cursos (id, nome, descricao) VALUES (150, 'Categoria 150', 'Categoria de cursos sobre tema 150.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (1, 1, 'Pos-graduacao', 'Objetivo principal do aluno 1.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (2, 2, 'Graduacao', 'Objetivo principal do aluno 2.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (3, 3, 'Mestrado', 'Objetivo principal do aluno 3.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (4, 4, 'Doutorado', 'Objetivo principal do aluno 4.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (5, 5, 'Graduacao', 'Objetivo principal do aluno 5.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (6, 6, 'Mestrado', 'Objetivo principal do aluno 6.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (7, 7, 'Doutorado', 'Objetivo principal do aluno 7.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (8, 8, 'Tecnico', 'Objetivo principal do aluno 8.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (9, 9, 'Tecnico', 'Objetivo principal do aluno 9.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (10, 10, 'Pos-graduacao', 'Objetivo principal do aluno 10.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (11, 11, 'Pos-graduacao', 'Objetivo principal do aluno 11.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (12, 12, 'Mestrado', 'Objetivo principal do aluno 12.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (13, 13, 'Tecnico', 'Objetivo principal do aluno 13.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (14, 14, 'Tecnico', 'Objetivo principal do aluno 14.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (15, 15, 'Tecnico', 'Objetivo principal do aluno 15.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (16, 16, 'Mestrado', 'Objetivo principal do aluno 16.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (17, 17, 'Mestrado', 'Objetivo principal do aluno 17.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (18, 18, 'Graduacao', 'Objetivo principal do aluno 18.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (19, 19, 'Tecnico', 'Objetivo principal do aluno 19.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (20, 20, 'Pos-graduacao', 'Objetivo principal do aluno 20.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (21, 21, 'Graduacao', 'Objetivo principal do aluno 21.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (22, 22, 'Graduacao', 'Objetivo principal do aluno 22.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (23, 23, 'Tecnico', 'Objetivo principal do aluno 23.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (24, 24, 'Doutorado', 'Objetivo principal do aluno 24.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (25, 25, 'Mestrado', 'Objetivo principal do aluno 25.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (26, 26, 'Graduacao', 'Objetivo principal do aluno 26.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (27, 27, 'Doutorado', 'Objetivo principal do aluno 27.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (28, 28, 'Tecnico', 'Objetivo principal do aluno 28.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (29, 29, 'Ensino Medio', 'Objetivo principal do aluno 29.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (30, 30, 'Doutorado', 'Objetivo principal do aluno 30.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (31, 31, 'Ensino Medio', 'Objetivo principal do aluno 31.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (32, 32, 'Ensino Medio', 'Objetivo principal do aluno 32.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (33, 33, 'Tecnico', 'Objetivo principal do aluno 33.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (34, 34, 'Ensino Medio', 'Objetivo principal do aluno 34.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (35, 35, 'Ensino Medio', 'Objetivo principal do aluno 35.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (36, 36, 'Mestrado', 'Objetivo principal do aluno 36.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (37, 37, 'Graduacao', 'Objetivo principal do aluno 37.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (38, 38, 'Tecnico', 'Objetivo principal do aluno 38.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (39, 39, 'Graduacao', 'Objetivo principal do aluno 39.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (40, 40, 'Ensino Medio', 'Objetivo principal do aluno 40.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (41, 41, 'Tecnico', 'Objetivo principal do aluno 41.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (42, 42, 'Graduacao', 'Objetivo principal do aluno 42.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (43, 43, 'Ensino Medio', 'Objetivo principal do aluno 43.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (44, 44, 'Graduacao', 'Objetivo principal do aluno 44.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (45, 45, 'Doutorado', 'Objetivo principal do aluno 45.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (46, 46, 'Mestrado', 'Objetivo principal do aluno 46.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (47, 47, 'Pos-graduacao', 'Objetivo principal do aluno 47.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (48, 48, 'Ensino Medio', 'Objetivo principal do aluno 48.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (49, 49, 'Doutorado', 'Objetivo principal do aluno 49.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (50, 50, 'Tecnico', 'Objetivo principal do aluno 50.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (51, 51, 'Tecnico', 'Objetivo principal do aluno 51.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (52, 52, 'Doutorado', 'Objetivo principal do aluno 52.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (53, 53, 'Mestrado', 'Objetivo principal do aluno 53.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (54, 54, 'Tecnico', 'Objetivo principal do aluno 54.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (55, 55, 'Mestrado', 'Objetivo principal do aluno 55.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (56, 56, 'Ensino Medio', 'Objetivo principal do aluno 56.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (57, 57, 'Ensino Medio', 'Objetivo principal do aluno 57.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (58, 58, 'Doutorado', 'Objetivo principal do aluno 58.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (59, 59, 'Doutorado', 'Objetivo principal do aluno 59.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (60, 60, 'Mestrado', 'Objetivo principal do aluno 60.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (61, 61, 'Ensino Medio', 'Objetivo principal do aluno 61.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (62, 62, 'Ensino Medio', 'Objetivo principal do aluno 62.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (63, 63, 'Doutorado', 'Objetivo principal do aluno 63.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (64, 64, 'Tecnico', 'Objetivo principal do aluno 64.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (65, 65, 'Pos-graduacao', 'Objetivo principal do aluno 65.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (66, 66, 'Doutorado', 'Objetivo principal do aluno 66.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (67, 67, 'Pos-graduacao', 'Objetivo principal do aluno 67.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (68, 68, 'Ensino Medio', 'Objetivo principal do aluno 68.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (69, 69, 'Doutorado', 'Objetivo principal do aluno 69.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (70, 70, 'Tecnico', 'Objetivo principal do aluno 70.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (71, 71, 'Tecnico', 'Objetivo principal do aluno 71.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (72, 72, 'Mestrado', 'Objetivo principal do aluno 72.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (73, 73, 'Graduacao', 'Objetivo principal do aluno 73.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (74, 74, 'Ensino Medio', 'Objetivo principal do aluno 74.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (75, 75, 'Ensino Medio', 'Objetivo principal do aluno 75.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (76, 76, 'Doutorado', 'Objetivo principal do aluno 76.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (77, 77, 'Graduacao', 'Objetivo principal do aluno 77.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (78, 78, 'Graduacao', 'Objetivo principal do aluno 78.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (79, 79, 'Graduacao', 'Objetivo principal do aluno 79.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (80, 80, 'Doutorado', 'Objetivo principal do aluno 80.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (81, 81, 'Doutorado', 'Objetivo principal do aluno 81.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (82, 82, 'Pos-graduacao', 'Objetivo principal do aluno 82.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (83, 83, 'Pos-graduacao', 'Objetivo principal do aluno 83.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (84, 84, 'Pos-graduacao', 'Objetivo principal do aluno 84.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (85, 85, 'Mestrado', 'Objetivo principal do aluno 85.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (86, 86, 'Ensino Medio', 'Objetivo principal do aluno 86.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (87, 87, 'Pos-graduacao', 'Objetivo principal do aluno 87.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (88, 88, 'Mestrado', 'Objetivo principal do aluno 88.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (89, 89, 'Mestrado', 'Objetivo principal do aluno 89.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (90, 90, 'Doutorado', 'Objetivo principal do aluno 90.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (91, 91, 'Graduacao', 'Objetivo principal do aluno 91.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (92, 92, 'Tecnico', 'Objetivo principal do aluno 92.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (93, 93, 'Graduacao', 'Objetivo principal do aluno 93.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (94, 94, 'Pos-graduacao', 'Objetivo principal do aluno 94.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (95, 95, 'Tecnico', 'Objetivo principal do aluno 95.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (96, 96, 'Ensino Medio', 'Objetivo principal do aluno 96.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (97, 97, 'Tecnico', 'Objetivo principal do aluno 97.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (98, 98, 'Tecnico', 'Objetivo principal do aluno 98.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (99, 99, 'Ensino Medio', 'Objetivo principal do aluno 99.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (100, 100, 'Ensino Medio', 'Objetivo principal do aluno 100.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (101, 101, 'Mestrado', 'Objetivo principal do aluno 101.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (102, 102, 'Mestrado', 'Objetivo principal do aluno 102.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (103, 103, 'Mestrado', 'Objetivo principal do aluno 103.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (104, 104, 'Doutorado', 'Objetivo principal do aluno 104.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (105, 105, 'Mestrado', 'Objetivo principal do aluno 105.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (106, 106, 'Ensino Medio', 'Objetivo principal do aluno 106.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (107, 107, 'Tecnico', 'Objetivo principal do aluno 107.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (108, 108, 'Ensino Medio', 'Objetivo principal do aluno 108.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (109, 109, 'Tecnico', 'Objetivo principal do aluno 109.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (110, 110, 'Graduacao', 'Objetivo principal do aluno 110.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (111, 111, 'Ensino Medio', 'Objetivo principal do aluno 111.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (112, 112, 'Mestrado', 'Objetivo principal do aluno 112.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (113, 113, 'Mestrado', 'Objetivo principal do aluno 113.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (114, 114, 'Tecnico', 'Objetivo principal do aluno 114.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (115, 115, 'Pos-graduacao', 'Objetivo principal do aluno 115.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (116, 116, 'Doutorado', 'Objetivo principal do aluno 116.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (117, 117, 'Ensino Medio', 'Objetivo principal do aluno 117.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (118, 118, 'Doutorado', 'Objetivo principal do aluno 118.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (119, 119, 'Ensino Medio', 'Objetivo principal do aluno 119.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (120, 120, 'Graduacao', 'Objetivo principal do aluno 120.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (121, 121, 'Graduacao', 'Objetivo principal do aluno 121.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (122, 122, 'Tecnico', 'Objetivo principal do aluno 122.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (123, 123, 'Doutorado', 'Objetivo principal do aluno 123.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (124, 124, 'Mestrado', 'Objetivo principal do aluno 124.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (125, 125, 'Pos-graduacao', 'Objetivo principal do aluno 125.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (126, 126, 'Ensino Medio', 'Objetivo principal do aluno 126.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (127, 127, 'Ensino Medio', 'Objetivo principal do aluno 127.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (128, 128, 'Tecnico', 'Objetivo principal do aluno 128.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (129, 129, 'Pos-graduacao', 'Objetivo principal do aluno 129.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (130, 130, 'Doutorado', 'Objetivo principal do aluno 130.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (131, 131, 'Doutorado', 'Objetivo principal do aluno 131.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (132, 132, 'Tecnico', 'Objetivo principal do aluno 132.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (133, 133, 'Ensino Medio', 'Objetivo principal do aluno 133.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (134, 134, 'Graduacao', 'Objetivo principal do aluno 134.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (135, 135, 'Pos-graduacao', 'Objetivo principal do aluno 135.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (136, 136, 'Ensino Medio', 'Objetivo principal do aluno 136.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (137, 137, 'Graduacao', 'Objetivo principal do aluno 137.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (138, 138, 'Doutorado', 'Objetivo principal do aluno 138.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (139, 139, 'Graduacao', 'Objetivo principal do aluno 139.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (140, 140, 'Tecnico', 'Objetivo principal do aluno 140.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (141, 141, 'Mestrado', 'Objetivo principal do aluno 141.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (142, 142, 'Ensino Medio', 'Objetivo principal do aluno 142.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (143, 143, 'Pos-graduacao', 'Objetivo principal do aluno 143.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (144, 144, 'Graduacao', 'Objetivo principal do aluno 144.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (145, 145, 'Doutorado', 'Objetivo principal do aluno 145.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (146, 146, 'Graduacao', 'Objetivo principal do aluno 146.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (147, 147, 'Doutorado', 'Objetivo principal do aluno 147.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (148, 148, 'Mestrado', 'Objetivo principal do aluno 148.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (149, 149, 'Tecnico', 'Objetivo principal do aluno 149.');
+INSERT INTO alunos (id, usuario_id, escolaridade, principais_objetivos) VALUES (150, 150, 'Doutorado', 'Objetivo principal do aluno 150.');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (1, 1, 1, 'Biografia do instrutor 1, especialista em 1.', 'https://www.linkedin.com/in/instrutor1');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (2, 2, 2, 'Biografia do instrutor 2, especialista em 2.', 'https://www.linkedin.com/in/instrutor2');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (3, 3, 3, 'Biografia do instrutor 3, especialista em 3.', 'https://www.linkedin.com/in/instrutor3');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (4, 4, 4, 'Biografia do instrutor 4, especialista em 4.', 'https://www.linkedin.com/in/instrutor4');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (5, 5, 5, 'Biografia do instrutor 5, especialista em 5.', 'https://www.linkedin.com/in/instrutor5');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (6, 6, 6, 'Biografia do instrutor 6, especialista em 6.', 'https://www.linkedin.com/in/instrutor6');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (7, 7, 7, 'Biografia do instrutor 7, especialista em 7.', 'https://www.linkedin.com/in/instrutor7');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (8, 8, 8, 'Biografia do instrutor 8, especialista em 8.', 'https://www.linkedin.com/in/instrutor8');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (9, 9, 9, 'Biografia do instrutor 9, especialista em 9.', 'https://www.linkedin.com/in/instrutor9');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (10, 10, 10, 'Biografia do instrutor 10, especialista em 10.', 'https://www.linkedin.com/in/instrutor10');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (11, 11, 11, 'Biografia do instrutor 11, especialista em 11.', 'https://www.linkedin.com/in/instrutor11');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (12, 12, 12, 'Biografia do instrutor 12, especialista em 12.', 'https://www.linkedin.com/in/instrutor12');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (13, 13, 13, 'Biografia do instrutor 13, especialista em 13.', 'https://www.linkedin.com/in/instrutor13');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (14, 14, 14, 'Biografia do instrutor 14, especialista em 14.', 'https://www.linkedin.com/in/instrutor14');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (15, 15, 15, 'Biografia do instrutor 15, especialista em 15.', 'https://www.linkedin.com/in/instrutor15');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (16, 16, 16, 'Biografia do instrutor 16, especialista em 16.', 'https://www.linkedin.com/in/instrutor16');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (17, 17, 17, 'Biografia do instrutor 17, especialista em 17.', 'https://www.linkedin.com/in/instrutor17');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (18, 18, 18, 'Biografia do instrutor 18, especialista em 18.', 'https://www.linkedin.com/in/instrutor18');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (19, 19, 19, 'Biografia do instrutor 19, especialista em 19.', 'https://www.linkedin.com/in/instrutor19');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (20, 20, 20, 'Biografia do instrutor 20, especialista em 20.', 'https://www.linkedin.com/in/instrutor20');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (21, 21, 21, 'Biografia do instrutor 21, especialista em 21.', 'https://www.linkedin.com/in/instrutor21');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (22, 22, 22, 'Biografia do instrutor 22, especialista em 22.', 'https://www.linkedin.com/in/instrutor22');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (23, 23, 23, 'Biografia do instrutor 23, especialista em 23.', 'https://www.linkedin.com/in/instrutor23');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (24, 24, 24, 'Biografia do instrutor 24, especialista em 24.', 'https://www.linkedin.com/in/instrutor24');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (25, 25, 25, 'Biografia do instrutor 25, especialista em 25.', 'https://www.linkedin.com/in/instrutor25');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (26, 26, 26, 'Biografia do instrutor 26, especialista em 26.', 'https://www.linkedin.com/in/instrutor26');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (27, 27, 27, 'Biografia do instrutor 27, especialista em 27.', 'https://www.linkedin.com/in/instrutor27');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (28, 28, 28, 'Biografia do instrutor 28, especialista em 28.', 'https://www.linkedin.com/in/instrutor28');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (29, 29, 29, 'Biografia do instrutor 29, especialista em 29.', 'https://www.linkedin.com/in/instrutor29');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (30, 30, 30, 'Biografia do instrutor 30, especialista em 30.', 'https://www.linkedin.com/in/instrutor30');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (31, 31, 31, 'Biografia do instrutor 31, especialista em 31.', 'https://www.linkedin.com/in/instrutor31');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (32, 32, 32, 'Biografia do instrutor 32, especialista em 32.', 'https://www.linkedin.com/in/instrutor32');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (33, 33, 33, 'Biografia do instrutor 33, especialista em 33.', 'https://www.linkedin.com/in/instrutor33');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (34, 34, 34, 'Biografia do instrutor 34, especialista em 34.', 'https://www.linkedin.com/in/instrutor34');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (35, 35, 35, 'Biografia do instrutor 35, especialista em 35.', 'https://www.linkedin.com/in/instrutor35');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (36, 36, 36, 'Biografia do instrutor 36, especialista em 36.', 'https://www.linkedin.com/in/instrutor36');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (37, 37, 37, 'Biografia do instrutor 37, especialista em 37.', 'https://www.linkedin.com/in/instrutor37');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (38, 38, 38, 'Biografia do instrutor 38, especialista em 38.', 'https://www.linkedin.com/in/instrutor38');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (39, 39, 39, 'Biografia do instrutor 39, especialista em 39.', 'https://www.linkedin.com/in/instrutor39');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (40, 40, 40, 'Biografia do instrutor 40, especialista em 40.', 'https://www.linkedin.com/in/instrutor40');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (41, 41, 41, 'Biografia do instrutor 41, especialista em 41.', 'https://www.linkedin.com/in/instrutor41');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (42, 42, 42, 'Biografia do instrutor 42, especialista em 42.', 'https://www.linkedin.com/in/instrutor42');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (43, 43, 43, 'Biografia do instrutor 43, especialista em 43.', 'https://www.linkedin.com/in/instrutor43');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (44, 44, 44, 'Biografia do instrutor 44, especialista em 44.', 'https://www.linkedin.com/in/instrutor44');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (45, 45, 45, 'Biografia do instrutor 45, especialista em 45.', 'https://www.linkedin.com/in/instrutor45');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (46, 46, 46, 'Biografia do instrutor 46, especialista em 46.', 'https://www.linkedin.com/in/instrutor46');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (47, 47, 47, 'Biografia do instrutor 47, especialista em 47.', 'https://www.linkedin.com/in/instrutor47');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (48, 48, 48, 'Biografia do instrutor 48, especialista em 48.', 'https://www.linkedin.com/in/instrutor48');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (49, 49, 49, 'Biografia do instrutor 49, especialista em 49.', 'https://www.linkedin.com/in/instrutor49');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (50, 50, 50, 'Biografia do instrutor 50, especialista em 50.', 'https://www.linkedin.com/in/instrutor50');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (51, 51, 51, 'Biografia do instrutor 51, especialista em 51.', 'https://www.linkedin.com/in/instrutor51');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (52, 52, 52, 'Biografia do instrutor 52, especialista em 52.', 'https://www.linkedin.com/in/instrutor52');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (53, 53, 53, 'Biografia do instrutor 53, especialista em 53.', 'https://www.linkedin.com/in/instrutor53');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (54, 54, 54, 'Biografia do instrutor 54, especialista em 54.', 'https://www.linkedin.com/in/instrutor54');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (55, 55, 55, 'Biografia do instrutor 55, especialista em 55.', 'https://www.linkedin.com/in/instrutor55');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (56, 56, 56, 'Biografia do instrutor 56, especialista em 56.', 'https://www.linkedin.com/in/instrutor56');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (57, 57, 57, 'Biografia do instrutor 57, especialista em 57.', 'https://www.linkedin.com/in/instrutor57');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (58, 58, 58, 'Biografia do instrutor 58, especialista em 58.', 'https://www.linkedin.com/in/instrutor58');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (59, 59, 59, 'Biografia do instrutor 59, especialista em 59.', 'https://www.linkedin.com/in/instrutor59');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (60, 60, 60, 'Biografia do instrutor 60, especialista em 60.', 'https://www.linkedin.com/in/instrutor60');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (61, 61, 61, 'Biografia do instrutor 61, especialista em 61.', 'https://www.linkedin.com/in/instrutor61');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (62, 62, 62, 'Biografia do instrutor 62, especialista em 62.', 'https://www.linkedin.com/in/instrutor62');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (63, 63, 63, 'Biografia do instrutor 63, especialista em 63.', 'https://www.linkedin.com/in/instrutor63');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (64, 64, 64, 'Biografia do instrutor 64, especialista em 64.', 'https://www.linkedin.com/in/instrutor64');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (65, 65, 65, 'Biografia do instrutor 65, especialista em 65.', 'https://www.linkedin.com/in/instrutor65');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (66, 66, 66, 'Biografia do instrutor 66, especialista em 66.', 'https://www.linkedin.com/in/instrutor66');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (67, 67, 67, 'Biografia do instrutor 67, especialista em 67.', 'https://www.linkedin.com/in/instrutor67');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (68, 68, 68, 'Biografia do instrutor 68, especialista em 68.', 'https://www.linkedin.com/in/instrutor68');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (69, 69, 69, 'Biografia do instrutor 69, especialista em 69.', 'https://www.linkedin.com/in/instrutor69');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (70, 70, 70, 'Biografia do instrutor 70, especialista em 70.', 'https://www.linkedin.com/in/instrutor70');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (71, 71, 71, 'Biografia do instrutor 71, especialista em 71.', 'https://www.linkedin.com/in/instrutor71');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (72, 72, 72, 'Biografia do instrutor 72, especialista em 72.', 'https://www.linkedin.com/in/instrutor72');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (73, 73, 73, 'Biografia do instrutor 73, especialista em 73.', 'https://www.linkedin.com/in/instrutor73');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (74, 74, 74, 'Biografia do instrutor 74, especialista em 74.', 'https://www.linkedin.com/in/instrutor74');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (75, 75, 75, 'Biografia do instrutor 75, especialista em 75.', 'https://www.linkedin.com/in/instrutor75');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (76, 76, 76, 'Biografia do instrutor 76, especialista em 76.', 'https://www.linkedin.com/in/instrutor76');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (77, 77, 77, 'Biografia do instrutor 77, especialista em 77.', 'https://www.linkedin.com/in/instrutor77');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (78, 78, 78, 'Biografia do instrutor 78, especialista em 78.', 'https://www.linkedin.com/in/instrutor78');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (79, 79, 79, 'Biografia do instrutor 79, especialista em 79.', 'https://www.linkedin.com/in/instrutor79');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (80, 80, 80, 'Biografia do instrutor 80, especialista em 80.', 'https://www.linkedin.com/in/instrutor80');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (81, 81, 81, 'Biografia do instrutor 81, especialista em 81.', 'https://www.linkedin.com/in/instrutor81');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (82, 82, 82, 'Biografia do instrutor 82, especialista em 82.', 'https://www.linkedin.com/in/instrutor82');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (83, 83, 83, 'Biografia do instrutor 83, especialista em 83.', 'https://www.linkedin.com/in/instrutor83');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (84, 84, 84, 'Biografia do instrutor 84, especialista em 84.', 'https://www.linkedin.com/in/instrutor84');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (85, 85, 85, 'Biografia do instrutor 85, especialista em 85.', 'https://www.linkedin.com/in/instrutor85');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (86, 86, 86, 'Biografia do instrutor 86, especialista em 86.', 'https://www.linkedin.com/in/instrutor86');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (87, 87, 87, 'Biografia do instrutor 87, especialista em 87.', 'https://www.linkedin.com/in/instrutor87');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (88, 88, 88, 'Biografia do instrutor 88, especialista em 88.', 'https://www.linkedin.com/in/instrutor88');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (89, 89, 89, 'Biografia do instrutor 89, especialista em 89.', 'https://www.linkedin.com/in/instrutor89');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (90, 90, 90, 'Biografia do instrutor 90, especialista em 90.', 'https://www.linkedin.com/in/instrutor90');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (91, 91, 91, 'Biografia do instrutor 91, especialista em 91.', 'https://www.linkedin.com/in/instrutor91');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (92, 92, 92, 'Biografia do instrutor 92, especialista em 92.', 'https://www.linkedin.com/in/instrutor92');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (93, 93, 93, 'Biografia do instrutor 93, especialista em 93.', 'https://www.linkedin.com/in/instrutor93');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (94, 94, 94, 'Biografia do instrutor 94, especialista em 94.', 'https://www.linkedin.com/in/instrutor94');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (95, 95, 95, 'Biografia do instrutor 95, especialista em 95.', 'https://www.linkedin.com/in/instrutor95');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (96, 96, 96, 'Biografia do instrutor 96, especialista em 96.', 'https://www.linkedin.com/in/instrutor96');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (97, 97, 97, 'Biografia do instrutor 97, especialista em 97.', 'https://www.linkedin.com/in/instrutor97');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (98, 98, 98, 'Biografia do instrutor 98, especialista em 98.', 'https://www.linkedin.com/in/instrutor98');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (99, 99, 99, 'Biografia do instrutor 99, especialista em 99.', 'https://www.linkedin.com/in/instrutor99');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (100, 100, 100, 'Biografia do instrutor 100, especialista em 100.', 'https://www.linkedin.com/in/instrutor100');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (101, 101, 101, 'Biografia do instrutor 101, especialista em 101.', 'https://www.linkedin.com/in/instrutor101');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (102, 102, 102, 'Biografia do instrutor 102, especialista em 102.', 'https://www.linkedin.com/in/instrutor102');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (103, 103, 103, 'Biografia do instrutor 103, especialista em 103.', 'https://www.linkedin.com/in/instrutor103');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (104, 104, 104, 'Biografia do instrutor 104, especialista em 104.', 'https://www.linkedin.com/in/instrutor104');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (105, 105, 105, 'Biografia do instrutor 105, especialista em 105.', 'https://www.linkedin.com/in/instrutor105');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (106, 106, 106, 'Biografia do instrutor 106, especialista em 106.', 'https://www.linkedin.com/in/instrutor106');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (107, 107, 107, 'Biografia do instrutor 107, especialista em 107.', 'https://www.linkedin.com/in/instrutor107');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (108, 108, 108, 'Biografia do instrutor 108, especialista em 108.', 'https://www.linkedin.com/in/instrutor108');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (109, 109, 109, 'Biografia do instrutor 109, especialista em 109.', 'https://www.linkedin.com/in/instrutor109');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (110, 110, 110, 'Biografia do instrutor 110, especialista em 110.', 'https://www.linkedin.com/in/instrutor110');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (111, 111, 111, 'Biografia do instrutor 111, especialista em 111.', 'https://www.linkedin.com/in/instrutor111');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (112, 112, 112, 'Biografia do instrutor 112, especialista em 112.', 'https://www.linkedin.com/in/instrutor112');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (113, 113, 113, 'Biografia do instrutor 113, especialista em 113.', 'https://www.linkedin.com/in/instrutor113');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (114, 114, 114, 'Biografia do instrutor 114, especialista em 114.', 'https://www.linkedin.com/in/instrutor114');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (115, 115, 115, 'Biografia do instrutor 115, especialista em 115.', 'https://www.linkedin.com/in/instrutor115');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (116, 116, 116, 'Biografia do instrutor 116, especialista em 116.', 'https://www.linkedin.com/in/instrutor116');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (117, 117, 117, 'Biografia do instrutor 117, especialista em 117.', 'https://www.linkedin.com/in/instrutor117');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (118, 118, 118, 'Biografia do instrutor 118, especialista em 118.', 'https://www.linkedin.com/in/instrutor118');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (119, 119, 119, 'Biografia do instrutor 119, especialista em 119.', 'https://www.linkedin.com/in/instrutor119');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (120, 120, 120, 'Biografia do instrutor 120, especialista em 120.', 'https://www.linkedin.com/in/instrutor120');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (121, 121, 121, 'Biografia do instrutor 121, especialista em 121.', 'https://www.linkedin.com/in/instrutor121');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (122, 122, 122, 'Biografia do instrutor 122, especialista em 122.', 'https://www.linkedin.com/in/instrutor122');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (123, 123, 123, 'Biografia do instrutor 123, especialista em 123.', 'https://www.linkedin.com/in/instrutor123');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (124, 124, 124, 'Biografia do instrutor 124, especialista em 124.', 'https://www.linkedin.com/in/instrutor124');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (125, 125, 125, 'Biografia do instrutor 125, especialista em 125.', 'https://www.linkedin.com/in/instrutor125');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (126, 126, 126, 'Biografia do instrutor 126, especialista em 126.', 'https://www.linkedin.com/in/instrutor126');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (127, 127, 127, 'Biografia do instrutor 127, especialista em 127.', 'https://www.linkedin.com/in/instrutor127');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (128, 128, 128, 'Biografia do instrutor 128, especialista em 128.', 'https://www.linkedin.com/in/instrutor128');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (129, 129, 129, 'Biografia do instrutor 129, especialista em 129.', 'https://www.linkedin.com/in/instrutor129');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (130, 130, 130, 'Biografia do instrutor 130, especialista em 130.', 'https://www.linkedin.com/in/instrutor130');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (131, 131, 131, 'Biografia do instrutor 131, especialista em 131.', 'https://www.linkedin.com/in/instrutor131');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (132, 132, 132, 'Biografia do instrutor 132, especialista em 132.', 'https://www.linkedin.com/in/instrutor132');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (133, 133, 133, 'Biografia do instrutor 133, especialista em 133.', 'https://www.linkedin.com/in/instrutor133');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (134, 134, 134, 'Biografia do instrutor 134, especialista em 134.', 'https://www.linkedin.com/in/instrutor134');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (135, 135, 135, 'Biografia do instrutor 135, especialista em 135.', 'https://www.linkedin.com/in/instrutor135');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (136, 136, 136, 'Biografia do instrutor 136, especialista em 136.', 'https://www.linkedin.com/in/instrutor136');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (137, 137, 137, 'Biografia do instrutor 137, especialista em 137.', 'https://www.linkedin.com/in/instrutor137');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (138, 138, 138, 'Biografia do instrutor 138, especialista em 138.', 'https://www.linkedin.com/in/instrutor138');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (139, 139, 139, 'Biografia do instrutor 139, especialista em 139.', 'https://www.linkedin.com/in/instrutor139');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (140, 140, 140, 'Biografia do instrutor 140, especialista em 140.', 'https://www.linkedin.com/in/instrutor140');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (141, 141, 141, 'Biografia do instrutor 141, especialista em 141.', 'https://www.linkedin.com/in/instrutor141');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (142, 142, 142, 'Biografia do instrutor 142, especialista em 142.', 'https://www.linkedin.com/in/instrutor142');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (143, 143, 143, 'Biografia do instrutor 143, especialista em 143.', 'https://www.linkedin.com/in/instrutor143');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (144, 144, 144, 'Biografia do instrutor 144, especialista em 144.', 'https://www.linkedin.com/in/instrutor144');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (145, 145, 145, 'Biografia do instrutor 145, especialista em 145.', 'https://www.linkedin.com/in/instrutor145');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (146, 146, 146, 'Biografia do instrutor 146, especialista em 146.', 'https://www.linkedin.com/in/instrutor146');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (147, 147, 147, 'Biografia do instrutor 147, especialista em 147.', 'https://www.linkedin.com/in/instrutor147');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (148, 148, 148, 'Biografia do instrutor 148, especialista em 148.', 'https://www.linkedin.com/in/instrutor148');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (149, 149, 149, 'Biografia do instrutor 149, especialista em 149.', 'https://www.linkedin.com/in/instrutor149');
+INSERT INTO instrutores (id, usuario_id, area_atuacao_id, biografia, linkedin) VALUES (150, 150, 150, 'Biografia do instrutor 150, especialista em 150.', 'https://www.linkedin.com/in/instrutor150');
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (1, 'Curso 1 de Design', 'Descricao do curso 1.', 1, 1, '2024-08-23 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (2, 'Curso 2 de Marketing', 'Descricao do curso 2.', 2, 2, '2023-07-04 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (3, 'Curso 3 de Ciencia de Dados', 'Descricao do curso 3.', 3, 3, '2025-07-02 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (4, 'Curso 4 de Design', 'Descricao do curso 4.', 4, 4, '2025-07-28 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (5, 'Curso 5 de Marketing', 'Descricao do curso 5.', 5, 5, '2023-05-16 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (6, 'Curso 6 de Idiomas', 'Descricao do curso 6.', 6, 6, '2023-07-26 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (7, 'Curso 7 de Idiomas', 'Descricao do curso 7.', 7, 7, '2024-08-10 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (8, 'Curso 8 de Design', 'Descricao do curso 8.', 8, 8, '2025-08-21 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (9, 'Curso 9 de Negocios', 'Descricao do curso 9.', 9, 9, '2024-05-06 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (10, 'Curso 10 de Idiomas', 'Descricao do curso 10.', 10, 10, '2023-01-31 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (11, 'Curso 11 de Marketing', 'Descricao do curso 11.', 11, 11, '2023-10-25 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (12, 'Curso 12 de Negocios', 'Descricao do curso 12.', 12, 12, '2025-06-25 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (13, 'Curso 13 de Design', 'Descricao do curso 13.', 13, 13, '2023-06-26 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (14, 'Curso 14 de Programacao', 'Descricao do curso 14.', 14, 14, '2025-06-28 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (15, 'Curso 15 de Negocios', 'Descricao do curso 15.', 15, 15, '2023-09-23 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (16, 'Curso 16 de Marketing', 'Descricao do curso 16.', 16, 16, '2023-08-25 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (17, 'Curso 17 de Design', 'Descricao do curso 17.', 17, 17, '2025-06-03 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (18, 'Curso 18 de Design', 'Descricao do curso 18.', 18, 18, '2024-06-22 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (19, 'Curso 19 de Design', 'Descricao do curso 19.', 19, 19, '2025-06-08 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (20, 'Curso 20 de Marketing', 'Descricao do curso 20.', 20, 20, '2024-07-06 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (21, 'Curso 21 de Idiomas', 'Descricao do curso 21.', 21, 21, '2024-04-14 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (22, 'Curso 22 de Programacao', 'Descricao do curso 22.', 22, 22, '2025-06-21 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (23, 'Curso 23 de Programacao', 'Descricao do curso 23.', 23, 23, '2024-01-18 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (24, 'Curso 24 de Design', 'Descricao do curso 24.', 24, 24, '2023-04-20 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (25, 'Curso 25 de Design', 'Descricao do curso 25.', 25, 25, '2024-07-24 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (26, 'Curso 26 de Programacao', 'Descricao do curso 26.', 26, 26, '2023-09-09 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (27, 'Curso 27 de Marketing', 'Descricao do curso 27.', 27, 27, '2024-02-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (28, 'Curso 28 de Ciencia de Dados', 'Descricao do curso 28.', 28, 28, '2024-08-27 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (29, 'Curso 29 de Design', 'Descricao do curso 29.', 29, 29, '2024-11-16 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (30, 'Curso 30 de Marketing', 'Descricao do curso 30.', 30, 30, '2025-07-18 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (31, 'Curso 31 de Design', 'Descricao do curso 31.', 31, 31, '2024-07-16 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (32, 'Curso 32 de Programacao', 'Descricao do curso 32.', 32, 32, '2024-09-16 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (33, 'Curso 33 de Marketing', 'Descricao do curso 33.', 33, 33, '2023-09-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (34, 'Curso 34 de Idiomas', 'Descricao do curso 34.', 34, 34, '2023-12-29 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (35, 'Curso 35 de Programacao', 'Descricao do curso 35.', 35, 35, '2025-05-05 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (36, 'Curso 36 de Negocios', 'Descricao do curso 36.', 36, 36, '2024-10-15 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (37, 'Curso 37 de Negocios', 'Descricao do curso 37.', 37, 37, '2023-06-20 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (38, 'Curso 38 de Negocios', 'Descricao do curso 38.', 38, 38, '2024-10-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (39, 'Curso 39 de Ciencia de Dados', 'Descricao do curso 39.', 39, 39, '2022-12-28 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (40, 'Curso 40 de Design', 'Descricao do curso 40.', 40, 40, '2024-10-27 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (41, 'Curso 41 de Ciencia de Dados', 'Descricao do curso 41.', 41, 41, '2025-02-27 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (42, 'Curso 42 de Marketing', 'Descricao do curso 42.', 42, 42, '2023-01-07 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (43, 'Curso 43 de Design', 'Descricao do curso 43.', 43, 43, '2024-11-26 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (44, 'Curso 44 de Ciencia de Dados', 'Descricao do curso 44.', 44, 44, '2024-05-06 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (45, 'Curso 45 de Marketing', 'Descricao do curso 45.', 45, 45, '2024-10-22 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (46, 'Curso 46 de Negocios', 'Descricao do curso 46.', 46, 46, '2024-09-12 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (47, 'Curso 47 de Idiomas', 'Descricao do curso 47.', 47, 47, '2025-02-28 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (48, 'Curso 48 de Idiomas', 'Descricao do curso 48.', 48, 48, '2025-03-20 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (49, 'Curso 49 de Idiomas', 'Descricao do curso 49.', 49, 49, '2025-08-24 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (50, 'Curso 50 de Negocios', 'Descricao do curso 50.', 50, 50, '2023-01-29 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (51, 'Curso 51 de Negocios', 'Descricao do curso 51.', 51, 51, '2023-06-27 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (52, 'Curso 52 de Ciencia de Dados', 'Descricao do curso 52.', 52, 52, '2025-07-12 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (53, 'Curso 53 de Negocios', 'Descricao do curso 53.', 53, 53, '2023-11-01 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (54, 'Curso 54 de Ciencia de Dados', 'Descricao do curso 54.', 54, 54, '2024-11-14 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (55, 'Curso 55 de Ciencia de Dados', 'Descricao do curso 55.', 55, 55, '2025-04-16 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (56, 'Curso 56 de Negocios', 'Descricao do curso 56.', 56, 56, '2025-07-07 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (57, 'Curso 57 de Idiomas', 'Descricao do curso 57.', 57, 57, '2024-05-18 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (58, 'Curso 58 de Idiomas', 'Descricao do curso 58.', 58, 58, '2024-04-20 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (59, 'Curso 59 de Ciencia de Dados', 'Descricao do curso 59.', 59, 59, '2024-07-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (60, 'Curso 60 de Design', 'Descricao do curso 60.', 60, 60, '2023-10-03 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (61, 'Curso 61 de Idiomas', 'Descricao do curso 61.', 61, 61, '2024-01-21 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (62, 'Curso 62 de Programacao', 'Descricao do curso 62.', 62, 62, '2025-06-01 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (63, 'Curso 63 de Ciencia de Dados', 'Descricao do curso 63.', 63, 63, '2023-11-10 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (64, 'Curso 64 de Ciencia de Dados', 'Descricao do curso 64.', 64, 64, '2024-01-02 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (65, 'Curso 65 de Ciencia de Dados', 'Descricao do curso 65.', 65, 65, '2023-10-28 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (66, 'Curso 66 de Design', 'Descricao do curso 66.', 66, 66, '2023-01-06 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (67, 'Curso 67 de Programacao', 'Descricao do curso 67.', 67, 67, '2025-09-10 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (68, 'Curso 68 de Marketing', 'Descricao do curso 68.', 68, 68, '2024-04-16 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (69, 'Curso 69 de Idiomas', 'Descricao do curso 69.', 69, 69, '2024-02-04 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (70, 'Curso 70 de Marketing', 'Descricao do curso 70.', 70, 70, '2024-06-21 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (71, 'Curso 71 de Negocios', 'Descricao do curso 71.', 71, 71, '2023-07-23 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (72, 'Curso 72 de Ciencia de Dados', 'Descricao do curso 72.', 72, 72, '2024-04-26 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (73, 'Curso 73 de Programacao', 'Descricao do curso 73.', 73, 73, '2024-05-14 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (74, 'Curso 74 de Negocios', 'Descricao do curso 74.', 74, 74, '2023-02-21 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (75, 'Curso 75 de Programacao', 'Descricao do curso 75.', 75, 75, '2023-05-23 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (76, 'Curso 76 de Marketing', 'Descricao do curso 76.', 76, 76, '2024-09-29 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (77, 'Curso 77 de Negocios', 'Descricao do curso 77.', 77, 77, '2023-07-10 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (78, 'Curso 78 de Negocios', 'Descricao do curso 78.', 78, 78, '2024-09-29 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (79, 'Curso 79 de Negocios', 'Descricao do curso 79.', 79, 79, '2023-09-12 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (80, 'Curso 80 de Design', 'Descricao do curso 80.', 80, 80, '2025-07-14 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (81, 'Curso 81 de Ciencia de Dados', 'Descricao do curso 81.', 81, 81, '2025-05-26 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (82, 'Curso 82 de Design', 'Descricao do curso 82.', 82, 82, '2023-11-27 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (83, 'Curso 83 de Marketing', 'Descricao do curso 83.', 83, 83, '2023-02-11 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (84, 'Curso 84 de Marketing', 'Descricao do curso 84.', 84, 84, '2024-04-10 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (85, 'Curso 85 de Marketing', 'Descricao do curso 85.', 85, 85, '2024-10-17 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (86, 'Curso 86 de Negocios', 'Descricao do curso 86.', 86, 86, '2025-01-26 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (87, 'Curso 87 de Ciencia de Dados', 'Descricao do curso 87.', 87, 87, '2025-03-16 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (88, 'Curso 88 de Ciencia de Dados', 'Descricao do curso 88.', 88, 88, '2024-07-05 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (89, 'Curso 89 de Ciencia de Dados', 'Descricao do curso 89.', 89, 89, '2024-01-01 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (90, 'Curso 90 de Negocios', 'Descricao do curso 90.', 90, 90, '2024-01-23 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (91, 'Curso 91 de Programacao', 'Descricao do curso 91.', 91, 91, '2023-09-30 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (92, 'Curso 92 de Design', 'Descricao do curso 92.', 92, 92, '2023-08-12 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (93, 'Curso 93 de Programacao', 'Descricao do curso 93.', 93, 93, '2024-02-07 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (94, 'Curso 94 de Idiomas', 'Descricao do curso 94.', 94, 94, '2025-03-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (95, 'Curso 95 de Marketing', 'Descricao do curso 95.', 95, 95, '2024-06-09 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (96, 'Curso 96 de Ciencia de Dados', 'Descricao do curso 96.', 96, 96, '2023-04-21 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (97, 'Curso 97 de Ciencia de Dados', 'Descricao do curso 97.', 97, 97, '2024-11-04 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (98, 'Curso 98 de Idiomas', 'Descricao do curso 98.', 98, 98, '2024-08-15 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (99, 'Curso 99 de Design', 'Descricao do curso 99.', 99, 99, '2024-09-25 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (100, 'Curso 100 de Idiomas', 'Descricao do curso 100.', 100, 100, '2025-03-28 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (101, 'Curso 101 de Ciencia de Dados', 'Descricao do curso 101.', 101, 101, '2023-06-24 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (102, 'Curso 102 de Idiomas', 'Descricao do curso 102.', 102, 102, '2024-01-25 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (103, 'Curso 103 de Marketing', 'Descricao do curso 103.', 103, 103, '2024-11-04 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (104, 'Curso 104 de Design', 'Descricao do curso 104.', 104, 104, '2025-05-24 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (105, 'Curso 105 de Ciencia de Dados', 'Descricao do curso 105.', 105, 105, '2025-04-29 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (106, 'Curso 106 de Negocios', 'Descricao do curso 106.', 106, 106, '2024-01-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (107, 'Curso 107 de Negocios', 'Descricao do curso 107.', 107, 107, '2024-07-14 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (108, 'Curso 108 de Ciencia de Dados', 'Descricao do curso 108.', 108, 108, '2024-03-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (109, 'Curso 109 de Ciencia de Dados', 'Descricao do curso 109.', 109, 109, '2023-02-10 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (110, 'Curso 110 de Idiomas', 'Descricao do curso 110.', 110, 110, '2025-04-03 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (111, 'Curso 111 de Marketing', 'Descricao do curso 111.', 111, 111, '2025-03-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (112, 'Curso 112 de Negocios', 'Descricao do curso 112.', 112, 112, '2023-12-26 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (113, 'Curso 113 de Design', 'Descricao do curso 113.', 113, 113, '2023-01-20 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (114, 'Curso 114 de Marketing', 'Descricao do curso 114.', 114, 114, '2025-03-05 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (115, 'Curso 115 de Idiomas', 'Descricao do curso 115.', 115, 115, '2024-04-21 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (116, 'Curso 116 de Negocios', 'Descricao do curso 116.', 116, 116, '2023-10-20 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (117, 'Curso 117 de Ciencia de Dados', 'Descricao do curso 117.', 117, 117, '2023-05-14 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (118, 'Curso 118 de Marketing', 'Descricao do curso 118.', 118, 118, '2025-06-28 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (119, 'Curso 119 de Marketing', 'Descricao do curso 119.', 119, 119, '2024-11-25 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (120, 'Curso 120 de Marketing', 'Descricao do curso 120.', 120, 120, '2024-03-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (121, 'Curso 121 de Negocios', 'Descricao do curso 121.', 121, 121, '2024-02-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (122, 'Curso 122 de Negocios', 'Descricao do curso 122.', 122, 122, '2024-03-07 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (123, 'Curso 123 de Idiomas', 'Descricao do curso 123.', 123, 123, '2025-05-27 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (124, 'Curso 124 de Idiomas', 'Descricao do curso 124.', 124, 124, '2023-05-31 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (125, 'Curso 125 de Idiomas', 'Descricao do curso 125.', 125, 125, '2023-06-01 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (126, 'Curso 126 de Ciencia de Dados', 'Descricao do curso 126.', 126, 126, '2024-06-26 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (127, 'Curso 127 de Negocios', 'Descricao do curso 127.', 127, 127, '2025-06-08 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (128, 'Curso 128 de Ciencia de Dados', 'Descricao do curso 128.', 128, 128, '2023-08-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (129, 'Curso 129 de Programacao', 'Descricao do curso 129.', 129, 129, '2024-06-17 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (130, 'Curso 130 de Programacao', 'Descricao do curso 130.', 130, 130, '2024-06-28 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (131, 'Curso 131 de Programacao', 'Descricao do curso 131.', 131, 131, '2023-07-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (132, 'Curso 132 de Marketing', 'Descricao do curso 132.', 132, 132, '2023-06-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (133, 'Curso 133 de Ciencia de Dados', 'Descricao do curso 133.', 133, 133, '2024-09-26 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (134, 'Curso 134 de Idiomas', 'Descricao do curso 134.', 134, 134, '2023-12-13 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (135, 'Curso 135 de Idiomas', 'Descricao do curso 135.', 135, 135, '2025-05-01 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (136, 'Curso 136 de Marketing', 'Descricao do curso 136.', 136, 136, '2023-06-19 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (137, 'Curso 137 de Design', 'Descricao do curso 137.', 137, 137, '2024-03-24 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (138, 'Curso 138 de Idiomas', 'Descricao do curso 138.', 138, 138, '2025-04-01 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (139, 'Curso 139 de Ciencia de Dados', 'Descricao do curso 139.', 139, 139, '2024-11-25 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (140, 'Curso 140 de Design', 'Descricao do curso 140.', 140, 140, '2023-01-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (141, 'Curso 141 de Ciencia de Dados', 'Descricao do curso 141.', 141, 141, '2023-06-09 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (142, 'Curso 142 de Negocios', 'Descricao do curso 142.', 142, 142, '2023-02-23 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (143, 'Curso 143 de Design', 'Descricao do curso 143.', 143, 143, '2023-04-17 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (144, 'Curso 144 de Ciencia de Dados', 'Descricao do curso 144.', 144, 144, '2023-04-18 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (145, 'Curso 145 de Marketing', 'Descricao do curso 145.', 145, 145, '2023-09-23 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (146, 'Curso 146 de Marketing', 'Descricao do curso 146.', 146, 146, '2023-08-03 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (147, 'Curso 147 de Negocios', 'Descricao do curso 147.', 147, 147, '2024-05-07 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (148, 'Curso 148 de Ciencia de Dados', 'Descricao do curso 148.', 148, 148, '2024-12-19 00:19:52', 1);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (149, 'Curso 149 de Negocios', 'Descricao do curso 149.', 149, 149, '2024-06-15 00:19:52', 0);
+INSERT INTO cursos (id, titulo, descricao, instrutor_responsavel_id, categoria_id, criado_em, ativo) VALUES (150, 'Curso 150 de Programacao', 'Descricao do curso 150.', 150, 150, '2024-08-04 00:19:52', 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (1, 1, 1, 'Aula 1 - Curso 1 de Design', 'Conteudo da aula 1.', 22, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (2, 2, 2, 'Aula 2 - Curso 2 de Marketing', 'Conteudo da aula 2.', 34, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (3, 3, 3, 'Aula 3 - Curso 3 de Ciencia de Dados', 'Conteudo da aula 3.', 25, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (4, 4, 4, 'Aula 4 - Curso 4 de Design', 'Conteudo da aula 4.', 5, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (5, 5, 5, 'Aula 5 - Curso 5 de Marketing', 'Conteudo da aula 5.', 51, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (6, 6, 6, 'Aula 6 - Curso 6 de Idiomas', 'Conteudo da aula 6.', 45, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (7, 7, 7, 'Aula 7 - Curso 7 de Idiomas', 'Conteudo da aula 7.', 59, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (8, 8, 8, 'Aula 8 - Curso 8 de Design', 'Conteudo da aula 8.', 55, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (9, 9, 9, 'Aula 9 - Curso 9 de Negocios', 'Conteudo da aula 9.', 30, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (10, 10, 10, 'Aula 10 - Curso 10 de Idiomas', 'Conteudo da aula 10.', 32, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (11, 11, 11, 'Aula 11 - Curso 11 de Marketing', 'Conteudo da aula 11.', 36, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (12, 12, 12, 'Aula 12 - Curso 12 de Negocios', 'Conteudo da aula 12.', 25, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (13, 13, 13, 'Aula 13 - Curso 13 de Design', 'Conteudo da aula 13.', 26, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (14, 14, 14, 'Aula 14 - Curso 14 de Programacao', 'Conteudo da aula 14.', 41, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (15, 15, 15, 'Aula 15 - Curso 15 de Negocios', 'Conteudo da aula 15.', 41, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (16, 16, 16, 'Aula 16 - Curso 16 de Marketing', 'Conteudo da aula 16.', 55, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (17, 17, 17, 'Aula 17 - Curso 17 de Design', 'Conteudo da aula 17.', 48, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (18, 18, 18, 'Aula 18 - Curso 18 de Design', 'Conteudo da aula 18.', 7, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (19, 19, 19, 'Aula 19 - Curso 19 de Design', 'Conteudo da aula 19.', 45, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (20, 20, 20, 'Aula 20 - Curso 20 de Marketing', 'Conteudo da aula 20.', 6, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (21, 21, 21, 'Aula 21 - Curso 21 de Idiomas', 'Conteudo da aula 21.', 59, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (22, 22, 22, 'Aula 22 - Curso 22 de Programacao', 'Conteudo da aula 22.', 33, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (23, 23, 23, 'Aula 23 - Curso 23 de Programacao', 'Conteudo da aula 23.', 5, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (24, 24, 24, 'Aula 24 - Curso 24 de Design', 'Conteudo da aula 24.', 17, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (25, 25, 25, 'Aula 25 - Curso 25 de Design', 'Conteudo da aula 25.', 46, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (26, 26, 26, 'Aula 26 - Curso 26 de Programacao', 'Conteudo da aula 26.', 15, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (27, 27, 27, 'Aula 27 - Curso 27 de Marketing', 'Conteudo da aula 27.', 10, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (28, 28, 28, 'Aula 28 - Curso 28 de Ciencia de Dados', 'Conteudo da aula 28.', 21, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (29, 29, 29, 'Aula 29 - Curso 29 de Design', 'Conteudo da aula 29.', 28, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (30, 30, 30, 'Aula 30 - Curso 30 de Marketing', 'Conteudo da aula 30.', 8, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (31, 31, 31, 'Aula 31 - Curso 31 de Design', 'Conteudo da aula 31.', 45, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (32, 32, 32, 'Aula 32 - Curso 32 de Programacao', 'Conteudo da aula 32.', 51, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (33, 33, 33, 'Aula 33 - Curso 33 de Marketing', 'Conteudo da aula 33.', 32, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (34, 34, 34, 'Aula 34 - Curso 34 de Idiomas', 'Conteudo da aula 34.', 50, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (35, 35, 35, 'Aula 35 - Curso 35 de Programacao', 'Conteudo da aula 35.', 5, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (36, 36, 36, 'Aula 36 - Curso 36 de Negocios', 'Conteudo da aula 36.', 35, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (37, 37, 37, 'Aula 37 - Curso 37 de Negocios', 'Conteudo da aula 37.', 13, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (38, 38, 38, 'Aula 38 - Curso 38 de Negocios', 'Conteudo da aula 38.', 19, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (39, 39, 39, 'Aula 39 - Curso 39 de Ciencia de Dados', 'Conteudo da aula 39.', 48, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (40, 40, 40, 'Aula 40 - Curso 40 de Design', 'Conteudo da aula 40.', 5, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (41, 41, 41, 'Aula 41 - Curso 41 de Ciencia de Dados', 'Conteudo da aula 41.', 49, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (42, 42, 42, 'Aula 42 - Curso 42 de Marketing', 'Conteudo da aula 42.', 57, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (43, 43, 43, 'Aula 43 - Curso 43 de Design', 'Conteudo da aula 43.', 60, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (44, 44, 44, 'Aula 44 - Curso 44 de Ciencia de Dados', 'Conteudo da aula 44.', 49, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (45, 45, 45, 'Aula 45 - Curso 45 de Marketing', 'Conteudo da aula 45.', 35, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (46, 46, 46, 'Aula 46 - Curso 46 de Negocios', 'Conteudo da aula 46.', 19, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (47, 47, 47, 'Aula 47 - Curso 47 de Idiomas', 'Conteudo da aula 47.', 10, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (48, 48, 48, 'Aula 48 - Curso 48 de Idiomas', 'Conteudo da aula 48.', 11, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (49, 49, 49, 'Aula 49 - Curso 49 de Idiomas', 'Conteudo da aula 49.', 28, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (50, 50, 50, 'Aula 50 - Curso 50 de Negocios', 'Conteudo da aula 50.', 13, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (51, 51, 51, 'Aula 51 - Curso 51 de Negocios', 'Conteudo da aula 51.', 54, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (52, 52, 52, 'Aula 52 - Curso 52 de Ciencia de Dados', 'Conteudo da aula 52.', 46, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (53, 53, 53, 'Aula 53 - Curso 53 de Negocios', 'Conteudo da aula 53.', 9, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (54, 54, 54, 'Aula 54 - Curso 54 de Ciencia de Dados', 'Conteudo da aula 54.', 41, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (55, 55, 55, 'Aula 55 - Curso 55 de Ciencia de Dados', 'Conteudo da aula 55.', 44, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (56, 56, 56, 'Aula 56 - Curso 56 de Negocios', 'Conteudo da aula 56.', 33, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (57, 57, 57, 'Aula 57 - Curso 57 de Idiomas', 'Conteudo da aula 57.', 51, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (58, 58, 58, 'Aula 58 - Curso 58 de Idiomas', 'Conteudo da aula 58.', 45, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (59, 59, 59, 'Aula 59 - Curso 59 de Ciencia de Dados', 'Conteudo da aula 59.', 31, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (60, 60, 60, 'Aula 60 - Curso 60 de Design', 'Conteudo da aula 60.', 48, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (61, 61, 61, 'Aula 61 - Curso 61 de Idiomas', 'Conteudo da aula 61.', 60, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (62, 62, 62, 'Aula 62 - Curso 62 de Programacao', 'Conteudo da aula 62.', 10, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (63, 63, 63, 'Aula 63 - Curso 63 de Ciencia de Dados', 'Conteudo da aula 63.', 13, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (64, 64, 64, 'Aula 64 - Curso 64 de Ciencia de Dados', 'Conteudo da aula 64.', 42, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (65, 65, 65, 'Aula 65 - Curso 65 de Ciencia de Dados', 'Conteudo da aula 65.', 27, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (66, 66, 66, 'Aula 66 - Curso 66 de Design', 'Conteudo da aula 66.', 25, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (67, 67, 67, 'Aula 67 - Curso 67 de Programacao', 'Conteudo da aula 67.', 20, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (68, 68, 68, 'Aula 68 - Curso 68 de Marketing', 'Conteudo da aula 68.', 46, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (69, 69, 69, 'Aula 69 - Curso 69 de Idiomas', 'Conteudo da aula 69.', 20, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (70, 70, 70, 'Aula 70 - Curso 70 de Marketing', 'Conteudo da aula 70.', 43, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (71, 71, 71, 'Aula 71 - Curso 71 de Negocios', 'Conteudo da aula 71.', 51, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (72, 72, 72, 'Aula 72 - Curso 72 de Ciencia de Dados', 'Conteudo da aula 72.', 23, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (73, 73, 73, 'Aula 73 - Curso 73 de Programacao', 'Conteudo da aula 73.', 59, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (74, 74, 74, 'Aula 74 - Curso 74 de Negocios', 'Conteudo da aula 74.', 18, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (75, 75, 75, 'Aula 75 - Curso 75 de Programacao', 'Conteudo da aula 75.', 43, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (76, 76, 76, 'Aula 76 - Curso 76 de Marketing', 'Conteudo da aula 76.', 17, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (77, 77, 77, 'Aula 77 - Curso 77 de Negocios', 'Conteudo da aula 77.', 23, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (78, 78, 78, 'Aula 78 - Curso 78 de Negocios', 'Conteudo da aula 78.', 55, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (79, 79, 79, 'Aula 79 - Curso 79 de Negocios', 'Conteudo da aula 79.', 36, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (80, 80, 80, 'Aula 80 - Curso 80 de Design', 'Conteudo da aula 80.', 12, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (81, 81, 81, 'Aula 81 - Curso 81 de Ciencia de Dados', 'Conteudo da aula 81.', 36, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (82, 82, 82, 'Aula 82 - Curso 82 de Design', 'Conteudo da aula 82.', 9, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (83, 83, 83, 'Aula 83 - Curso 83 de Marketing', 'Conteudo da aula 83.', 5, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (84, 84, 84, 'Aula 84 - Curso 84 de Marketing', 'Conteudo da aula 84.', 25, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (85, 85, 85, 'Aula 85 - Curso 85 de Marketing', 'Conteudo da aula 85.', 29, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (86, 86, 86, 'Aula 86 - Curso 86 de Negocios', 'Conteudo da aula 86.', 31, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (87, 87, 87, 'Aula 87 - Curso 87 de Ciencia de Dados', 'Conteudo da aula 87.', 39, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (88, 88, 88, 'Aula 88 - Curso 88 de Ciencia de Dados', 'Conteudo da aula 88.', 53, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (89, 89, 89, 'Aula 89 - Curso 89 de Ciencia de Dados', 'Conteudo da aula 89.', 54, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (90, 90, 90, 'Aula 90 - Curso 90 de Negocios', 'Conteudo da aula 90.', 6, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (91, 91, 91, 'Aula 91 - Curso 91 de Programacao', 'Conteudo da aula 91.', 9, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (92, 92, 92, 'Aula 92 - Curso 92 de Design', 'Conteudo da aula 92.', 21, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (93, 93, 93, 'Aula 93 - Curso 93 de Programacao', 'Conteudo da aula 93.', 7, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (94, 94, 94, 'Aula 94 - Curso 94 de Idiomas', 'Conteudo da aula 94.', 55, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (95, 95, 95, 'Aula 95 - Curso 95 de Marketing', 'Conteudo da aula 95.', 37, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (96, 96, 96, 'Aula 96 - Curso 96 de Ciencia de Dados', 'Conteudo da aula 96.', 45, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (97, 97, 97, 'Aula 97 - Curso 97 de Ciencia de Dados', 'Conteudo da aula 97.', 54, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (98, 98, 98, 'Aula 98 - Curso 98 de Idiomas', 'Conteudo da aula 98.', 32, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (99, 99, 99, 'Aula 99 - Curso 99 de Design', 'Conteudo da aula 99.', 10, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (100, 100, 100, 'Aula 100 - Curso 100 de Idiomas', 'Conteudo da aula 100.', 39, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (101, 101, 101, 'Aula 101 - Curso 101 de Ciencia de Dados', 'Conteudo da aula 101.', 14, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (102, 102, 102, 'Aula 102 - Curso 102 de Idiomas', 'Conteudo da aula 102.', 10, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (103, 103, 103, 'Aula 103 - Curso 103 de Marketing', 'Conteudo da aula 103.', 10, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (104, 104, 104, 'Aula 104 - Curso 104 de Design', 'Conteudo da aula 104.', 18, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (105, 105, 105, 'Aula 105 - Curso 105 de Ciencia de Dados', 'Conteudo da aula 105.', 39, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (106, 106, 106, 'Aula 106 - Curso 106 de Negocios', 'Conteudo da aula 106.', 30, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (107, 107, 107, 'Aula 107 - Curso 107 de Negocios', 'Conteudo da aula 107.', 45, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (108, 108, 108, 'Aula 108 - Curso 108 de Ciencia de Dados', 'Conteudo da aula 108.', 24, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (109, 109, 109, 'Aula 109 - Curso 109 de Ciencia de Dados', 'Conteudo da aula 109.', 51, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (110, 110, 110, 'Aula 110 - Curso 110 de Idiomas', 'Conteudo da aula 110.', 8, 4);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (111, 111, 111, 'Aula 111 - Curso 111 de Marketing', 'Conteudo da aula 111.', 10, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (112, 112, 112, 'Aula 112 - Curso 112 de Negocios', 'Conteudo da aula 112.', 12, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (113, 113, 113, 'Aula 113 - Curso 113 de Design', 'Conteudo da aula 113.', 44, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (114, 114, 114, 'Aula 114 - Curso 114 de Marketing', 'Conteudo da aula 114.', 8, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (115, 115, 115, 'Aula 115 - Curso 115 de Idiomas', 'Conteudo da aula 115.', 47, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (116, 116, 116, 'Aula 116 - Curso 116 de Negocios', 'Conteudo da aula 116.', 12, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (117, 117, 117, 'Aula 117 - Curso 117 de Ciencia de Dados', 'Conteudo da aula 117.', 50, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (118, 118, 118, 'Aula 118 - Curso 118 de Marketing', 'Conteudo da aula 118.', 49, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (119, 119, 119, 'Aula 119 - Curso 119 de Marketing', 'Conteudo da aula 119.', 15, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (120, 120, 120, 'Aula 120 - Curso 120 de Marketing', 'Conteudo da aula 120.', 27, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (121, 121, 121, 'Aula 121 - Curso 121 de Negocios', 'Conteudo da aula 121.', 38, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (122, 122, 122, 'Aula 122 - Curso 122 de Negocios', 'Conteudo da aula 122.', 15, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (123, 123, 123, 'Aula 123 - Curso 123 de Idiomas', 'Conteudo da aula 123.', 13, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (124, 124, 124, 'Aula 124 - Curso 124 de Idiomas', 'Conteudo da aula 124.', 51, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (125, 125, 125, 'Aula 125 - Curso 125 de Idiomas', 'Conteudo da aula 125.', 54, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (126, 126, 126, 'Aula 126 - Curso 126 de Ciencia de Dados', 'Conteudo da aula 126.', 26, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (127, 127, 127, 'Aula 127 - Curso 127 de Negocios', 'Conteudo da aula 127.', 22, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (128, 128, 128, 'Aula 128 - Curso 128 de Ciencia de Dados', 'Conteudo da aula 128.', 9, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (129, 129, 129, 'Aula 129 - Curso 129 de Programacao', 'Conteudo da aula 129.', 50, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (130, 130, 130, 'Aula 130 - Curso 130 de Programacao', 'Conteudo da aula 130.', 45, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (131, 131, 131, 'Aula 131 - Curso 131 de Programacao', 'Conteudo da aula 131.', 36, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (132, 132, 132, 'Aula 132 - Curso 132 de Marketing', 'Conteudo da aula 132.', 37, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (133, 133, 133, 'Aula 133 - Curso 133 de Ciencia de Dados', 'Conteudo da aula 133.', 8, 8);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (134, 134, 134, 'Aula 134 - Curso 134 de Idiomas', 'Conteudo da aula 134.', 59, 10);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (135, 135, 135, 'Aula 135 - Curso 135 de Idiomas', 'Conteudo da aula 135.', 15, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (136, 136, 136, 'Aula 136 - Curso 136 de Marketing', 'Conteudo da aula 136.', 15, 5);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (137, 137, 137, 'Aula 137 - Curso 137 de Design', 'Conteudo da aula 137.', 54, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (138, 138, 138, 'Aula 138 - Curso 138 de Idiomas', 'Conteudo da aula 138.', 41, 2);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (139, 139, 139, 'Aula 139 - Curso 139 de Ciencia de Dados', 'Conteudo da aula 139.', 19, 9);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (140, 140, 140, 'Aula 140 - Curso 140 de Design', 'Conteudo da aula 140.', 5, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (141, 141, 141, 'Aula 141 - Curso 141 de Ciencia de Dados', 'Conteudo da aula 141.', 59, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (142, 142, 142, 'Aula 142 - Curso 142 de Negocios', 'Conteudo da aula 142.', 20, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (143, 143, 143, 'Aula 143 - Curso 143 de Design', 'Conteudo da aula 143.', 35, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (144, 144, 144, 'Aula 144 - Curso 144 de Ciencia de Dados', 'Conteudo da aula 144.', 29, 3);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (145, 145, 145, 'Aula 145 - Curso 145 de Marketing', 'Conteudo da aula 145.', 16, 1);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (146, 146, 146, 'Aula 146 - Curso 146 de Marketing', 'Conteudo da aula 146.', 40, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (147, 147, 147, 'Aula 147 - Curso 147 de Negocios', 'Conteudo da aula 147.', 19, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (148, 148, 148, 'Aula 148 - Curso 148 de Ciencia de Dados', 'Conteudo da aula 148.', 20, 7);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (149, 149, 149, 'Aula 149 - Curso 149 de Negocios', 'Conteudo da aula 149.', 51, 6);
+INSERT INTO aulas (id, curso_id, instrutor_id, titulo, conteudo, duracao, ordem) VALUES (150, 150, 150, 'Aula 150 - Curso 150 de Programacao', 'Conteudo da aula 150.', 22, 2);
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (1, 147, 96, '2024-04-24 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (2, 14, 46, '2023-06-20 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (3, 133, 12, '2025-07-12 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (4, 120, 73, '2024-10-20 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (5, 23, 142, '2025-09-12 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (6, 95, 52, '2024-02-21 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (7, 78, 63, '2024-09-08 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (8, 127, 51, '2023-03-13 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (9, 140, 63, '2025-09-14 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (10, 105, 7, '2024-03-15 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (11, 89, 3, '2025-09-19 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (12, 97, 79, '2025-02-22 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (13, 136, 61, '2024-05-05 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (14, 16, 37, '2024-12-08 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (15, 24, 12, '2023-03-17 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (16, 134, 106, '2023-03-18 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (17, 96, 118, '2025-06-26 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (18, 149, 25, '2025-05-07 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (19, 101, 20, '2024-02-17 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (20, 16, 112, '2023-01-07 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (21, 34, 61, '2024-12-27 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (22, 81, 101, '2023-05-23 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (23, 84, 82, '2024-12-16 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (24, 60, 20, '2025-05-04 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (25, 150, 28, '2025-06-04 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (26, 43, 116, '2024-11-03 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (27, 105, 31, '2024-09-19 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (28, 54, 116, '2024-06-03 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (29, 68, 31, '2025-04-12 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (30, 78, 11, '2023-05-19 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (31, 84, 38, '2023-09-23 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (32, 64, 92, '2024-04-13 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (33, 13, 77, '2023-06-04 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (34, 45, 8, '2023-04-29 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (35, 116, 143, '2024-03-06 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (36, 64, 25, '2025-06-08 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (37, 36, 32, '2025-07-19 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (38, 57, 34, '2023-05-31 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (39, 103, 96, '2023-12-15 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (40, 22, 150, '2024-12-29 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (41, 20, 6, '2025-03-02 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (42, 114, 33, '2023-03-09 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (43, 85, 32, '2023-01-30 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (44, 119, 13, '2023-02-17 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (45, 147, 111, '2024-08-12 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (46, 128, 8, '2023-10-22 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (47, 110, 45, '2025-02-13 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (48, 48, 71, '2024-06-21 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (49, 39, 9, '2023-12-26 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (50, 63, 76, '2024-07-26 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (51, 141, 123, '2025-06-23 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (52, 72, 99, '2024-07-18 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (53, 52, 135, '2023-12-15 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (54, 140, 5, '2023-07-13 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (55, 92, 123, '2023-07-13 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (56, 125, 89, '2024-04-24 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (57, 83, 100, '2025-03-20 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (58, 7, 82, '2025-02-08 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (59, 8, 72, '2023-06-15 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (60, 121, 136, '2023-07-28 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (61, 150, 60, '2025-06-10 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (62, 64, 62, '2024-03-23 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (63, 15, 57, '2023-05-08 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (64, 100, 91, '2025-03-24 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (65, 61, 82, '2023-10-07 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (66, 92, 8, '2023-10-04 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (67, 91, 146, '2025-04-28 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (68, 145, 49, '2024-03-14 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (69, 80, 45, '2025-08-13 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (70, 24, 15, '2024-01-13 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (71, 57, 6, '2024-05-19 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (72, 1, 85, '2025-02-26 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (73, 34, 88, '2025-03-23 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (74, 83, 16, '2025-04-22 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (75, 37, 29, '2023-04-23 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (76, 94, 19, '2023-09-30 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (77, 102, 26, '2024-11-15 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (78, 83, 35, '2023-09-02 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (79, 112, 125, '2024-10-31 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (80, 45, 144, '2023-03-25 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (81, 92, 58, '2024-01-26 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (82, 45, 97, '2023-08-31 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (83, 76, 33, '2023-09-05 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (84, 1, 147, '2023-05-03 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (85, 146, 9, '2024-01-13 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (86, 82, 57, '2024-02-19 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (87, 27, 128, '2024-10-16 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (88, 20, 61, '2024-10-28 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (89, 43, 23, '2023-11-04 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (90, 86, 115, '2024-12-23 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (91, 54, 64, '2025-07-13 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (92, 90, 66, '2023-09-14 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (93, 1, 13, '2024-06-29 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (94, 108, 43, '2024-05-04 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (95, 97, 90, '2024-09-01 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (96, 26, 123, '2023-11-24 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (97, 58, 42, '2025-07-07 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (98, 9, 76, '2024-10-29 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (99, 67, 27, '2024-10-05 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (100, 44, 97, '2023-09-02 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (101, 20, 141, '2024-10-09 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (102, 124, 8, '2023-01-29 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (103, 43, 112, '2025-07-28 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (104, 26, 85, '2022-12-28 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (105, 49, 105, '2024-03-02 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (106, 139, 68, '2024-12-06 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (107, 77, 61, '2025-08-01 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (108, 101, 147, '2023-05-14 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (109, 126, 40, '2024-09-16 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (110, 1, 110, '2024-11-23 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (111, 123, 52, '2025-08-25 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (112, 53, 44, '2024-11-26 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (113, 21, 122, '2024-11-09 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (114, 102, 121, '2023-03-19 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (115, 68, 24, '2024-03-12 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (116, 100, 48, '2023-03-29 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (117, 98, 95, '2024-06-21 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (118, 12, 68, '2024-06-01 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (119, 68, 58, '2024-02-21 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (120, 16, 39, '2023-11-07 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (121, 25, 22, '2024-10-03 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (122, 139, 106, '2025-01-31 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (123, 142, 16, '2023-06-05 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (124, 134, 108, '2023-10-18 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (125, 122, 147, '2024-05-21 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (126, 77, 21, '2023-03-11 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (127, 9, 129, '2023-03-13 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (128, 133, 147, '2023-12-25 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (129, 38, 31, '2025-03-27 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (130, 43, 55, '2025-05-14 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (131, 11, 109, '2023-10-22 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (132, 112, 52, '2025-04-22 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (133, 67, 82, '2023-02-27 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (134, 18, 23, '2024-02-29 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (135, 102, 142, '2023-04-27 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (136, 71, 134, '2023-02-24 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (137, 4, 134, '2025-05-28 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (138, 107, 39, '2024-02-18 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (139, 150, 26, '2024-02-22 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (140, 26, 74, '2023-04-03 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (141, 89, 106, '2024-08-24 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (142, 125, 147, '2024-05-24 00:19:52', 'cancelada');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (143, 10, 45, '2024-08-04 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (144, 37, 103, '2024-08-11 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (145, 85, 61, '2023-08-19 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (146, 122, 69, '2025-08-31 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (147, 87, 78, '2024-12-07 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (148, 126, 26, '2025-05-06 00:19:52', 'ativa');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (149, 77, 114, '2024-12-19 00:19:52', 'concluida');
+INSERT INTO inscricoes (id, aluno_id, curso_id, data_inscricao, status) VALUES (150, 107, 23, '2024-06-25 00:19:52', 'ativa');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (1, 55, 105, 4, 'Avaliacao 1 do curso 105.', '2023-08-05 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (2, 133, 96, 1, 'Avaliacao 2 do curso 96.', '2024-04-11 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (3, 41, 17, 3, 'Avaliacao 3 do curso 17.', '2023-09-25 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (4, 130, 104, 2, 'Avaliacao 4 do curso 104.', '2023-07-14 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (5, 135, 146, 1, 'Avaliacao 5 do curso 146.', '2025-03-27 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (6, 50, 52, 1, 'Avaliacao 6 do curso 52.', '2025-01-08 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (7, 9, 117, 1, 'Avaliacao 7 do curso 117.', '2023-02-23 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (8, 93, 51, 3, 'Avaliacao 8 do curso 51.', '2024-09-08 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (9, 119, 130, 4, 'Avaliacao 9 do curso 130.', '2023-12-10 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (10, 32, 8, 2, 'Avaliacao 10 do curso 8.', '2024-09-04 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (11, 126, 115, 2, 'Avaliacao 11 do curso 115.', '2023-01-11 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (12, 122, 142, 3, 'Avaliacao 12 do curso 142.', '2024-10-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (13, 42, 67, 1, 'Avaliacao 13 do curso 67.', '2024-12-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (14, 8, 99, 1, 'Avaliacao 14 do curso 99.', '2025-04-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (15, 147, 55, 2, 'Avaliacao 15 do curso 55.', '2023-11-28 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (16, 58, 53, 3, 'Avaliacao 16 do curso 53.', '2023-11-23 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (17, 105, 132, 1, 'Avaliacao 17 do curso 132.', '2023-04-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (18, 3, 122, 2, 'Avaliacao 18 do curso 122.', '2023-11-28 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (19, 45, 3, 2, 'Avaliacao 19 do curso 3.', '2025-01-05 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (20, 79, 71, 4, 'Avaliacao 20 do curso 71.', '2023-03-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (21, 97, 90, 4, 'Avaliacao 21 do curso 90.', '2025-01-05 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (22, 56, 120, 3, 'Avaliacao 22 do curso 120.', '2023-10-28 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (23, 134, 102, 5, 'Avaliacao 23 do curso 102.', '2025-06-08 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (24, 2, 131, 3, 'Avaliacao 24 do curso 131.', '2024-02-24 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (25, 73, 77, 1, 'Avaliacao 25 do curso 77.', '2024-05-15 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (26, 17, 87, 3, 'Avaliacao 26 do curso 87.', '2023-12-05 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (27, 84, 71, 3, 'Avaliacao 27 do curso 71.', '2023-11-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (28, 77, 49, 2, 'Avaliacao 28 do curso 49.', '2024-04-09 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (29, 62, 15, 5, 'Avaliacao 29 do curso 15.', '2024-08-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (30, 82, 36, 1, 'Avaliacao 30 do curso 36.', '2023-11-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (31, 128, 76, 3, 'Avaliacao 31 do curso 76.', '2023-03-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (32, 108, 104, 4, 'Avaliacao 32 do curso 104.', '2023-08-28 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (33, 10, 150, 5, 'Avaliacao 33 do curso 150.', '2023-06-08 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (34, 49, 88, 2, 'Avaliacao 34 do curso 88.', '2023-10-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (35, 137, 122, 3, 'Avaliacao 35 do curso 122.', '2024-04-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (36, 77, 44, 5, 'Avaliacao 36 do curso 44.', '2025-03-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (37, 76, 25, 4, 'Avaliacao 37 do curso 25.', '2025-05-12 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (38, 67, 144, 2, 'Avaliacao 38 do curso 144.', '2023-01-25 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (39, 86, 23, 2, 'Avaliacao 39 do curso 23.', '2024-09-22 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (40, 58, 79, 4, 'Avaliacao 40 do curso 79.', '2023-07-06 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (41, 85, 96, 3, 'Avaliacao 41 do curso 96.', '2024-01-30 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (42, 76, 119, 1, 'Avaliacao 42 do curso 119.', '2024-05-27 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (43, 14, 150, 5, 'Avaliacao 43 do curso 150.', '2023-01-28 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (44, 19, 121, 2, 'Avaliacao 44 do curso 121.', '2024-04-26 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (45, 31, 98, 5, 'Avaliacao 45 do curso 98.', '2024-11-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (46, 106, 14, 2, 'Avaliacao 46 do curso 14.', '2025-05-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (47, 52, 88, 4, 'Avaliacao 47 do curso 88.', '2024-02-15 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (48, 118, 37, 3, 'Avaliacao 48 do curso 37.', '2023-04-21 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (49, 47, 21, 4, 'Avaliacao 49 do curso 21.', '2024-10-15 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (50, 46, 81, 1, 'Avaliacao 50 do curso 81.', '2025-09-16 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (51, 116, 71, 2, 'Avaliacao 51 do curso 71.', '2023-08-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (52, 44, 148, 2, 'Avaliacao 52 do curso 148.', '2024-05-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (53, 23, 34, 5, 'Avaliacao 53 do curso 34.', '2024-07-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (54, 110, 104, 4, 'Avaliacao 54 do curso 104.', '2023-01-06 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (55, 123, 99, 1, 'Avaliacao 55 do curso 99.', '2025-08-13 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (56, 137, 52, 3, 'Avaliacao 56 do curso 52.', '2023-01-22 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (57, 4, 83, 5, 'Avaliacao 57 do curso 83.', '2025-03-09 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (58, 5, 2, 2, 'Avaliacao 58 do curso 2.', '2025-02-01 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (59, 89, 80, 2, 'Avaliacao 59 do curso 80.', '2025-06-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (60, 99, 129, 5, 'Avaliacao 60 do curso 129.', '2024-11-11 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (61, 43, 17, 1, 'Avaliacao 61 do curso 17.', '2024-11-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (62, 75, 117, 5, 'Avaliacao 62 do curso 117.', '2024-01-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (63, 135, 87, 4, 'Avaliacao 63 do curso 87.', '2023-03-26 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (64, 35, 88, 4, 'Avaliacao 64 do curso 88.', '2024-09-18 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (65, 49, 43, 4, 'Avaliacao 65 do curso 43.', '2025-09-01 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (66, 59, 58, 2, 'Avaliacao 66 do curso 58.', '2025-02-16 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (67, 6, 130, 2, 'Avaliacao 67 do curso 130.', '2025-05-17 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (68, 94, 10, 4, 'Avaliacao 68 do curso 10.', '2023-04-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (69, 66, 137, 5, 'Avaliacao 69 do curso 137.', '2025-08-02 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (70, 13, 28, 1, 'Avaliacao 70 do curso 28.', '2025-08-02 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (71, 30, 107, 4, 'Avaliacao 71 do curso 107.', '2024-08-27 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (72, 32, 141, 3, 'Avaliacao 72 do curso 141.', '2024-05-23 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (73, 40, 53, 1, 'Avaliacao 73 do curso 53.', '2024-11-16 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (74, 108, 26, 5, 'Avaliacao 74 do curso 26.', '2024-12-18 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (75, 36, 108, 1, 'Avaliacao 75 do curso 108.', '2024-04-15 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (76, 31, 73, 1, 'Avaliacao 76 do curso 73.', '2023-07-10 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (77, 28, 128, 2, 'Avaliacao 77 do curso 128.', '2024-01-06 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (78, 52, 68, 5, 'Avaliacao 78 do curso 68.', '2022-12-29 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (79, 52, 92, 4, 'Avaliacao 79 do curso 92.', '2024-11-22 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (80, 42, 11, 5, 'Avaliacao 80 do curso 11.', '2024-04-30 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (81, 54, 124, 3, 'Avaliacao 81 do curso 124.', '2025-01-23 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (82, 1, 4, 1, 'Avaliacao 82 do curso 4.', '2023-03-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (83, 29, 147, 4, 'Avaliacao 83 do curso 147.', '2025-04-21 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (84, 24, 131, 1, 'Avaliacao 84 do curso 131.', '2023-09-11 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (85, 26, 66, 2, 'Avaliacao 85 do curso 66.', '2024-06-10 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (86, 76, 68, 4, 'Avaliacao 86 do curso 68.', '2025-07-31 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (87, 26, 45, 1, 'Avaliacao 87 do curso 45.', '2023-05-02 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (88, 75, 93, 3, 'Avaliacao 88 do curso 93.', '2024-07-11 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (89, 30, 25, 1, 'Avaliacao 89 do curso 25.', '2025-09-11 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (90, 36, 44, 3, 'Avaliacao 90 do curso 44.', '2024-09-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (91, 113, 69, 1, 'Avaliacao 91 do curso 69.', '2024-09-04 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (92, 88, 47, 1, 'Avaliacao 92 do curso 47.', '2024-08-06 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (93, 103, 117, 3, 'Avaliacao 93 do curso 117.', '2023-05-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (94, 99, 123, 4, 'Avaliacao 94 do curso 123.', '2023-11-26 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (95, 43, 29, 2, 'Avaliacao 95 do curso 29.', '2023-10-09 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (96, 16, 41, 1, 'Avaliacao 96 do curso 41.', '2024-07-21 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (97, 124, 146, 4, 'Avaliacao 97 do curso 146.', '2025-03-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (98, 98, 92, 5, 'Avaliacao 98 do curso 92.', '2025-08-22 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (99, 34, 124, 4, 'Avaliacao 99 do curso 124.', '2025-05-28 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (100, 106, 113, 1, 'Avaliacao 100 do curso 113.', '2025-07-18 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (101, 67, 81, 1, 'Avaliacao 101 do curso 81.', '2023-09-30 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (102, 135, 148, 5, 'Avaliacao 102 do curso 148.', '2025-02-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (103, 87, 133, 5, 'Avaliacao 103 do curso 133.', '2023-10-17 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (104, 25, 111, 2, 'Avaliacao 104 do curso 111.', '2024-05-15 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (105, 89, 99, 2, 'Avaliacao 105 do curso 99.', '2023-05-15 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (106, 143, 14, 1, 'Avaliacao 106 do curso 14.', '2023-12-02 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (107, 41, 130, 4, 'Avaliacao 107 do curso 130.', '2023-05-02 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (108, 127, 43, 1, 'Avaliacao 108 do curso 43.', '2023-08-13 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (109, 126, 83, 2, 'Avaliacao 109 do curso 83.', '2024-10-17 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (110, 72, 13, 5, 'Avaliacao 110 do curso 13.', '2025-02-04 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (111, 141, 97, 4, 'Avaliacao 111 do curso 97.', '2023-06-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (112, 61, 21, 4, 'Avaliacao 112 do curso 21.', '2024-06-23 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (113, 147, 115, 1, 'Avaliacao 113 do curso 115.', '2023-04-27 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (114, 128, 115, 3, 'Avaliacao 114 do curso 115.', '2025-05-22 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (115, 128, 5, 1, 'Avaliacao 115 do curso 5.', '2024-08-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (116, 106, 10, 5, 'Avaliacao 116 do curso 10.', '2024-03-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (117, 1, 24, 5, 'Avaliacao 117 do curso 24.', '2023-01-08 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (118, 78, 131, 5, 'Avaliacao 118 do curso 131.', '2025-02-21 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (119, 117, 88, 3, 'Avaliacao 119 do curso 88.', '2023-05-29 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (120, 14, 58, 4, 'Avaliacao 120 do curso 58.', '2024-10-16 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (121, 144, 122, 3, 'Avaliacao 121 do curso 122.', '2023-09-18 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (122, 116, 30, 1, 'Avaliacao 122 do curso 30.', '2023-08-05 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (123, 57, 1, 3, 'Avaliacao 123 do curso 1.', '2024-09-22 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (124, 75, 141, 5, 'Avaliacao 124 do curso 141.', '2024-09-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (125, 28, 12, 2, 'Avaliacao 125 do curso 12.', '2024-05-04 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (126, 36, 105, 1, 'Avaliacao 126 do curso 105.', '2025-01-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (127, 51, 49, 1, 'Avaliacao 127 do curso 49.', '2023-02-11 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (128, 101, 56, 4, 'Avaliacao 128 do curso 56.', '2023-05-30 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (129, 49, 87, 1, 'Avaliacao 129 do curso 87.', '2023-08-07 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (130, 107, 12, 5, 'Avaliacao 130 do curso 12.', '2025-05-17 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (131, 116, 118, 5, 'Avaliacao 131 do curso 118.', '2023-01-15 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (132, 130, 35, 4, 'Avaliacao 132 do curso 35.', '2025-09-16 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (133, 136, 13, 5, 'Avaliacao 133 do curso 13.', '2023-02-06 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (134, 111, 150, 4, 'Avaliacao 134 do curso 150.', '2023-02-17 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (135, 131, 46, 5, 'Avaliacao 135 do curso 46.', '2025-03-27 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (136, 33, 27, 4, 'Avaliacao 136 do curso 27.', '2023-11-17 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (137, 83, 130, 4, 'Avaliacao 137 do curso 130.', '2024-07-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (138, 64, 71, 4, 'Avaliacao 138 do curso 71.', '2023-01-08 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (139, 88, 76, 4, 'Avaliacao 139 do curso 76.', '2023-06-19 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (140, 35, 36, 4, 'Avaliacao 140 do curso 36.', '2024-01-13 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (141, 132, 77, 5, 'Avaliacao 141 do curso 77.', '2023-04-23 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (142, 81, 142, 2, 'Avaliacao 142 do curso 142.', '2025-02-27 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (143, 54, 75, 3, 'Avaliacao 143 do curso 75.', '2023-02-20 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (144, 34, 46, 5, 'Avaliacao 144 do curso 46.', '2024-03-14 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (145, 83, 30, 3, 'Avaliacao 145 do curso 30.', '2024-02-23 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (146, 123, 150, 5, 'Avaliacao 146 do curso 150.', '2023-01-29 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (147, 107, 137, 3, 'Avaliacao 147 do curso 137.', '2023-04-06 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (148, 109, 4, 5, 'Avaliacao 148 do curso 4.', '2025-06-03 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (149, 7, 98, 2, 'Avaliacao 149 do curso 98.', '2025-07-28 00:19:52');
+INSERT INTO avaliacoes (id, aluno_id, curso_id, nota, depoimento, data_avaliacao) VALUES (150, 15, 52, 3, 'Avaliacao 150 do curso 52.', '2023-08-14 00:19:52');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (1, 1, '2025-04-09', '2025-10-08', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (2, 2, '2025-07-19', '2026-07-19', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (3, 3, '2025-02-24', '2026-02-24', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (4, 4, '2024-06-14', '2024-07-14', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (5, 5, '2024-02-24', '2024-08-24', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (6, 6, '2024-11-30', '2025-11-30', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (7, 7, '2024-08-26', '2025-02-24', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (8, 8, '2024-11-04', '2025-11-04', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (9, 9, '2025-01-06', '2025-02-05', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (10, 10, '2023-12-12', '2024-12-11', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (11, 11, '2024-09-09', '2025-09-09', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (12, 12, '2024-01-12', '2024-02-11', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (13, 13, '2025-03-23', '2026-03-23', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (14, 14, '2025-03-27', '2026-03-27', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (15, 15, '2024-08-30', '2024-09-29', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (16, 16, '2024-12-24', '2025-01-23', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (17, 17, '2025-01-02', '2025-02-01', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (18, 18, '2025-04-15', '2025-05-15', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (19, 19, '2024-01-18', '2024-02-17', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (20, 20, '2024-02-12', '2025-02-11', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (21, 21, '2024-10-30', '2025-10-30', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (22, 22, '2025-03-16', '2026-03-16', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (23, 23, '2024-04-21', '2024-05-21', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (24, 24, '2024-08-03', '2024-09-02', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (25, 25, '2025-02-14', '2026-02-14', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (26, 26, '2024-09-16', '2025-03-17', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (27, 27, '2023-12-27', '2024-12-26', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (28, 28, '2024-02-24', '2025-02-23', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (29, 29, '2023-11-06', '2024-05-06', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (30, 30, '2023-12-03', '2024-12-02', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (31, 31, '2025-01-14', '2025-02-13', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (32, 32, '2025-05-27', '2025-11-25', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (33, 33, '2024-12-05', '2025-01-04', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (34, 34, '2024-04-18', '2024-10-17', 'diamond', 'semestral', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (35, 35, '2023-11-23', '2023-12-23', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (36, 36, '2025-06-14', '2025-07-14', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (37, 37, '2025-02-17', '2026-02-17', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (38, 38, '2025-02-14', '2026-02-14', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (39, 39, '2025-06-06', '2025-07-06', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (40, 40, '2025-07-09', '2026-07-09', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (41, 41, '2025-08-27', '2026-02-25', 'diamond', 'semestral', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (42, 42, '2025-07-07', '2025-08-06', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (43, 43, '2024-02-27', '2024-03-28', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (44, 44, '2024-07-30', '2025-01-28', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (45, 45, '2024-07-04', '2025-01-02', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (46, 46, '2025-05-22', '2026-05-22', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (47, 47, '2023-12-27', '2024-01-26', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (48, 48, '2025-07-08', '2026-01-06', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (49, 49, '2024-11-16', '2025-11-16', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (50, 50, '2024-06-29', '2024-12-28', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (51, 51, '2025-08-20', '2026-02-18', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (52, 52, '2025-05-04', '2026-05-04', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (53, 53, '2024-03-11', '2024-09-09', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (54, 54, '2023-11-27', '2024-05-27', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (55, 55, '2024-03-01', '2024-03-31', 'silver', 'mensal', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (56, 56, '2024-02-12', '2025-02-11', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (57, 57, '2024-03-09', '2024-04-08', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (58, 58, '2024-10-03', '2024-11-02', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (59, 59, '2024-04-14', '2024-05-14', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (60, 60, '2023-12-29', '2024-06-28', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (61, 61, '2023-11-03', '2024-11-02', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (62, 62, '2024-03-07', '2024-09-05', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (63, 63, '2025-07-14', '2026-01-12', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (64, 64, '2024-02-04', '2024-08-04', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (65, 65, '2023-11-03', '2024-11-02', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (66, 66, '2024-12-03', '2025-12-03', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (67, 67, '2025-03-06', '2025-09-04', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (68, 68, '2023-12-29', '2024-12-28', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (69, 69, '2024-01-31', '2024-03-01', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (70, 70, '2024-07-09', '2024-08-08', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (71, 71, '2025-02-06', '2026-02-06', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (72, 72, '2024-07-01', '2024-12-30', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (73, 73, '2024-10-16', '2025-04-16', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (74, 74, '2024-11-12', '2025-05-13', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (75, 75, '2024-01-08', '2024-02-07', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (76, 76, '2025-04-30', '2026-04-30', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (77, 77, '2023-12-19', '2024-01-18', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (78, 78, '2024-04-19', '2025-04-19', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (79, 79, '2024-02-03', '2025-02-02', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (80, 80, '2024-01-25', '2024-02-24', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (81, 81, '2024-03-13', '2025-03-13', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (82, 82, '2025-04-21', '2025-10-20', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (83, 83, '2024-01-26', '2025-01-25', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (84, 84, '2025-05-06', '2025-11-04', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (85, 85, '2024-04-24', '2024-05-24', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (86, 86, '2024-01-01', '2024-12-31', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (87, 87, '2024-04-12', '2024-05-12', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (88, 88, '2024-02-19', '2025-02-18', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (89, 89, '2025-04-24', '2026-04-24', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (90, 90, '2024-09-18', '2024-10-18', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (91, 91, '2025-01-26', '2025-02-25', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (92, 92, '2025-08-08', '2026-08-08', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (93, 93, '2024-09-16', '2025-03-17', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (94, 94, '2025-08-04', '2025-09-03', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (95, 95, '2024-04-05', '2025-04-05', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (96, 96, '2024-12-25', '2025-12-25', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (97, 97, '2025-03-26', '2025-09-24', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (98, 98, '2023-11-21', '2023-12-21', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (99, 99, '2025-02-04', '2026-02-04', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (100, 100, '2024-10-02', '2025-04-02', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (101, 101, '2025-09-14', '2026-09-14', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (102, 102, '2024-06-27', '2024-07-27', 'silver', 'mensal', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (103, 103, '2023-12-02', '2024-06-01', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (104, 104, '2025-04-12', '2025-10-11', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (105, 105, '2024-07-23', '2025-01-21', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (106, 106, '2024-05-18', '2024-11-16', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (107, 107, '2023-11-28', '2024-05-28', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (108, 108, '2025-05-13', '2026-05-13', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (109, 109, '2025-05-06', '2026-05-06', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (110, 110, '2024-02-12', '2024-03-13', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (111, 111, '2025-03-20', '2026-03-20', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (112, 112, '2024-01-16', '2025-01-15', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (113, 113, '2023-11-13', '2024-05-13', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (114, 114, '2024-01-08', '2024-07-08', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (115, 115, '2024-07-27', '2025-07-27', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (116, 116, '2024-02-02', '2024-03-03', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (117, 117, '2024-10-05', '2025-04-05', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (118, 118, '2024-08-22', '2024-09-21', 'silver', 'mensal', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (119, 119, '2024-04-03', '2025-04-03', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (120, 120, '2025-04-20', '2026-04-20', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (121, 121, '2024-05-21', '2025-05-21', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (122, 122, '2024-03-25', '2025-03-25', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (123, 123, '2025-06-17', '2025-12-16', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (124, 124, '2024-03-17', '2024-04-16', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (125, 125, '2024-09-06', '2024-10-06', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (126, 126, '2024-05-15', '2024-11-13', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (127, 127, '2024-02-09', '2024-03-10', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (128, 128, '2024-05-20', '2024-06-19', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (129, 129, '2024-03-13', '2024-09-11', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (130, 130, '2025-09-13', '2026-09-13', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (131, 131, '2024-04-06', '2024-05-06', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (132, 132, '2024-11-01', '2025-05-02', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (133, 133, '2024-07-11', '2025-07-11', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (134, 134, '2024-12-27', '2025-12-27', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (135, 135, '2024-09-11', '2025-09-11', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (136, 136, '2023-10-25', '2024-04-24', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (137, 137, '2024-02-28', '2024-08-28', 'gold', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (138, 138, '2024-03-01', '2024-08-30', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (139, 139, '2024-02-07', '2024-08-07', 'diamond', 'semestral', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (140, 140, '2023-11-15', '2023-12-15', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (141, 141, '2025-04-08', '2025-05-08', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (142, 142, '2024-10-09', '2025-10-09', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (143, 143, '2023-10-21', '2024-10-20', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (144, 144, '2024-08-18', '2025-08-18', 'diamond', 'anual', 'falta_pagamento');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (145, 145, '2025-06-19', '2025-07-19', 'gold', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (146, 146, '2024-07-02', '2024-08-01', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (147, 147, '2024-09-06', '2024-10-06', 'silver', 'mensal', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (148, 148, '2024-08-06', '2025-08-06', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (149, 149, '2024-12-01', '2025-12-01', 'diamond', 'anual', 'ativo');
+INSERT INTO assinaturas_ativas (id, usuario_id, data_inicio, data_fim, plano, tempo_plano, status) VALUES (150, 150, '2025-07-24', '2025-08-23', 'gold', 'mensal', 'ativo');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (1, 1, 342.48, 'pix', '2024-04-08 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (2, 2, 332.38, 'pix', '2024-04-16 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (3, 3, 1062.75, 'pix', '2025-03-31 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (4, 4, 102.29, 'cartao', '2023-11-20 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (5, 5, 1464.69, 'cartao', '2024-12-12 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (6, 6, 562.04, 'boleto', '2024-08-01 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (7, 7, 340.45, 'cartao', '2025-07-12 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (8, 8, 846.91, 'pix', '2024-02-26 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (9, 9, 554.74, 'boleto', '2025-02-01 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (10, 10, 1446.43, 'boleto', '2024-08-03 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (11, 11, 56.74, 'cartao', '2024-07-31 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (12, 12, 204.37, 'cartao', '2024-04-23 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (13, 13, 542.95, 'cartao', '2024-04-13 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (14, 14, 1320.36, 'pix', '2025-01-07 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (15, 15, 692.01, 'boleto', '2024-02-22 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (16, 16, 1166.45, 'boleto', '2024-06-08 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (17, 17, 718.04, 'pix', '2025-08-23 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (18, 18, 218.59, 'cartao', '2024-08-25 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (19, 19, 1193.55, 'cartao', '2023-10-28 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (20, 20, 383.4, 'boleto', '2024-07-25 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (21, 21, 798.93, 'cartao', '2024-12-25 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (22, 22, 466.57, 'boleto', '2023-11-01 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (23, 23, 1240.56, 'cartao', '2024-03-02 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (24, 24, 741.01, 'boleto', '2025-02-09 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (25, 25, 440.16, 'pix', '2023-10-22 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (26, 26, 773.55, 'cartao', '2025-01-23 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (27, 27, 400.98, 'boleto', '2025-02-21 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (28, 28, 344.01, 'cartao', '2023-12-27 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (29, 29, 276.19, 'cartao', '2025-05-21 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (30, 30, 1029.93, 'pix', '2024-05-04 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (31, 31, 59.6, 'pix', '2025-08-08 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (32, 32, 588.23, 'boleto', '2024-05-04 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (33, 33, 1309.71, 'boleto', '2025-03-17 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (34, 34, 456.39, 'cartao', '2024-02-08 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (35, 35, 128.51, 'boleto', '2024-05-19 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (36, 36, 97.22, 'boleto', '2024-08-13 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (37, 37, 1175.06, 'boleto', '2025-05-20 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (38, 38, 801.4, 'boleto', '2025-09-12 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (39, 39, 1027.45, 'boleto', '2024-02-04 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (40, 40, 521.88, 'pix', '2024-12-29 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (41, 41, 845.42, 'cartao', '2024-12-19 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (42, 42, 1439.86, 'boleto', '2024-09-11 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (43, 43, 773.22, 'cartao', '2024-07-18 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (44, 44, 1140.68, 'boleto', '2024-08-06 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (45, 45, 703.56, 'pix', '2025-05-09 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (46, 46, 1044.72, 'cartao', '2024-12-18 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (47, 47, 855.24, 'boleto', '2025-03-04 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (48, 48, 1210.05, 'pix', '2025-04-20 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (49, 49, 1218.22, 'cartao', '2024-07-16 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (50, 50, 244.98, 'pix', '2024-04-09 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (51, 51, 1094.81, 'boleto', '2024-11-17 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (52, 52, 865.1, 'pix', '2025-08-03 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (53, 53, 193.51, 'cartao', '2025-07-21 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (54, 54, 1230.04, 'boleto', '2023-12-16 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (55, 55, 702.29, 'boleto', '2024-12-28 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (56, 56, 572.44, 'pix', '2024-12-31 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (57, 57, 78.76, 'cartao', '2024-09-26 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (58, 58, 1446.52, 'cartao', '2024-02-08 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (59, 59, 992.3, 'pix', '2025-03-26 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (60, 60, 564.91, 'pix', '2024-04-16 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (61, 61, 1173.38, 'boleto', '2025-07-02 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (62, 62, 939.81, 'boleto', '2023-12-14 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (63, 63, 1308.97, 'pix', '2024-10-10 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (64, 64, 965.35, 'pix', '2024-08-02 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (65, 65, 164.71, 'boleto', '2025-01-30 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (66, 66, 509.47, 'boleto', '2024-12-21 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (67, 67, 984.73, 'boleto', '2024-06-22 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (68, 68, 1134.45, 'pix', '2024-06-16 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (69, 69, 292.61, 'cartao', '2025-05-15 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (70, 70, 390.21, 'boleto', '2025-07-01 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (71, 71, 292.02, 'cartao', '2025-06-15 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (72, 72, 1408.35, 'boleto', '2024-03-08 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (73, 73, 88.23, 'boleto', '2024-04-02 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (74, 74, 200.7, 'pix', '2025-04-14 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (75, 75, 999.51, 'boleto', '2024-11-08 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (76, 76, 408.72, 'boleto', '2024-06-24 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (77, 77, 233.3, 'pix', '2025-03-30 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (78, 78, 100.97, 'boleto', '2024-10-22 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (79, 79, 727.43, 'pix', '2024-12-16 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (80, 80, 695.03, 'pix', '2024-03-17 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (81, 81, 906.7, 'boleto', '2023-12-14 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (82, 82, 971.98, 'pix', '2024-07-02 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (83, 83, 977.69, 'pix', '2024-11-07 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (84, 84, 748.39, 'cartao', '2025-06-21 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (85, 85, 496.41, 'boleto', '2024-12-28 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (86, 86, 490.18, 'cartao', '2024-04-03 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (87, 87, 548.63, 'boleto', '2024-03-22 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (88, 88, 1047.27, 'boleto', '2024-05-20 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (89, 89, 63.24, 'boleto', '2024-11-25 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (90, 90, 385.26, 'cartao', '2024-03-08 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (91, 91, 323.43, 'pix', '2024-06-30 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (92, 92, 412.35, 'pix', '2023-11-29 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (93, 93, 1251.22, 'cartao', '2024-12-25 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (94, 94, 662.25, 'cartao', '2024-04-09 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (95, 95, 1220.98, 'pix', '2024-12-16 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (96, 96, 990.26, 'pix', '2024-12-19 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (97, 97, 322.6, 'cartao', '2025-03-18 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (98, 98, 469.91, 'pix', '2024-06-11 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (99, 99, 706.51, 'pix', '2023-12-23 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (100, 100, 322.29, 'cartao', '2025-04-18 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (101, 101, 1456.09, 'cartao', '2025-03-14 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (102, 102, 459.07, 'cartao', '2024-06-29 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (103, 103, 61.9, 'cartao', '2025-04-19 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (104, 104, 765.69, 'boleto', '2024-07-17 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (105, 105, 1189.3, 'boleto', '2024-09-05 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (106, 106, 1060.56, 'cartao', '2024-10-17 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (107, 107, 1273.14, 'cartao', '2025-07-25 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (108, 108, 1174.7, 'cartao', '2024-03-13 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (109, 109, 313.33, 'boleto', '2024-08-26 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (110, 110, 226.84, 'pix', '2025-01-09 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (111, 111, 1168.28, 'boleto', '2025-01-10 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (112, 112, 1492.08, 'cartao', '2024-06-06 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (113, 113, 1167.94, 'pix', '2023-11-09 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (114, 114, 735.6, 'pix', '2024-11-05 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (115, 115, 279.99, 'pix', '2025-08-08 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (116, 116, 1409.26, 'pix', '2025-05-18 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (117, 117, 747.78, 'boleto', '2025-03-01 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (118, 118, 1336.9, 'pix', '2025-02-09 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (119, 119, 392.15, 'boleto', '2024-10-23 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (120, 120, 292.67, 'boleto', '2024-01-31 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (121, 121, 623.92, 'cartao', '2025-09-11 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (122, 122, 892.56, 'pix', '2024-05-22 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (123, 123, 914.51, 'boleto', '2025-06-21 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (124, 124, 278.66, 'cartao', '2023-12-27 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (125, 125, 1399.73, 'pix', '2025-07-21 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (126, 126, 565.5, 'cartao', '2024-03-20 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (127, 127, 232.45, 'cartao', '2024-10-31 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (128, 128, 1193.41, 'boleto', '2024-06-28 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (129, 129, 329.8, 'pix', '2024-08-30 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (130, 130, 1100.38, 'boleto', '2025-08-11 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (131, 131, 1074.61, 'pix', '2024-11-23 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (132, 132, 1060.7, 'cartao', '2024-02-18 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (133, 133, 838.25, 'boleto', '2024-05-29 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (134, 134, 1308.11, 'pix', '2024-03-02 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (135, 135, 149.87, 'cartao', '2024-06-17 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (136, 136, 1238.16, 'pix', '2024-09-10 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (137, 137, 51.04, 'pix', '2024-04-20 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (138, 138, 1113.8, 'cartao', '2023-12-26 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (139, 139, 1175.22, 'cartao', '2024-10-27 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (140, 140, 141.85, 'pix', '2024-08-20 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (141, 141, 809.9, 'boleto', '2024-03-05 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (142, 142, 938.91, 'boleto', '2024-07-28 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (143, 143, 516.93, 'cartao', '2024-04-03 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (144, 144, 146.69, 'cartao', '2025-03-22 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (145, 145, 343.01, 'boleto', '2025-03-08 00:19:52', 'pendente');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (146, 146, 96.13, 'pix', '2024-08-19 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (147, 147, 760.37, 'pix', '2024-01-25 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (148, 148, 121.17, 'cartao', '2024-01-09 00:19:52', 'falhou');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (149, 149, 152.77, 'cartao', '2023-11-19 00:19:52', 'pago');
+INSERT INTO pagamentos (id, assinatura_id, valor_pago, metodo_pagamento, data_pagamento, status) VALUES (150, 150, 1396.19, 'cartao', '2024-05-29 00:19:52', 'falhou');

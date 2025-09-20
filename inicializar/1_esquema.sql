@@ -1,4 +1,6 @@
-CREATE DATABASE trabalho;
+CREATE DATABASE trabalho
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4_general_ci;
 USE trabalho;
 
 CREATE TABLE usuarios(
@@ -77,7 +79,7 @@ CREATE TABLE inscricoes (
     aluno_id INT NOT NULL,
     curso_id INT NOT NULL,
     data_inscricao DATETIME DEFAULT CURRENT_TIMESTAMP,
-    status ENUM('ativa', 'concluída', 'cancelada') DEFAULT 'ativa',
+    status ENUM('ativa', 'concluida', 'cancelada') DEFAULT 'ativa',
     FOREIGN KEY (aluno_id) REFERENCES alunos(id),
     FOREIGN KEY (curso_id) REFERENCES cursos(id)
 );
