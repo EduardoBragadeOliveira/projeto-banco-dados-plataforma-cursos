@@ -1,1 +1,1 @@
-Coloque aqui a explicação detalhada do trigger, conforme solicitado no enunciado
+Foi criado um trigger que, quando um usuário realiza um pagamento e o status é atualizado para "pago", duas ações são executadas: atualização do status para "ativo" na tabela de assinaturas_ativas e alteração do plano do usuário na tabela de usuários de acordo com a nova assinatura.
