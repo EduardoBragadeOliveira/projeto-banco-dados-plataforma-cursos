@@ -10,7 +10,9 @@ CREATE TABLE usuarios(
     genero VARCHAR(100) NOT NULL,
     data_nascimento DATE,
     foto_perfil VARCHAR(255),
-    status_conta ENUM('ativo', 'inativo', 'banido') DEFAULT 'ativo',
+    status_conta ENUM('ativo', 'inativo') DEFAULT 'ativo',
+    plano ENUM('basico', 'silver', 'gold', 'diamond') DEFAULT 'basico',
+    tipo_usuario ENUM('aluno', 'instrutor', 'ambos'),
     verificado BOOLEAN DEFAULT FALSE,
     ultimo_login DATETIME,
     criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -91,12 +93,23 @@ CREATE TABLE avaliacoes (
     FOREIGN KEY (curso_id) REFERENCES cursos(id)
 );
 
+CREATE TABLE assinaturas_ativas(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    data_inicio DATE NOT NULL,
+    data_fim DATE NOT NULL,
+    plano ENUM('silver', 'gold', 'diamond') NOT NULL,
+    tempo_plano ENUM('mensal', 'semestral', 'anual') NOT NULL,
+    status ENUM('ativo', 'falta_pagamento') NOT NULL DEFAULT 'falta_pagamento',
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
 CREATE TABLE pagamentos (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    aluno_id INT NOT NULL,
-    valor DECIMAL(10, 2) NOT NULL,
+    assinatura_id INT,
+    valor_pago DECIMAL(10, 2) NOT NULL,
     metodo_pagamento ENUM('cartao', 'boleto', 'pix') NOT NULL,
     data_pagamento DATETIME DEFAULT CURRENT_TIMESTAMP,
     status ENUM('pendente', 'pago', 'falhou') DEFAULT 'pendente',
-    FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+    FOREIGN KEY (assinatura_id) REFERENCES assinaturas_ativas(id)
 );
