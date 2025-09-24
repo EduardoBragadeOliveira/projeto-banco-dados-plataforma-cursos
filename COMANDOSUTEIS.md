@@ -45,7 +45,7 @@ docker exec -i meubanco mysql -u root
 Se não funcionar (ocorre de vez em quando no Windows), precisamos passar o caminho do host:
 
 ```
-docker exec -it meubanco mysql -h 127.0.0.1 -P 3306 -u root -p
+docker exec -it meubanco2 mysql -h 127.0.0.1 -P 3306 -u root -p
 ```
 
 Agora, teremos acesso às operações SQL rodando diretamente do nosso container, chamado `meubanco`. 
