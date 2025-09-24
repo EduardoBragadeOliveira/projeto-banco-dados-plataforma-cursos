@@ -1,3 +1,5 @@
+USE trabalho;
+
 CREATE VIEW vw_aulas_detalhes_completo AS
 SELECT
     a.titulo AS titulo_aula, 

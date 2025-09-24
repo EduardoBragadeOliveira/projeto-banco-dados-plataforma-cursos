@@ -1,3 +1,5 @@
+USE trabalho;
+
 CREATE VIEW vw_usuarios_com_papeis AS
 SELECT
     u.id AS id_usuario,
